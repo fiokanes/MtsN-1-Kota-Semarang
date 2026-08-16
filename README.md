@@ -2,6 +2,12 @@
 
 Website profil multi-halaman untuk **MTs Negeri 1 Kota Semarang** — madrasah tsanawiyah negeri di Kecamatan Tembalang, Kota Semarang, Jawa Tengah.
 
+> ## 🌐 Situs Live
+>
+> **https://mts-n-1-kota-semarang.vercel.app/**
+>
+> Deployed via Vercel (terhubung otomatis dengan repository GitHub).
+
 Dibangun dengan **HTML, CSS, dan JavaScript murni** (tanpa framework) sehingga ringan, cepat, dan mudah di-hosting di mana saja — termasuk **GitHub Pages** dan **Vercel**.
 
 ## 📄 Struktur Halaman

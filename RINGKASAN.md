@@ -116,12 +116,19 @@ git push -u origin main
 
 ---
 
-## 6️⃣ Langkah Selanjutnya (Belum Dilakukan)
+## 6️⃣ Deploy ke Vercel ✅ Selesai
 
-1. **Deploy ke Vercel** — via dashboard (Add New → Project → pilih repo) atau CLI (`vercel --prod`)
-2. **Perbarui konten placeholder** — visi misi resmi, sejarah, NPSN, telepon/email, sosmed
-3. **Ganti logo & foto** — dengan logo resmi madrasah dan foto asli
-4. **Integrasi formulir** — ke layanan pihak ketiga (Formspree/FormSubmit) jika butuh penyimpanan
+Website telah berhasil di-deploy dan **aktif secara live**:
+
+> ## 🌐 https://mts-n-1-kota-semarang.vercel.app/
+
+Vercel terhubung otomatis dengan repository GitHub — setiap `git push` ke `main` akan memicu *auto-deploy*.
+
+**Langkah selanjutnya yang masih terbuka:**
+
+1. **Perbarui konten placeholder** — visi misi resmi, sejarah, NPSN, telepon/email, sosmed
+2. **Ganti logo & foto** — dengan logo resmi madrasah dan foto asli
+3. **Integrasi formulir** — ke layanan pihak ketiga (Formspree/FormSubmit) jika butuh penyimpanan
 
 ---
 
@@ -133,4 +140,4 @@ git push -u origin main
 | Data riset | ✅ Tervalidasi sebagian |
 | Pengujian lokal | ✅ HTTP 200 semua halaman |
 | Push ke GitHub | ✅ `main` branch |
-| Deploy ke Vercel | ⏳ Menunggu tindakan pengguna |
+| Deploy ke Vercel | ✅ Live di https://mts-n-1-kota-semarang.vercel.app |
