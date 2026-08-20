@@ -1162,16 +1162,6 @@ body.overlay-open { overflow: hidden; }
 .sticky-cta.show { transform: translateY(0); }
 body.sticky-active .wa-float { bottom: 96px; }
 
-/* ---------- Dokumentasi guru & karyawan ---------- */
-.documentasi-guru { max-width: 920px; margin: 0 auto 36px; text-align: center; }
-.doc-img {
-  width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-lg);
-  object-fit: cover;
-}
-.documentasi-guru figcaption {
-  margin-top: 12px; font-size: .85rem; color: var(--ink-soft);
-}
-
 /* ---------- Tema gelap ---------- */
 html[data-theme="dark"] {
   --ink: #e6edf0;
