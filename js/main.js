@@ -56,6 +56,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ---------- Tombol kembali ke atas ----------
+  const toTop = document.querySelector('.to-top');
+  if (toTop) {
+    window.addEventListener('scroll', function () {
+      toTop.classList.toggle('show', window.scrollY > 500);
+    });
+    toTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   // ---------- Scroll halus untuk tautan dalam halaman ----------
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
