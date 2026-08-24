@@ -3,28 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="pst.title">Prestasi — MTs Negeri 1 Kota Semarang</title>
-  <meta name="description" data-i18n-meta="pst.desc" content="Prestasi MTs Negeri 1 Kota Semarang: Silver Medal AISEEF 2021, KSM 2023, LCTP Pramuka, dan lainnya.">
-  <link rel="canonical" href="https://mts-n-1-kota-semarang.vercel.app/prestasi.html">
+  <title data-i18n="keb.title">Kebijakan Privasi — MTs Negeri 1 Kota Semarang</title>
+  <meta name="description" data-i18n-meta="keb.desc" content="Kebijakan privasi dan ketentuan penggunaan website resmi MTs Negeri 1 Kota Semarang.">
+  <link rel="canonical" href="https://mts-n-1-kota-semarang.vercel.app/kebijakan.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MTs Negeri 1 Kota Semarang">
   <meta property="og:locale" content="id_ID">
-  <meta property="og:url" content="https://mts-n-1-kota-semarang.vercel.app/prestasi.html">
-  <meta property="og:title" content="Prestasi — MTs Negeri 1 Kota Semarang">
-  <meta property="og:description" data-i18n-meta="pst.desc" content="Prestasi MTs Negeri 1 Kota Semarang: Silver Medal AISEEF 2021, KSM 2023, LCTP Pramuka, dan lainnya.">
-  <meta property="og:image" content="https://mts-n-1-kota-semarang.vercel.app/assets/photos/riset-internasional.jpg">
+  <meta property="og:url" content="https://mts-n-1-kota-semarang.vercel.app/kebijakan.html">
+  <meta property="og:title" content="Kebijakan Privasi — MTs Negeri 1 Kota Semarang">
+  <meta property="og:description" data-i18n-meta="keb.desc" content="Kebijakan privasi dan ketentuan penggunaan website resmi MTs Negeri 1 Kota Semarang.">
+  <meta property="og:image" content="https://mts-n-1-kota-semarang.vercel.app/assets/photos/gedung-masjid.jpg">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="720">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Prestasi — MTs Negeri 1 Kota Semarang">
-  <meta name="twitter:description" data-i18n-meta="pst.desc" content="Prestasi MTs Negeri 1 Kota Semarang: Silver Medal AISEEF 2021, KSM 2023, LCTP Pramuka, dan lainnya.">
-  <meta name="twitter:image" content="https://mts-n-1-kota-semarang.vercel.app/assets/photos/riset-internasional.jpg">
+  <meta name="twitter:title" content="Kebijakan Privasi — MTs Negeri 1 Kota Semarang">
+  <meta name="twitter:description" data-i18n-meta="keb.desc" content="Kebijakan privasi dan ketentuan penggunaan website resmi MTs Negeri 1 Kota Semarang.">
+  <meta name="twitter:image" content="https://mts-n-1-kota-semarang.vercel.app/assets/photos/gedung-masjid.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <!-- ===== Navigasi ===== -->
   <header class="site-header">
@@ -40,7 +41,7 @@
         <ul>
           <li><a href="index.html" data-i18n="nav.home">Beranda</a></li>
           <li class="has-dropdown">
-            <a href="profil.html" data-i18n="nav.profil">Profil</a>
+            <a href="profil.html" class="active" data-i18n="nav.profil">Profil</a>
             <div class="dropdown">
               <a href="profil.html#sejarah" data-i18n="nav.sejarah">Sejarah</a>
               <a href="profil.html#visi" data-i18n="nav.visi">Visi &amp; Misi</a>
@@ -56,7 +57,7 @@
               <a href="program.html#ekskul" data-i18n="nav.ekskul">Ekstrakurikuler</a>
             </div>
           </li>
-          <li><a href="prestasi.html" class="active" data-i18n="nav.prestasi">Prestasi</a></li>
+          <li><a href="prestasi.html" data-i18n="nav.prestasi">Prestasi</a></li>
           <li><a href="fasilitas.html" data-i18n="nav.fasilitas">Fasilitas</a></li>
           <li><a href="ppdb.html" data-i18n="nav.ppdb">PPDB</a></li>
           <li><a href="kontak.html" data-i18n="nav.kontak">Kontak</a></li>
@@ -74,118 +75,44 @@
     </div>
   </header>
 
-  <!-- ===== Overlay pencarian ===== -->
-  <div class="search-overlay" id="searchOverlay" role="dialog" data-i18n-aria="search.overlayAria" aria-label="Pencarian situs">
-    <button class="search-close" id="searchClose" data-i18n-aria="search.closeAria" aria-label="Tutup pencarian">✕</button>
-    <form role="search">
-      <input type="search" id="searchInput" data-i18n-ph="search.ph" placeholder="Cari: PPDB, tahfidz, boarding, prestasi…" autocomplete="off" data-i18n-aria="search.inputAria" aria-label="Kata kunci pencarian">
-      <button type="submit" data-i18n="search.btn">Cari</button>
-    </form>
-    <div class="search-results" id="searchResults"></div>
-  </div>
-
   <!-- ===== Page Hero ===== -->
   <section class="page-hero" id="main">
     <div class="container">
-      <p class="breadcrumb"><a href="index.html" data-i18n="nav.home">Beranda</a> <span data-i18n="pst.bc">/ Prestasi</span></p>
-      <h1 data-i18n="pst.h1">Prestasi Madrasah</h1>
+      <p class="breadcrumb"><a href="index.html" data-i18n="nav.home">Beranda</a> <span data-i18n="keb.bc">/ Kebijakan Privasi</span></p>
+      <h1 data-i18n="keb.h1">Kebijakan Privasi &amp; Ketentuan</h1>
     </div>
   </section>
 
-  <!-- ===== Pendahuluan ===== -->
   <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-eyebrow" data-i18n="pst.ey">Kebanggaan Kami</span>
-        <h2 data-i18n="pst.h2">Prestasi dari Kota hingga Internasional</h2>
-        <p data-i18n="pst.p">
-          MTs Negeri 1 Kota Semarang konsisten menorehkan prestasi — baik akademik maupun
-          non-akademik — yang mengharumkan nama Kota Semarang di tingkat nasional dan internasional.
-        </p>
+    <div class="container keb" style="max-width:860px;">
+      <div class="note reveal" style="margin:0 0 28px;">
+        <strong data-i18n="keb.note">Catatan:</strong>
+        <span data-i18n="keb.notep">Dokumen ini disusun untuk menjelaskan pengelolaan data dan ketentuan penggunaan website resmi MTs Negeri 1 Kota Semarang. Perubahan kebijakan akan diumumkan pada laman ini.</span>
       </div>
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <div class="tl-year">2024</div>
-            <h3 data-i18n="pst.t1">Kunjungan Belajar Teknik Audio &amp; Video</h3>
-            <p data-i18n="pst.d1">Peserta didik belajar langsung teknik audio dan video di TVRI Stasiun Jawa Tengah (Desember 2024).</p>
-            <p data-i18n="pst.s1" style="font-size:0.8rem;color:#6b7280;margin-top:6px;">Sumber: tvri.go.id</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <div class="tl-year">2023</div>
-            <h3 data-i18n="pst.t2">Komitmen Madrasah Ramah Anak</h3>
-            <p data-i18n="pst.d2">MTsN 1 Kota Semarang berkomitmen mewujudkan madrasah ramah anak yang aman dan nyaman bagi seluruh peserta didik.</p>
-            <p data-i18n="pst.s2" style="font-size:0.8rem;color:#6b7280;margin-top:6px;">Sumber: Suara Merdeka, Maret 2023</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <div class="tl-year">2023</div>
-            <h3 data-i18n="pst.t3">Tiga Siswa Maju KSM Tingkat Provinsi</h3>
-            <p data-i18n="pst.d3">Tiga peserta didik mewakili Kota Semarang pada Kompetisi Sains Madrasah (KSM) tingkat provinsi tahun 2023.</p>
-            <p data-i18n="pst.s3" style="font-size:0.8rem;color:#6b7280;margin-top:6px;">Sumber: Kemenag Jateng, Juli 2023</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <div class="tl-year">2022</div>
-            <h3 data-i18n="pst.t4">Juara 1 LCTP Pramuka Tingkat Kwartir</h3>
-            <p data-i18n="pst.d4">Tim pramuka meraih juara 1 Lomba Cepat Tepat Pramuka (LCTP) tingkat kwartir dan siap maju ke tingkat kwarcab.</p>
-            <p data-i18n="pst.s4" style="font-size:0.8rem;color:#6b7280;margin-top:6px;">Sumber: Kemenag Jateng, Juni 2022</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <div class="tl-year">2022</div>
-            <h3 data-i18n="pst.t5">Juara Bulutangkis PBSI Jakarta Selatan</h3>
-            <p data-i18n="pst.d5">Siswa MTs Negeri 1 Kota Semarang menjadi juara bulutangkis pada kejuaraan PBSI Jakarta Selatan.</p>
-            <p data-i18n="pst.s5" style="font-size:0.8rem;color:#6b7280;margin-top:6px;">Sumber: Kemenag Jateng, Juli 2022</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <div class="tl-year">2022</div>
-            <h3 data-i18n="pst.t6">Lulusan Diterima di MAN Bergengsi</h3>
-            <p data-i18n="pst.d6">Peserta didik diterima di madrasah unggulan nasional berbasis asrama: MAN Insan Cendekia (IC), MAN Program Keagamaan (PK), dan MAKN melalui SNPDB.</p>
-            <p data-i18n="pst.s6" style="font-size:0.8rem;color:#6b7280;margin-top:6px;">Sumber: Kemenag Jateng, 2022</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <div class="tl-year">2021</div>
-            <h3 data-i18n="pst.t7"> Silver Medal AISEEF 2021</h3>
-            <p data-i18n="pst.d7">Tim riset MTs Negeri 1 Kota Semarang meraih medali perak pada ajang internasional AISEEF 2021, bersaing dengan 19 negara di dunia.</p>
-            <p data-i18n="pst.s7" style="font-size:0.8rem;color:#6b7280;margin-top:6px;">Sumber: Kemenag Jateng, Februari 2021</p>
-          </div>
-        </div>
+      <div class="keb-item reveal">
+        <h2 data-i18n="keb.1h">1. Privasi &amp; Data Pribadi</h2>
+        <p data-i18n="keb.1p">Website ini menggunakan data pribadi yang Anda berikan secara sukarela (nama, email, telepon) melalui formulir kontak, pendaftaran, atau newsletter. Data hanya digunakan untuk keperluan komunikasi, informasi PPDB, dan layanan madrasah — tidak pernah dijual atau dibagikan kepada pihak ketiga tanpa persetujuan.</p>
       </div>
-
-    </div>
-  </section>
-
-  <!-- ===== CTA ===== -->
-  <section class="section" style="padding-top:0;">
-    <div class="container">
-      <div class="cta-banner">
-        <div>
-          <h2 data-i18n="pst.cta.h">Ingin Anak Anda Berprestasi?</h2>
-          <p data-i18n="pst.cta.p">Bergabunglah dengan madrasah yang telah terbukti mencetak juara di tingkat nasional dan internasional.</p>
-        </div>
-        <a href="ppdb.html" class="btn btn-gold" data-i18n="pst.cta.btn">Info PPDB →</a>
+      <div class="keb-item reveal">
+        <h2 data-i18n="keb.2h">2. Cookie &amp; Penyimpanan Lokal</h2>
+        <p data-i18n="keb.2p">Situs ini menggunakan penyimpanan lokal pada perangkat Anda untuk preferensi pengguna (tema terang/gelap, bahasa, dan kalender akademik). Kami tidak menggunakan cookie pelacakan pihak ketiga.</p>
+      </div>
+      <div class="keb-item reveal">
+        <h2 data-i18n="keb.3h">3. Hak Cipta &amp; Konten</h2>
+        <p data-i18n="keb.3p">Seluruh konten — teks, foto, logo, video, dan mars madrasah — adalah milik MTs Negeri 1 Kota Semarang dan Kementerian Agama RI. Penggunaan ulang untuk publikasi wajib mencantumkan sumber.</p>
+      </div>
+      <div class="keb-item reveal">
+        <h2 data-i18n="keb.4h">4. Penafian (Disclaimer)</h2>
+        <p data-i18n="keb.4p">Informasi di situs ini disusun sebaik mungkin dan diperbarui berkala. Jadwal, kuota, dan kebijakan PPDB mengikuti pengumuman resmi panitia madrasah serta ketetapan Kementerian Agama RI.</p>
+      </div>
+      <div class="keb-item reveal">
+        <h2 data-i18n="keb.5h">5. Kontak</h2>
+        <p data-i18n="keb.5p">Pertanyaan seputar kebijakan ini dapat disampaikan melalui email humas@mtsn1semarang.sch.id atau halaman kontak resmi madrasah.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== Footer ===== -->
+<!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">

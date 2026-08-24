@@ -6,10 +6,65 @@
   <title>Beranda — MTs Negeri 1 Kota Semarang</title>
   <meta name="description" content="Website resmi MTs Negeri 1 Kota Semarang — Madrasah Tsanawiyah Negeri di Tembalang, Kota Semarang. Program unggulan Tahfidz, Riset, dan Sains serta Boarding School Idzatun Nasyi'in.">
   <meta name="theme-color" content="#064e2e">
+  <link rel="preload" as="image" href="assets/photos/gedung-masjid.jpg" fetchpriority="high">
+  <link rel="canonical" href="https://mts-n-1-kota-semarang.vercel.app/">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="MTs Negeri 1 Kota Semarang">
+  <meta property="og:url" content="https://mts-n-1-kota-semarang.vercel.app/">
   <meta property="og:title" content="MTs Negeri 1 Kota Semarang — Madrasah Hebat, Bermartabat">
   <meta property="og:description" content="Madrasah Tsanawiyah Negeri di Kota Semarang dengan program unggulan Tahfidz, Riset, dan Sains serta Boarding School Idzatun Nasyi'in.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mts-n-1-kota-semarang.vercel.app/assets/photos/gedung-masjid.jpg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "School",
+    "name": "MTs Negeri 1 Kota Semarang",
+    "alternateName": "MTsN 1 Kota Semarang",
+    "url": "https://mts-n-1-kota-semarang.vercel.app/",
+    "description": "Madrasah Tsanawiyah Negeri di Kota Semarang dengan program unggulan Tahfidz, Riset, dan Sains serta Boarding School Idzatun Nasyi'in.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo",
+      "addressLocality": "Kec. Tembalang",
+      "addressRegion": "Kota Semarang, Jawa Tengah",
+      "postalCode": "50272",
+      "addressCountry": "ID"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": -7.0334, "longitude": 110.4677 },
+    "sameAs": [ "https://www.youtube.com/@mtsnegeri1kotasemarang356" ],
+    "award": "Silver Medal AISEEF"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://mts-n-1-kota-semarang.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "PPDB", "item": "https://mts-n-1-kota-semarang.vercel.app/ppdb.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Bagaimana cara mendaftar PPDB?", "acceptedAnswer": { "@type": "Answer", "text": "Pendaftaran melalui jalur resmi yang diumumkan panitia PPDB pada laman ini. Detail jadwal, kuota, dan berkas menyusul dari pihak madrasah." } },
+      { "@type": "Question", "name": "Apakah tersedia program tahfidz untuk semua siswa?", "acceptedAnswer": { "@type": "Answer", "text": "Ya. Tahfidzul Qur'an merupakan salah satu program unggulan yang dibina terstruktur, dilengkapi kajian kitab kuning dan pendampingan pengasuh." } },
+      { "@type": "Question", "name": "Bagaimana sistem Boarding School Idzatun Nasyi'in?", "acceptedAnswer": { "@type": "Answer", "text": "Asrama dikelola mandiri oleh madrasah dengan pendidikan ala pesantren — hafalan Al-Qur'an, kajian kitab, dan pembinaan karakter setiap hari. Kapasitas 100 santri putra dan 100 santriwati." } },
+      { "@type": "Question", "name": "Apa saja program unggulan selain tahfidz?", "acceptedAnswer": { "@type": "Answer", "text": "Riset dan Sains. Peserta didik dibina untuk kompetisi mulai tingkat kota hingga internasional, termasuk KSM dan AISEEF." } }
+    ]
+  }
+  </script>
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="apple-touch-icon" href="assets/logo.svg">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
@@ -17,27 +72,43 @@
 </head>
 <body>
 
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <img src="assets/logo.svg" alt="">
+      <span class="preloader-ring"></span>
+    </div>
+    <span class="preloader-text">MTs Negeri 1 Kota Semarang</span>
+  </div>
+
   <a class="skip-link" href="#main">Langsung ke konten</a>
 
   <!-- ===== Topbar: pengumuman berjalan & kontak ===== -->
   <div class="topbar">
     <div class="container topbar-wrap">
       <div class="topbar-marquee">
-        <span class="marquee-label">📢 Pengumuman</span>
+        <span class="marquee-label">Pengumuman</span>
         <div class="marquee-wrap">
           <div class="marquee-track">
-            <span>🎓 Selamat datang di website resmi MTs Negeri 1 Kota Semarang — Madrasah Hebat, Bermartabat.</span>
-            <span>📝 PPDB Tahun Pelajaran 2025/2026 segera dibuka. Informasi resmi menunggu pengumuman panitia.</span>
-            <span>🏆 Selamat atas prestasi siswa-siswi MTs Negeri 1 Kota Semarang di berbagai ajang kompetisi.</span>
-            <span>🎓 Selamat datang di website resmi MTs Negeri 1 Kota Semarang — Madrasah Hebat, Bermartabat.</span>
-            <span>📝 PPDB Tahun Pelajaran 2025/2026 segera dibuka. Informasi resmi menunggu pengumuman panitia.</span>
-            <span>🏆 Selamat atas prestasi siswa-siswi MTs Negeri 1 Kota Semarang di berbagai ajang kompetisi.</span>
+            <span>Selamat datang di website resmi MTs Negeri 1 Kota Semarang — Madrasah Hebat, Bermartabat.</span>
+            <span>PPDB Tahun Pelajaran 2025/2026 segera dibuka. Informasi resmi menunggu pengumuman panitia.</span>
+            <span>Selamat atas prestasi siswa-siswi MTs Negeri 1 Kota Semarang di berbagai ajang kompetisi.</span>
+            <span>Selamat datang di website resmi MTs Negeri 1 Kota Semarang — Madrasah Hebat, Bermartabat.</span>
+            <span>PPDB Tahun Pelajaran 2025/2026 segera dibuka. Informasi resmi menunggu pengumuman panitia.</span>
+            <span>Selamat atas prestasi siswa-siswi MTs Negeri 1 Kota Semarang di berbagai ajang kompetisi.</span>
           </div>
         </div>
       </div>
       <div class="topbar-contact">
-        <span>🕐 Senin–Jumat, 07.00–16.00 WIB</span>
-        <a href="kontak.html">✉️ humas@mtsn1semarang.sch.id</a>
+        <nav class="topbar-quick" aria-label="Akses cepat">
+          <a href="program.html#ekskul" data-i18n="topbar.siswa">Siswa</a>
+          <a href="ppdb.html" data-i18n="topbar.ortu">Orang Tua</a>
+          <a href="prestasi.html" data-i18n="topbar.alumni">Alumni</a>
+        </nav>
+        <span class="topbar-sep" aria-hidden="true"></span>
+        <span data-i18n="topbar.hours">Senin–Jumat, 07.00–16.00 WIB</span>
+        <a href="kontak.html">humas@mtsn1semarang.sch.id</a>
       </div>
     </div>
   </div>
@@ -55,21 +126,48 @@
       <nav class="main-nav" aria-label="Navigasi utama">
         <ul>
           <li><a href="index.html" class="active" data-i18n="nav.home">Beranda</a></li>
-          <li class="has-dropdown">
+          <li class="has-dropdown mega-item">
             <a href="profil.html" data-i18n="nav.profil">Profil</a>
-            <div class="dropdown">
-              <a href="profil.html#sejarah" data-i18n="nav.sejarah">Sejarah</a>
-              <a href="profil.html#visi" data-i18n="nav.visi">Visi &amp; Misi</a>
-              <a href="profil.html#identitas" data-i18n="nav.identitas">Identitas</a>
-              <a href="profil.html#struktur" data-i18n="nav.struktur">Struktur</a>
+            <div class="dropdown mega">
+              <div class="mega-head"><span data-i18n="nav.profil">Profil Madrasah</span><small>Kenali lebih dekat</small></div>
+              <div class="mega-grid">
+                <a class="mega-link" href="profil.html#sejarah">
+                  <span class="mega-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+                  <span><b data-i18n="nav.sejarah">Sejarah</b><small>Perjalanan &amp; latar belakang</small></span>
+                </a>
+                <a class="mega-link" href="profil.html#visi">
+                  <span class="mega-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+                  <span><b data-i18n="nav.visi">Visi &amp; Misi</b><small>Arah &amp; tujuan pendidikan</small></span>
+                </a>
+                <a class="mega-link" href="profil.html#identitas">
+                  <span class="mega-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+                  <span><b data-i18n="nav.identitas">Identitas</b><small>Profil resmi madrasah</small></span>
+                </a>
+                <a class="mega-link" href="profil.html#struktur">
+                  <span class="mega-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                  <span><b data-i18n="nav.struktur">Struktur</b><small>Organisasi &amp; pimpinan</small></span>
+                </a>
+              </div>
             </div>
           </li>
-          <li class="has-dropdown">
+          <li class="has-dropdown mega-item">
             <a href="program.html" data-i18n="nav.program">Program</a>
-            <div class="dropdown">
-              <a href="program.html#boarding" data-i18n="nav.board">Boarding School</a>
-              <a href="program.html#unggulan" data-i18n="nav.unggulan">Tahfidz, Riset &amp; Sains</a>
-              <a href="program.html#ekskul" data-i18n="nav.ekskul">Ekstrakurikuler</a>
+            <div class="dropdown mega">
+              <div class="mega-head"><span data-i18n="nav.program">Program Madrasah</span><small>Pilihan unggulan</small></div>
+              <div class="mega-grid cols-3">
+                <a class="mega-link" href="program.html#boarding">
+                  <span class="mega-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/></svg></span>
+                  <span><b data-i18n="nav.board">Boarding School</b><small>Asrama Idzatun Nasyi'in</small></span>
+                </a>
+                <a class="mega-link" href="program.html#unggulan">
+                  <span class="mega-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg></span>
+                  <span><b data-i18n="nav.unggulan">Tahfidz, Riset &amp; Sains</b><small>Program unggulan</small></span>
+                </a>
+                <a class="mega-link" href="program.html#ekskul">
+                  <span class="mega-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M6.2 5.2l2.1 2.1M17.8 5.2l-2.1 2.1M4 13h3M17 13h3M6.2 20.8l2.1-2.1M17.8 20.8l-2.1-2.1M12 19v-2"/></svg></span>
+                  <span><b data-i18n="nav.ekskul">Ekstrakurikuler</b><small>Wadah pengembangan bakat</small></span>
+                </a>
+              </div>
             </div>
           </li>
           <li><a href="prestasi.html" data-i18n="nav.prestasi">Prestasi</a></li>
@@ -112,7 +210,7 @@
       <!-- Slide 1 -->
       <div class="hero-inner slide-panel active">
         <p class="hero-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-        <h1 data-i18n="hero.t1">Madrasah Hebat,<br>Bermartabat 🕌</h1>
+        <h1 data-i18n="hero.t1">Madrasah Hebat,<br>Bermartabat</h1>
         <p class="lead" data-i18n="hero.s1">
           <strong>MTs Negeri 1 Kota Semarang</strong> — madrasah tsanawiyah negeri di bawah
           Kementerian Agama RI yang berkomitmen mencetak generasi Qur'ani, cerdas, dan berprestasi
@@ -120,10 +218,10 @@
           <strong>Boarding School Idzatun Nasyi'in</strong>.
         </p>
         <div class="hero-chips">
-          <span class="hero-chip">✔ Akreditasi A</span>
-          <span class="hero-chip">✔ Madrasah Negeri (Kemenag RI)</span>
-          <span class="hero-chip">✔ Piloting Kurikulum Merdeka</span>
-          <span class="hero-chip">✔ Boarding School</span>
+          <span class="hero-chip" data-i18n="hero.c1">Akreditasi A</span>
+          <span class="hero-chip" data-i18n="hero.c2">Madrasah Negeri (Kemenag RI)</span>
+          <span class="hero-chip" data-i18n="hero.c3">Piloting Kurikulum Merdeka</span>
+          <span class="hero-chip" data-i18n="hero.c4">Boarding School</span>
         </div>
         <div class="hero-actions">
           <a href="profil.html" class="btn btn-gold" data-i18n="hero.a1">Profil Madrasah</a>
@@ -140,10 +238,10 @@
           hingga internasional.
         </p>
         <div class="hero-chips">
-          <span class="hero-chip">📖 Tahfidzul Qur'an</span>
-          <span class="hero-chip">🔬 Riset &amp; Penelitian</span>
-          <span class="hero-chip">🧪 Olimpiade Sains</span>
-          <span class="hero-chip">🏅 AISEEF &amp; KSM</span>
+          <span class="hero-chip" data-i18n="hero.c5">Tahfidzul Qur'an</span>
+          <span class="hero-chip" data-i18n="hero.c6">Riset &amp; Penelitian</span>
+          <span class="hero-chip" data-i18n="hero.c7">Olimpiade Sains</span>
+          <span class="hero-chip" data-i18n="hero.c8">AISEEF &amp; KSM</span>
         </div>
         <div class="hero-actions">
           <a href="program.html#unggulan" class="btn btn-gold" data-i18n="hero.a3">Program Unggulan</a>
@@ -159,9 +257,9 @@
           karakter setiap hari — kapasitas 100 santri putra dan 100 santriwati.
         </p>
         <div class="hero-chips">
-          <span class="hero-chip">🕌 Pendidikan Pesantren</span>
-          <span class="hero-chip">📖 Kajian Kitab Kuning</span>
-          <span class="hero-chip">👥 100 Putra + 100 Putri</span>
+          <span class="hero-chip" data-i18n="hero.c9">Pendidikan Pesantren</span>
+          <span class="hero-chip" data-i18n="hero.c10">Kajian Kitab Kuning</span>
+          <span class="hero-chip" data-i18n="hero.c11">100 Putra + 100 Putri</span>
         </div>
         <div class="hero-actions">
           <a href="program.html#boarding" class="btn btn-gold" data-i18n="hero.a4">Tentang Boarding</a>
@@ -174,6 +272,33 @@
     <div class="slider-arrow next" aria-label="Slide berikutnya">›</div>
     <div class="slider-dots" role="tablist" aria-label="Pilih slide"></div>
     <div class="slider-progress"><i></i></div>
+
+    <!-- Kartu info cepat admissions (gaya sekolah internasional) -->
+    <aside class="hero-side" aria-label="Informasi pendaftaran">
+      <div class="hero-side-head">
+        <span class="hero-side-badge">● <span data-i18n="hero.note1">Pendaftaran Dibuka</span></span>
+        <b data-i18n="hero.note2">TP 2025/2026</b>
+      </div>
+      <div class="hero-side-facts">
+        <div><b>A</b><span data-i18n="hero.qt1">Akreditasi</span></div>
+        <div><b>352+</b><span data-i18n="hero.qt2">Kuota Siswa</span></div>
+        <div><b>19</b><span data-i18n="hero.qt3">Negara AISEEF</span></div>
+      </div>
+      <div class="hero-side-cta">
+        <a href="ppdb.html" class="btn btn-gold" data-i18n="hero.apply">Daftar Sekarang →</a>
+        <a href="kontak.html" class="btn btn-outline hero-side-ghost" data-i18n="hero.visit">Kunjungi Kampus</a>
+      </div>
+    </aside>
+
+    <!-- Akses cepat: film profil & indikator scroll -->
+    <button class="hero-film" id="heroFilm" type="button" aria-label="Putar film profil madrasah" data-i18n-aria="hero.filmAria">
+      <span class="hero-film-ico">▶</span>
+      <span data-i18n="hero.film">Film Profil Madrasah</span>
+    </button>
+    <button class="hero-scroll" type="button" aria-label="Jelajahi halaman" data-i18n-aria="hero.scrollAria">
+      <span data-i18n="hero.scroll">Jelajahi</span>
+      <i></i>
+    </button>
   </section>
 
   <!-- ===== Statistik ===== -->
@@ -202,7 +327,99 @@
         </div>
         <div class="stat-item">
           <div class="stat-num">A</div>
-          <div class="stat-label" data-i18n="stat.6">Akreditasi <small style="color:#9ca3af;">(verifikasi)</small></div>
+          <div class="stat-label" data-i18n="stat.6">Akreditasi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pengakuan Global (marquee) ===== -->
+  <div class="global-strip" aria-hidden="true">
+    <div class="global-track">
+      <span>🌍 <b>19 Negara</b> — Ajang Riset Internasional AISEEF</span>
+      <span>🇲🇾 <b>MIICA Malaysia</b> — 13C Challenge 2025</span>
+      <span>🏆 <b>Kompetisi Sains Madrasah (KSM)</b> — Provinsi &amp; Nasional</span>
+      <span>📜 <b>Akreditasi A</b> — BAN-S/M</span>
+      <span>🕌 <b>Kementerian Agama RI</b> — Madrasah Negeri</span>
+      <span>📚 <b>Piloting Kurikulum Merdeka</b> — Sejak 2022/2023</span>
+      <span>🌍 <b>19 Negara</b> — Ajang Riset Internasional AISEEF</span>
+      <span>🇲🇾 <b>MIICA Malaysia</b> — 13C Challenge 2025</span>
+      <span>🏆 <b>Kompetisi Sains Madrasah (KSM)</b> — Provinsi &amp; Nasional</span>
+      <span>📜 <b>Akreditasi A</b> — BAN-S/M</span>
+      <span>🕌 <b>Kementerian Agama RI</b> — Madrasah Negeri</span>
+      <span>📚 <b>Piloting Kurikulum Merdeka</b> — Sejak 2022/2023</span>
+    </div>
+  </div>
+
+  <!-- ===== Trust strip: Akreditasi & Pengakuan ===== -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-inner reveal">
+        <span class="trust-label" data-i18n="trust.label">Terakreditasi &amp; Diakui</span>
+        <div class="trust-items">
+          <div class="trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div><b data-i18n="trust.1">Akreditasi A</b><span>Peringkat nasional BAN-S/M</span></div>
+          </div>
+          <div class="trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1M9 12h1M14 9h1M14 12h1M9 16h6"/></svg>
+            <div><b data-i18n="trust.2">Madrasah Negeri</b><span>Di bawah Kementerian Agama RI</span></div>
+          </div>
+          <div class="trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <div><b data-i18n="trust.3">Kurikulum Merdeka</b><span>Piloting IKM sejak 2022/2023</span></div>
+          </div>
+          <div class="trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><b>AISEEF</b><span>Berkiprah di kancah riset internasional</span></div>
+          </div>
+          <div class="trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <div><b data-i18n="trust.5">Boarding School</b><span>Idzatun Nasyi'in — 200 santri</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Mengapa Memilih Kami ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow" data-i18n="why.ey">Keunggulan</span>
+        <h2 data-i18n="why.h">Mengapa Memilih MTs Negeri 1</h2>
+        <p data-i18n="why.p">Alasan keluarga mempercayakan pendidikan putra-putrinya kepada kami.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3 data-i18n="why.1h">Pengakuan Nasional</h3>
+          <p data-i18n="why.1p">Akreditasi A dan madrasah negeri yang menjamin mutu pendidikan secara resmi.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.06s;">
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <h3 data-i18n="why.2h">Pendidik Berdedikasi</h3>
+          <p data-i18n="why.2p">Guru profesional dan berkomitmen mendampingi setiap peserta didik secara personal.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.12s;">
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+          <h3 data-i18n="why.3h">Pondasi Qur'ani</h3>
+          <p data-i18n="why.3p">Karakter Islami dan hafalan Al-Qur'an yang dikembangkan setiap hari dalam keseharian.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.18s;">
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg></span>
+          <h3 data-i18n="why.4h">Keterampilan Abad 21</h3>
+          <p data-i18n="why.4p">Riset, sains, dan literasi digital yang membekali siswa untuk masa depan.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.24s;">
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          <h3 data-i18n="why.5h">Fasilitas Modern</h3>
+          <p data-i18n="why.5p">Sarana belajar, laboratorium, masjid, dan asrama yang nyaman serta aman.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.3s;">
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8a5.5 5.5 0 0 1 9.5-3.5A5.5 5.5 0 0 1 21.5 13c-2.5 3.65-9.5 8-9.5 8z"/></svg></span>
+          <h3 data-i18n="why.6h">Islami &amp; Inklusif</h3>
+          <p data-i18n="why.6p">Lingkungan aman dan penuh kasih yang menghargai keunikan setiap anak.</p>
         </div>
       </div>
     </div>
@@ -212,56 +429,54 @@
   <section class="section">
     <div class="container sambutan">
       <div class="reveal">
-        <span class="section-eyebrow">Sambutan</span>
+        <span class="section-eyebrow" data-i18n="samb.ey">Sambutan</span>
         <h2 data-i18n="samb.h">Sambutan Kepala Madrasah</h2>
         <p class="jabatan" data-i18n="samb.j">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
-        <p>
+        <p data-i18n="samb.p1">
           Selamat datang di website resmi MTs Negeri 1 Kota Semarang. Kami bersyukur ke hadirat
           Allah SWT atas segala nikmat dan karunia-Nya, sehingga website ini dapat hadir sebagai
           media informasi, publikasi, dan layanan bagi seluruh warga madrasah, orang tua, serta
           masyarakat luas.
         </p>
-        <p>
+        <p data-i18n="samb.p2">
           MTs Negeri 1 Kota Semarang terus berbenah dan berkomitmen menjadi madrasah yang hebat
           dan bermartabat. Melalui program unggulan tahfidz, riset, dan sains, kami mendidik
           peserta didik dengan pendidikan ala pesantren, menanamkan nilai-nilai keislaman,
           serta membekali keterampilan abad 21 agar siap menghadapi tantangan zaman.
         </p>
-        <p>
+        <p data-i18n="samb.p3">
           Kami mengucapkan terima kasih atas dukungan dan kepercayaan masyarakat. Mari bersama
           wujudkan generasi Qur'ani yang cerdas, berakhlak mulia, dan berprestasi.
         </p>
         <p class="ttd">
-          <strong>Kepala Madrasah</strong><br>
-          <em>H. Kasturi, S.Ag., M.Pd.</em><br>
-          <small>(nama dapat diperbarui)</small>
+          <strong data-i18n="samb.kepala">Kepala Madrasah</strong><br>
+          <em>H. Kasturi, S.Ag., M.Pd.</em>
         </p>
 
         <div class="sambutan-info">
           <div class="info-mini">
-            <b>📍 Alamat</b>
-            <span>Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Kec. Tembalang, Kota Semarang 50272</span>
+            <span class="mini-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><b data-i18n="samb.alamat">Alamat</b><span data-i18n="samb.alamatv">Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Kec. Tembalang, Kota Semarang 50272</span></div>
           </div>
           <div class="info-mini">
-            <b>🕐 Jam Layanan</b>
-            <span>Senin–Jumat, 07.00–16.00 WIB (kantor &amp; pelayanan administrasi)</span>
+            <span class="mini-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <div><b data-i18n="samb.jam">Jam Layanan</b><span data-i18n="samb.jamv">Senin–Jumat, 07.00–16.00 WIB (kantor &amp; pelayanan administrasi)</span></div>
           </div>
           <div class="info-mini">
-            <b>📞 Telepon</b>
-            <span>(024) 000-0000 <small style="color:#9ca3af;">(perlu diperbarui)</small> — <a href="kontak.html">lihat kontak</a></span>
+            <span class="mini-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+            <div><b data-i18n="samb.telp">Telepon</b><span data-i18n="samb.telpv">(024) 6716521 — <a href="kontak.html">lihat kontak</a></span></div>
           </div>
           <div class="info-mini">
-            <b>✉️ Email</b>
-            <span>humas@mtsn1semarang.sch.id <small style="color:#9ca3af;">(perlu diperbarui)</small></span>
+            <span class="mini-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <div><b data-i18n="samb.email">Email</b><span>humas@mtsn1semarang.sch.id</span></div>
           </div>
         </div>
       </div>
       <div class="sambutan-foto reveal" style="transition-delay:.15s;">
-        <img src="assets/photos/kepala-madrasah.jpg" alt="H. Kasturi, S.Ag., M.Pd. — Kepala MTs Negeri 1 Kota Semarang">
-        <div class="cap">H. Kasturi, S.Ag., M.Pd.<br>Kepala Madrasah (dokumentasi resmi)</div>
-        <div class="note" style="position:static;margin:14px 0 0;background:#fffbeb;border:1px solid #fde68a;color:#92400e;">
-          <strong>Catatan:</strong> Foto diambil dari cuplikan video resmi madrasah (video PPDB). Mohon diganti dengan foto resmi bila tersedia.
-          Mohon diganti dengan foto resmi Kepala Madrasah bila tersedia.
+        <div class="sambutan-quote">
+          <p data-i18n="samb.quote">Bersama, kita wujudkan generasi Qur'ani yang cerdas, berakhlak mulia, dan berprestasi.</p>
+          <b>— <span data-i18n="samb.kepala">Kepala Madrasah</span></b>
+          <small>H. Kasturi, S.Ag., M.Pd.</small>
         </div>
       </div>
     </div>
@@ -271,51 +486,47 @@
   <section class="section section-alt">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-eyebrow">Informasi Resmi</span>
+        <span class="section-eyebrow" data-i18n="png.ey">Informasi Resmi</span>
         <h2 data-i18n="png.h">Pengumuman Madrasah</h2>
-        <p>Informasi dan pemberitahuan terbaru untuk warga madrasah, orang tua, dan masyarakat.</p>
+        <p data-i18n="png.p">Informasi dan pemberitahuan terbaru untuk warga madrasah, orang tua, dan masyarakat.</p>
       </div>
       <div class="pengumuman-list reveal" style="transition-delay:.1s;">
         <a href="ppdb.html" class="pengumuman-item">
           <div class="pengumuman-date"><b>2025</b><small>TP baru</small></div>
           <div class="pengumuman-body">
-            <span class="tag-kategori">PPDB</span>
-            <h4>PPDB Tahun Pelajaran 2025/2026 Segera Dibuka</h4>
-            <p>Informasi jadwal, kuota, dan jalur pendaftaran akan diumumkan panitia PPDB madrasah. Mohon pantau terus laman ini.</p>
+            <span class="tag-kategori" data-i18n="tag.ppdb">PPDB</span>
+            <h4 data-i18n="png.1t">PPDB Tahun Pelajaran 2025/2026 Segera Dibuka</h4>
+            <p data-i18n="png.1d">Informasi jadwal, kuota, dan jalur pendaftaran akan diumumkan panitia PPDB madrasah. Mohon pantau terus laman ini.</p>
           </div>
           <span class="pengumuman-arrow">→</span>
         </a>
         <a href="program.html" class="pengumuman-item">
           <div class="pengumuman-date"><b>2025</b><small>Boarding</small></div>
           <div class="pengumuman-body">
-            <span class="tag-kategori">Boarding School</span>
-            <h4>Penerimaan Santri Baru "Idzatun Nasyi'in"</h4>
-            <p>Pendaftaran santri baru boarding school dibuka dengan kapasitas 100 santri putra dan 100 santriwati.</p>
+            <span class="tag-kategori" data-i18n="tag.boarding">Boarding School</span>
+            <h4 data-i18n="png.2t">Penerimaan Santri Baru "Idzatun Nasyi'in"</h4>
+            <p data-i18n="png.2d">Pendaftaran santri baru boarding school dibuka dengan kapasitas 100 santri putra dan 100 santriwati.</p>
           </div>
           <span class="pengumuman-arrow">→</span>
         </a>
         <a href="kontak.html" class="pengumuman-item">
           <div class="pengumuman-date"><b>2025</b><small>Akademik</small></div>
           <div class="pengumuman-body">
-            <span class="tag-kategori">Akademik</span>
-            <h4>Pembagian Rapor &amp; Libur Semester Ganjil TP 2024/2025</h4>
-            <p>Pembagian rapor dilaksanakan oleh wali kelas masing-masing; jadwal rinci diumumkan melalui wali kelas.</p>
+            <span class="tag-kategori" data-i18n="tag.akademik">Akademik</span>
+            <h4 data-i18n="png.3t">Pembagian Rapor &amp; Libur Semester Ganjil TP 2024/2025</h4>
+            <p data-i18n="png.3d">Pembagian rapor dilaksanakan oleh wali kelas masing-masing; jadwal rinci diumumkan melalui wali kelas.</p>
           </div>
           <span class="pengumuman-arrow">→</span>
         </a>
         <a href="prestasi.html" class="pengumuman-item">
           <div class="pengumuman-date"><b>2024</b><small>Kegiatan</small></div>
           <div class="pengumuman-body">
-            <span class="tag-kategori">Kegiatan</span>
-            <h4>Kunjungan Belajar Teknik Audio &amp; Video ke TVRI Jateng</h4>
-            <p>Peserta didik mengikuti kunjungan belajar teknik audio dan video ke TVRI Stasiun Jawa Tengah.</p>
+            <span class="tag-kategori" data-i18n="tag.kegiatan">Kegiatan</span>
+            <h4 data-i18n="png.4t">Kunjungan Belajar Teknik Audio &amp; Video ke TVRI Jateng</h4>
+            <p data-i18n="png.4d">Peserta didik mengikuti kunjungan belajar teknik audio dan video ke TVRI Stasiun Jawa Tengah.</p>
           </div>
           <span class="pengumuman-arrow">→</span>
         </a>
-      </div>
-      <div class="note" style="max-width:820px;margin:34px auto 0;">
-        <strong>Catatan:</strong> Jadwal dan tanggal di atas menunggu pengumuman resmi madrasah.
-        Selalu merujuk pada informasi terbaru dari panitia atau staf TU.
       </div>
     </div>
   </section>
@@ -324,9 +535,9 @@
   <section class="section">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-eyebrow">Program Unggulan</span>
+        <span class="section-eyebrow" data-i18n="prg.ey">Program Unggulan</span>
         <h2 data-i18n="prg.h">Tiga Pilar Keunggulan Madrasah</h2>
-        <p>Program unggulan yang menjadi daya tarik dan ciri khas MTs Negeri 1 Kota Semarang.</p>
+        <p data-i18n="prg.p">Program unggulan yang menjadi daya tarik dan ciri khas MTs Negeri 1 Kota Semarang.</p>
       </div>
       <div class="grid-3">
         <div class="card reveal" style="transition-delay:.05s;">
@@ -335,9 +546,9 @@
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
             </svg>
           </div>
-          <span class="tag">Program 1</span>
-          <h3>Tahfidzul Qur'an</h3>
-          <p>Pembinaan hafalan Al-Qur'an dengan metode terstruktur, didampingi pengasuh, serta kajian kitab
+          <span class="tag" data-i18n="prg.tag1">Program 01</span>
+          <h3 data-i18n="prg.1t">Tahfidzul Qur'an</h3>
+          <p data-i18n="prg.1d">Pembinaan hafalan Al-Qur'an dengan metode terstruktur, didampingi pengasuh, serta kajian kitab
             kuning (Mabadiul Fiqhiyah, Hidatul Mustafid, Alala, dan lainnya).</p>
         </div>
         <div class="card reveal" style="transition-delay:.12s;">
@@ -346,9 +557,9 @@
               <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/>
             </svg>
           </div>
-          <span class="tag">Program 2</span>
-          <h3>Riset</h3>
-          <p>Pelatihan penelitian ilmiah dan pendalaman materi sains, dengan bimbingan khusus untuk
+          <span class="tag" data-i18n="prg.tag2">Program 02</span>
+          <h3 data-i18n="prg.2t">Riset</h3>
+          <p data-i18n="prg.2d">Pelatihan penelitian ilmiah dan pendalaman materi sains, dengan bimbingan khusus untuk
             persiapan mengikuti kompetisi tingkat kota, nasional, hingga internasional.</p>
         </div>
         <div class="card reveal" style="transition-delay:.19s;">
@@ -357,24 +568,24 @@
               <path d="M10 2v6.5L4.5 20a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 8.5V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/>
             </svg>
           </div>
-          <span class="tag">Program 3</span>
-          <h3>Sains</h3>
-          <p>Penguatan kompetensi sains melalui pembelajaran aktif, praktikum, dan olimpiade —
+          <span class="tag" data-i18n="prg.tag3">Program 03</span>
+          <h3 data-i18n="prg.3t">Sains</h3>
+          <p data-i18n="prg.3d">Penguatan kompetensi sains melalui pembelajaran aktif, praktikum, dan olimpiade —
             terbukti melalui prestasi di Kompetisi Sains Madrasah (KSM) hingga tingkat provinsi.</p>
         </div>
       </div>
       <div class="grid-3" style="margin-top:26px; gap:18px;">
         <div class="info-mini reveal" style="display:flex; gap:12px; align-items:center; padding:16px 18px;">
-          <span style="font-size:1.7rem; flex-shrink:0;">🕌</span>
-          <div><b>Pendidikan ala Pesantren</b><span>Pembinaan karakter dan nilai keislaman dalam keseharian.</span></div>
+          <span class="mini-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3Z"/><path d="M19 14a7 7 0 0 1-14 0"/><path d="M12 21v-4"/></svg></span>
+          <div><b data-i18n="prg.m1b">Pendidikan ala Pesantren</b><span data-i18n="prg.m1s">Pembinaan karakter dan nilai keislaman dalam keseharian.</span></div>
         </div>
         <div class="info-mini reveal" style="display:flex; gap:12px; align-items:center; padding:16px 18px; transition-delay:.1s;">
-          <span style="font-size:1.7rem; flex-shrink:0;">📘</span>
-          <div><b>Kurikulum Merdeka</b><span>Madrasah piloting Implementasi Kurikulum Merdeka sejak 2022/2023.</span></div>
+          <span class="mini-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+          <div><b data-i18n="prg.m2b">Kurikulum Merdeka</b><span data-i18n="prg.m2s">Madrasah piloting Implementasi Kurikulum Merdeka sejak 2022/2023.</span></div>
         </div>
         <div class="info-mini reveal" style="display:flex; gap:12px; align-items:center; padding:16px 18px; transition-delay:.2s;">
-          <span style="font-size:1.7rem; flex-shrink:0;">🏆</span>
-          <div><b>Berprestasi di Banyak Ajang</b><span>Dari tingkat kota, provinsi, nasional, hingga internasional.</span></div>
+          <span class="mini-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span>
+          <div><b data-i18n="prg.m3b">Berprestasi di Banyak Ajang</b><span data-i18n="prg.m3s">Dari tingkat kota, provinsi, nasional, hingga internasional.</span></div>
         </div>
       </div>
       <div style="text-align:center; margin-top:40px;">
@@ -387,55 +598,67 @@
   <section class="section section-alt">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-eyebrow">Pengembangan Bakat</span>
+        <span class="section-eyebrow" data-i18n="eks.ey">Pengembangan Bakat</span>
         <h2 data-i18n="eks.h">Ekstrakurikuler &amp; Kegiatan Siswa</h2>
-        <p>Wadah pengembangan minat, bakat, dan karakter peserta didik di luar jam pembelajaran.</p>
+        <p data-i18n="eks.p">Wadah pengembangan minat, bakat, dan karakter peserta didik di luar jam pembelajaran.</p>
       </div>
       <div class="ekskul-grid">
         <div class="ekskul-card reveal">
-          <div class="ekskul-icon">⚜️</div>
-          <h4>Pramuka</h4>
-          <p>Gerakan Pramuka Gugus Depan — kepemimpinan, kedisiplinan, dan kecakapan hidup.</p>
+          <div class="ekskul-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></svg>
+          </div>
+          <h4 data-i18n="eks.1t">Pramuka</h4>
+          <p data-i18n="eks.1d">Gerakan Pramuka Gugus Depan — kepemimpinan, kedisiplinan, dan kecakapan hidup.</p>
         </div>
         <div class="ekskul-card reveal" style="transition-delay:.06s;">
-          <div class="ekskul-icon">🚩</div>
-          <h4>Paskibra</h4>
-          <p>Pasukan pengibar bendera — pelatihan baris-berbaris dan kedisiplinan.</p>
+          <div class="ekskul-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v4L12 12l7 5v4H5v-4l7-5-7-5z"/></svg>
+          </div>
+          <h4 data-i18n="eks.2t">Paskibra</h4>
+          <p data-i18n="eks.2d">Pasukan pengibar bendera — pelatihan baris-berbaris dan kedisiplinan.</p>
         </div>
         <div class="ekskul-card reveal" style="transition-delay:.12s;">
-          <div class="ekskul-icon">📖</div>
-          <h4>Tahfidz &amp; Tilawah</h4>
-          <p>Pembinaan hafalan Al-Qur'an, tilawah, dan tahsin untuk santri.</p>
+          <div class="ekskul-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h4 data-i18n="eks.3t">Tahfidz &amp; Tilawah</h4>
+          <p data-i18n="eks.3d">Pembinaan hafalan Al-Qur'an, tilawah, dan tahsin untuk santri.</p>
         </div>
         <div class="ekskul-card reveal" style="transition-delay:.18s;">
-          <div class="ekskul-icon">🥁</div>
-          <h4>Hadroh &amp; Rebana</h4>
-          <p>Seni musik Islami sebagai media dakwah dan syiar madrasah.</p>
+          <div class="ekskul-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6 8 12l6 6"/><path d="M18 2v20"/></svg>
+          </div>
+          <h4 data-i18n="eks.4t">Hadroh &amp; Rebana</h4>
+          <p data-i18n="eks.4d">Seni musik Islami sebagai media dakwah dan syiar madrasah.</p>
         </div>
         <div class="ekskul-card reveal">
-          <div class="ekskul-icon">⚽</div>
-          <h4>Futsal</h4>
-          <p>Pembinaan olahraga futsal putra-putri untuk kompetisi antar madrasah.</p>
+          <div class="ekskul-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 7l1.5 3.5L17 12l-3.5 1.5L12 17l-1.5-3.5L7 12l3.5-1.5z"/></svg>
+          </div>
+          <h4 data-i18n="eks.5t">Futsal</h4>
+          <p data-i18n="eks.5d">Pembinaan olahraga futsal putra-putri untuk kompetisi antar madrasah.</p>
         </div>
         <div class="ekskul-card reveal" style="transition-delay:.06s;">
-          <div class="ekskul-icon">🩺</div>
-          <h4>PMR</h4>
-          <p>Palang Merah Remaja — pertolongan pertama, kesehatan, dan aksi sosial.</p>
+          <div class="ekskul-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8a5.5 5.5 0 0 1 9.5-3.5A5.5 5.5 0 0 1 21.5 13c-2.5 3.65-9.5 8-9.5 8z"/></svg>
+          </div>
+          <h4 data-i18n="eks.6t">PMR</h4>
+          <p data-i18n="eks.6d">Palang Merah Remaja — pertolongan pertama, kesehatan, dan aksi sosial.</p>
         </div>
         <div class="ekskul-card reveal" style="transition-delay:.12s;">
-          <div class="ekskul-icon">🔬</div>
-          <h4>KIR / Sains Club</h4>
-          <p>Karya Ilmiah Remaja dan klub sains untuk riset serta olimpiade.</p>
+          <div class="ekskul-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v6.5L4.5 20a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 8.5V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>
+          </div>
+          <h4 data-i18n="eks.7t">KIR / Sains Club</h4>
+          <p data-i18n="eks.7d">Karya Ilmiah Remaja dan klub sains untuk riset serta olimpiade.</p>
         </div>
         <div class="ekskul-card reveal" style="transition-delay:.18s;">
-          <div class="ekskul-icon">🗞️</div>
-          <h4>Jurnalistik &amp; English</h4>
-          <p>Madrasah journaling, mading digital, dan English club.</p>
+          <div class="ekskul-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+          </div>
+          <h4 data-i18n="eks.8t">Jurnalistik &amp; English</h4>
+          <p data-i18n="eks.8d">Madrasah journaling, mading digital, dan English club.</p>
         </div>
-      </div>
-      <div class="note" style="max-width:820px;margin:34px auto 0;">
-        <strong>Catatan:</strong> Daftar ekstrakurikuler di atas bersifat umum. Jadwal latihan dan
-        daftar lengkap dapat dikonfirmasi melalui Waka Kesiswaan.
       </div>
     </div>
   </section>
@@ -445,7 +668,7 @@
     <div class="container">
       <div class="cta-banner reveal" style="background:linear-gradient(120deg, rgba(2,44,34,.92), rgba(6,95,52,.85)), url('assets/photos/boarding-tour.jpg') center/cover no-repeat;">
         <div>
-          <h2 data-i18n="brd.h">🏫 Boarding School "Idzatun Nasyi'in"</h2>
+          <h2 data-i18n="brd.h">Boarding School "Idzatun Nasyi'in"</h2>
           <p>
             Pendidikan ala pesantren dengan pembelajaran hafalan Al-Qur'an dan kajian kitab,
             dikelola secara mandiri oleh madrasah. Beroperasi sejak 1 Februari 2022 dengan
@@ -457,48 +680,214 @@
     </div>
   </section>
 
-  <!-- ===== Berita & Prestasi ===== -->
-  <section class="section section-alt">
+  <!-- ===== Media Center: video resmi YouTube & lokal ===== -->
+  <section class="section section-alt" id="media">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-eyebrow">Media &amp; Video</span>
-        <h2 data-i18n="news.h">Video &amp; Dokumentasi Madrasah</h2>
-        <p>Video resmi dari kanal YouTube MTs Negeri 1 Kota Semarang — klik untuk menonton.</p>
+        <span class="section-eyebrow" data-i18n="media.ey">Media &amp; Film</span>
+        <h2 data-i18n="media.h">Media Center Madrasah</h2>
+        <p data-i18n="media.p">Video resmi dari kanal YouTube MTs Negeri 1 Kota Semarang — pilih untuk memutar langsung di sini.</p>
       </div>
-      <div class="grid-3 img-card-preview">
-        <div class="card reveal">
-          <div class="news-img photo" style="background-image:url('assets/photos/boarding-tour.jpg');"></div>
-          <div class="card-body">
-            <div class="news-meta"><span>Video Resmi</span><span>•</span><span>Boarding</span></div>
-            <h3>Boarding Tour MTsN 1 Kota Semarang</h3>
-            <p>Tur resmi asrama Boarding School "Idzatun Nasyi'in" yang dirilis oleh kanal madrasah.</p>
-            <a href="https://www.youtube.com/watch?v=4quCpUjAiMs" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:.85rem;font-weight:700;color:var(--green-700);">&#9654; Tonton di YouTube</a>
-            
+      <div class="media-center reveal" style="transition-delay:.1s;">
+        <div class="media-stage">
+          <div class="media-stage-frame" id="mediaStage">
+            <div class="media-player" id="mediaPlayer"></div>
+          </div>
+          <div class="media-stage-meta">
+            <span class="tag-kategori" id="mediaTag" data-i18n="media.tagProfile">Profil</span>
+            <h3 id="mediaTitle" data-i18n="media.m1t">Kurikulum Berbasis Cinta — Profil Madrasah</h3>
+            <p id="mediaDesc" data-i18n="media.m1d">Film profil resmi madrasah: kurikulum berbasis cinta, pembelajaran, dan kehidupan kampus.</p>
           </div>
         </div>
-        <div class="card reveal" style="transition-delay:.1s;">
-          <div class="news-img photo" style="background-image:url('assets/photos/gedung-masjid.jpg');"></div>
-          <div class="card-body">
-            <div class="news-meta"><span>Video Resmi</span><span>•</span><span>Keagamaan</span></div>
-            <h3>Peresmian Masjid Al-Karim MTsN 1 Kota Semarang</h3>
-            <p>Dokumentasi peresmian masjid madrasah sebagai pusat ibadah dan pembinaan tahfidz.</p>
-            <a href="https://www.youtube.com/watch?v=PjDR-QOTodM" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:.85rem;font-weight:700;color:var(--green-700);">&#9654; Tonton di YouTube</a>
-            
-          </div>
+        <div class="media-list" id="mediaList">
+          <button type="button" class="media-card active" data-kind="yt" data-id="D0foM9tPhiw" data-tag="media.tagProfile" data-title="media.m1t" data-desc="media.m1d" data-thumb="https://i.ytimg.com/vi/D0foM9tPhiw/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/D0foM9tPhiw/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m1t">Kurikulum Berbasis Cinta — Profil Madrasah</b>
+              <small data-i18n="media.m1d">Film profil resmi madrasah: kurikulum berbasis cinta, pembelajaran, dan kehidupan kampus.</small>
+              <em class="media-card-sub" data-i18n="media.tagProfile">Profil</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="yt" data-id="ZmfHvMNzVWw" data-tag="media.tagPPDB" data-title="media.m2t" data-desc="media.m2d" data-thumb="https://i.ytimg.com/vi/ZmfHvMNzVWw/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/ZmfHvMNzVWw/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m2t">Menyambut PPDB 2025/2026</b>
+              <small data-i18n="media.m2d">Video promosi PPDB: "Madrasah Paling Tepat Untuk Generasi Emas" oleh Emtessa.</small>
+              <em class="media-card-sub" data-i18n="media.tagPPDB">PPDB</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="yt" data-id="fkoqwhx7GNQ" data-tag="media.tagGlobal" data-title="media.m3t" data-desc="media.m3d" data-thumb="https://i.ytimg.com/vi/fkoqwhx7GNQ/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/fkoqwhx7GNQ/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m3t">MTsN 1 di Ajang Riset Internasional</b>
+              <small data-i18n="media.m3d">Dokumentasi kiprah peserta didik di kompetisi dan pameran riset internasional.</small>
+              <em class="media-card-sub" data-i18n="media.tagGlobal">Global</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="yt" data-id="yd0-x8zGgW0" data-tag="media.tagGlobal" data-title="media.m4t" data-desc="media.m4d" data-thumb="https://i.ytimg.com/vi/yd0-x8zGgW0/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/yd0-x8zGgW0/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m4t">13C Challenge — MIICA Malaysia 2025</b>
+              <small data-i18n="media.m4d">Video challenge kreatif siswa dalam ajang internasional MIICA Malaysia.</small>
+              <em class="media-card-sub" data-i18n="media.tagGlobal">Global</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="yt" data-id="PjDR-QOTodM" data-tag="media.tagFaith" data-title="media.m5t" data-desc="media.m5d" data-thumb="https://i.ytimg.com/vi/PjDR-QOTodM/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/PjDR-QOTodM/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m5t">Peresmian Masjid Al-Karim</b>
+              <small data-i18n="media.m5d">Dokumentasi peresmian masjid madrasah sebagai pusat ibadah dan tahfidz.</small>
+              <em class="media-card-sub" data-i18n="media.tagFaith">Keislaman</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="yt" data-id="MnJr7Ve5Z5c" data-tag="media.tagArts" data-title="media.m6t" data-desc="media.m6d" data-thumb="https://i.ytimg.com/vi/MnJr7Ve5Z5c/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/MnJr7Ve5Z5c/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m6t">Emtessa Music — Spesial Kemerdekaan</b>
+              <small data-i18n="media.m6d">Penampilan seni Emtessa Music dalam memperingati kemerdekaan RI.</small>
+              <em class="media-card-sub" data-i18n="media.tagArts">Seni</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="local" data-src="assets/videos/mars-mtsn-1.mp4" data-tag="media.tagMars" data-title="media.m7t" data-desc="media.m7d" data-thumb="assets/photos/mars-seni.jpg">
+            <span class="media-thumb" style="background-image:url('assets/photos/mars-seni.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m7t">Mars MTsN 1 Kota Semarang</b>
+              <small data-i18n="media.m7d">Mars madrasah, ciptaan Bapak H. Kasturi, S.Ag., M.Pd.</small>
+              <em class="media-card-sub" data-i18n="media.tagMars">Mars</em>
+            </span>
+          </button>
         </div>
-        <div class="card reveal" style="transition-delay:.2s;">
-          <div class="news-img photo" style="background-image:url('assets/photos/riset-internasional.jpg');"></div>
-          <div class="card-body">
-            <div class="news-meta"><span>Video Resmi</span><span>•</span><span>Prestasi</span></div>
-            <h3>MTsN 1 Kota Semarang di Ajang Riset Internasional</h3>
-            <p>Kiprah peserta didik madrasah pada kompetisi dan pameran riset tingkat internasional.</p>
-            <a href="https://www.youtube.com/watch?v=fkoqwhx7GNQ" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:.85rem;font-weight:700;color:var(--green-700);">&#9654; Tonton di YouTube</a>
-            
+      </div>
+      <div class="media-foot reveal">
+        <a href="https://www.youtube.com/@mtsnegeri1kotasemarang356" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="media.channel">▶ Kunjungi Kanal YouTube Resmi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== News & Stories ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">News &amp; Stories</span>
+        <h2 data-i18n="nws.h">Cerita, Berita &amp; Prestasi</h2>
+        <p data-i18n="nws.p">Kabar dan capaian MTs Negeri 1 Kota Semarang dari berbagai kegiatan.</p>
+      </div>
+      <div class="news-grid">
+        <a href="prestasi.html" class="news-card feat reveal">
+          <div class="news-card-img" style="background-image:url('assets/photos/riset-internasional.jpg');"></div>
+          <div class="news-card-body">
+            <span class="tag-kategori">Prestasi</span>
+            <h3 data-i18n="nws.1t">Silver Medal di Ajang Riset Internasional AISEEF</h3>
+            <p data-i18n="nws.1p">Peserta didik meraih medali perak pada ajang riset internasional yang diikuti siswa dari 19 negara.</p>
+            <span class="news-date" data-i18n="nws.1d">2021 · Internasional</span>
           </div>
-        </div>
+        </a>
+        <a href="fasilitas.html" class="news-card reveal" style="transition-delay:.08s;">
+          <div class="news-card-img" style="background-image:url('assets/photos/gedung-masjid.jpg');"></div>
+          <div class="news-card-body">
+            <span class="tag-kategori">Fasilitas</span>
+            <h3 data-i18n="nws.2t">Gedung SBSN Diresmikan Menteri Agama</h3>
+            <p data-i18n="nws.2p">Gedung baru madrasah yang dibangun lewat skema SBSN diresmikan untuk menunjang kegiatan belajar.</p>
+            <span class="news-date">7 Feb 2022</span>
+          </div>
+        </a>
+        <a href="prestasi.html" class="news-card reveal" style="transition-delay:.16s;">
+          <div class="news-card-img" style="background-image:url('assets/photos/dokumentasi.jpg');"></div>
+          <div class="news-card-body">
+            <span class="tag-kategori">Akademik</span>
+            <h3 data-i18n="nws.3t">Bertanding di Kompetisi Sains Madrasah (KSM)</h3>
+            <p data-i18n="nws.3p">Tiga siswa maju mewakili madrasah ke tingkat provinsi pada Kompetisi Sains Madrasah.</p>
+            <span class="news-date">2023 · Provinsi</span>
+          </div>
+        </a>
+        <a href="program.html#boarding" class="news-card reveal" style="transition-delay:.24s;">
+          <div class="news-card-img" style="background-image:url('assets/photos/boarding-tour.jpg');"></div>
+          <div class="news-card-body">
+            <span class="tag-kategori">Boarding</span>
+            <h3 data-i18n="nws.4t">Boarding School "Idzatun Nasyi'in" Resmi Beroperasi</h3>
+            <p data-i18n="nws.4p">Pendidikan ala pesantren dengan pembinaan hafalan dan kajian kitab mulai berjalan penuh.</p>
+            <span class="news-date">1 Feb 2022</span>
+          </div>
+        </a>
+        <a href="prestasi.html" class="news-card reveal" style="transition-delay:.32s;">
+          <div class="news-card-img" style="background-image:url('assets/photos/kegiatan.jpg');"></div>
+          <div class="news-card-body">
+            <span class="tag-kategori">Kesiswaan</span>
+            <h3 data-i18n="nws.5t">Juara 1 LCTP Pramuka Tingkat Kwartir</h3>
+            <p data-i18n="nws.5p">Tim pramuka madrasah meraih juara pertama Lomba Cepat Tepat Pramuka tingkat kwartir.</p>
+            <span class="news-date">2022 · Kwartir</span>
+          </div>
+        </a>
+        <a href="profil.html#visi" class="news-card reveal" style="transition-delay:.4s;">
+          <div class="news-card-img" style="background-image:url('assets/photos/kegiatan.jpg');"></div>
+          <div class="news-card-body">
+            <span class="tag-kategori">Nilai</span>
+            <h3 data-i18n="nws.6t">Komitmen Madrasah Ramah Anak</h3>
+            <p data-i18n="nws.6p">Madrasah berkomitmen menghadirkan lingkungan belajar yang aman, nyaman, dan ramah anak.</p>
+            <span class="news-date">2023</span>
+          </div>
+        </a>
       </div>
       <div style="text-align:center; margin-top:40px;">
-        <a href="prestasi.html" class="btn btn-ghost" data-i18n="news.btn">Lihat Semua Prestasi →</a>
+        <a href="prestasi.html" class="btn btn-ghost" data-i18n="nws.btn">Lihat Semua Berita &amp; Prestasi →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Global Pathway: jejaring & kesempatan internasional ===== -->
+  <section class="section pathway-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow" data-i18n="path.ey">Global Engagement</span>
+        <h2 data-i18n="path.h">Dari Semarang, Berkarya di Panggung Dunia</h2>
+        <p data-i18n="path.p">Jejaring prestasi dan kesempatan global untuk peserta didik — dari kompetisi internasional hingga melanjutkan studi di sekolah unggulan.</p>
+      </div>
+      <div class="pathway-grid reveal" style="transition-delay:.1s;">
+        <a class="pathway-card" href="prestasi.html">
+          <span class="pathway-flag">🌍</span>
+          <h3 data-i18n="path.1t">Riset Internasional</h3>
+          <p data-i18n="path.1d">Silver Medal AISEEF 2021 — bersaing dengan peserta didik dari 19 negara di kancah riset dunia.</p>
+          <em data-i18n="path.more">Lihat Prestasi →</em>
+        </a>
+        <a class="pathway-card" href="program.html#unggulan">
+          <span class="pathway-flag">🇲🇾</span>
+          <h3 data-i18n="path.2t">Kolaborasi ASEAN</h3>
+          <p data-i18n="path.2d">13C Challenge — MIICA Malaysia 2025: kolaborasi kreatif lintas negara.</p>
+          <em data-i18n="path.more">Pelajari Program →</em>
+        </a>
+        <a class="pathway-card" href="prestasi.html">
+          <span class="pathway-flag">🏆</span>
+          <h3 data-i18n="path.3t">Kompetisi Nasional</h3>
+          <p data-i18n="path.3d">Kompetisi Sains Madrasah (KSM) hingga tingkat provinsi dan nasional.</p>
+          <em data-i18n="path.more">Lihat Prestasi →</em>
+        </a>
+        <a class="pathway-card" href="ppdb.html">
+          <span class="pathway-flag">🎓</span>
+          <h3 data-i18n="path.4t">Lanjutan Studi Gemilang</h3>
+          <p data-i18n="path.4d">Alumni berhasil melaju ke MAN Insan Cendekia, MA/SMA unggulan, dan pesantren ternama.</p>
+          <em data-i18n="path.more">Mulai Perjalanan →</em>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Virtual Tour / Campus Experience ===== -->
+  <section class="section vtour-section">
+    <div class="container">
+      <div class="vtour reveal" style="background:linear-gradient(120deg, rgba(2,44,34,.78), rgba(6,95,52,.72)), url('assets/photos/boarding-tour.jpg') center/cover no-repeat;">
+        <video class="vtour-video" src="assets/videos/ppdb-2026.mp4" poster="assets/photos/boarding-tour.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+        <button class="vtour-play" id="vtourPlay" type="button" aria-label="Putar film profil madrasah" data-i18n-aria="vtr.playAria">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="vtour-text">
+          <span class="vtour-tag" data-i18n="vtr.tag">Campus Experience</span>
+          <h2 data-i18n="vtr.h">Jelajahi Lingkungan Madrasah Kami</h2>
+          <p data-i18n="vtr.p">Tonton tur virtual kampus, fasilitas, dan kehidupan Boarding School Idzatun Nasyi'in — dari mana saja.</p>
+          <div class="vtour-links">
+            <a href="https://www.youtube.com/watch?v=fkoqwhx7GNQ" target="_blank" rel="noopener" class="btn btn-gold" data-i18n="vtr.b1">Tonton Video →</a>
+            <a href="kontak.html" class="btn btn-outline" data-i18n="vtr.b2">Kunjungi Kami</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -507,23 +896,18 @@
   <section class="section">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-eyebrow">Dokumentasi</span>
+        <span class="section-eyebrow" data-i18n="gal.ey">Dokumentasi</span>
         <h2 data-i18n="gal.h">Galeri Kegiatan</h2>
-        <p>Potret suasana dan aktivitas di lingkungan MTs Negeri 1 Kota Semarang.</p>
+        <p data-i18n="gal.p">Potret suasana dan aktivitas di lingkungan MTs Negeri 1 Kota Semarang.</p>
       </div>
       <div class="galeri-grid reveal" style="transition-delay:.1s;">
-        <div class="galeri-item wide" style="background-image:url('assets/photos/dokumentasi.jpg');"><span>🏢 Dokumentasi Resmi Madrasah</span></div>
-        <div class="galeri-item" style="background-image:url('assets/photos/gedung-masjid.jpg');"><span>🕌 Peresmian Masjid Al-Karim</span></div>
-        <div class="galeri-item" style="background-image:url('assets/photos/kegiatan.jpg');"><span>🔬 Kegiatan & Karya Siswa</span></div>
-        <div class="galeri-item" style="background-image:url('assets/photos/kurikulum-cinta.jpg');"><span>📚 Kurikulum Berbasis Cinta</span></div>
-        <div class="galeri-item" style="background-image:url('assets/photos/paskibra.jpg');"><span>⚽ LKBB & Paskibra</span></div>
-        <div class="galeri-item wide" style="background-image:url('assets/photos/boarding-tour.jpg');"><span>🏠 Boarding School "Idzatun Nasyi'in"</span></div>
-        <div class="galeri-item wide" style="background-image:url('assets/photos/mars-seni.jpg');"><span>🎶 Mars MTsN 1 Kota Semarang</span></div>
-        <div class="galeri-item wide" style="background-image:url('assets/photos/riset-internasional.jpg');"><span>🏆 Ajang Riset Internasional</span></div>
-      </div>
-      <div class="note" style="max-width:820px;margin:34px auto 0;">
-        <strong>Catatan:</strong> Foto merupakan cuplikan video resmi madrasah (YouTube)
-        dapat ditambahkan melalui tim Humas / IT madrasah.
+        <div class="galeri-item wide" style="background-image:url('assets/photos/dokumentasi.jpg');" tabindex="0" role="button" data-full="assets/photos/dokumentasi.jpg" data-caption="Dokumentasi Resmi Madrasah"><span data-i18n="gal.1">Dokumentasi Resmi Madrasah</span></div>
+        <div class="galeri-item" style="background-image:url('assets/photos/gedung-masjid.jpg');" tabindex="0" role="button" data-full="assets/photos/gedung-masjid.jpg" data-caption="Peresmian Masjid Al-Karim"><span data-i18n="gal.2">Peresmian Masjid Al-Karim</span></div>
+        <div class="galeri-item" style="background-image:url('assets/photos/kegiatan.jpg');" tabindex="0" role="button" data-full="assets/photos/kegiatan.jpg" data-caption="Kegiatan &amp; Karya Siswa"><span data-i18n="gal.3">Kegiatan &amp; Karya Siswa</span></div>
+        <div class="galeri-item wide" style="background-image:url('assets/photos/kurikulum-cinta.jpg');" tabindex="0" role="button" data-full="assets/photos/kurikulum-cinta.jpg" data-caption="Kurikulum Berbasis Cinta"><span data-i18n="gal.4">Kurikulum Berbasis Cinta</span></div>
+        <div class="galeri-item wide" style="background-image:url('assets/photos/boarding-tour.jpg');" tabindex="0" role="button" data-full="assets/photos/boarding-tour.jpg" data-caption="Boarding School &quot;Idzatun Nasyi&#39;in&quot;"><span data-i18n="gal.6">Boarding School</span></div>
+        <div class="galeri-item wide" style="background-image:url('assets/photos/mars-seni.jpg');" tabindex="0" role="button" data-full="assets/photos/mars-seni.jpg" data-caption="Mars MTsN 1 Kota Semarang"><span data-i18n="gal.7">Mars MTsN 1 Kota Semarang</span></div>
+        <div class="galeri-item wide" style="background-image:url('assets/photos/riset-internasional.jpg');" tabindex="0" role="button" data-full="assets/photos/riset-internasional.jpg" data-caption="Ajang Riset Internasional"><span data-i18n="gal.8">Ajang Riset Internasional</span></div>
       </div>
     </div>
   </section>
@@ -532,14 +916,14 @@
   <section class="section section-alt">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-eyebrow">Kalender Madrasah</span>
+        <span class="section-eyebrow" data-i18n="age.ey">Kalender Madrasah</span>
         <h2 data-i18n="age.h">Agenda Kegiatan</h2>
-        <p>Jadwal kegiatan akademik dan non-akademik di lingkungan madrasah — klik tanggal untuk detail.</p>
+        <p data-i18n="age.p">Kalender akademik TP 2026/2027 — jadwal kegiatan, ujian, dan libur madrasah. Klik tanggal untuk detail.</p>
       </div>
       <div class="cal-wrap reveal" style="transition-delay:.1s;">
         <div class="cal" id="cal">
           <div class="cal-head">
-            <h4>Februari 2025</h4>
+            <h4>Kalender Akademik</h4>
             <div class="cal-nav">
               <button class="cal-prev" aria-label="Bulan sebelumnya">‹</button>
               <button class="cal-next" aria-label="Bulan berikutnya">›</button>
@@ -551,15 +935,12 @@
           <div class="cal-grid"></div>
         </div>
         <div class="cal-panel">
-          <h4 id="calPanelTitle">Agenda Februari 2025</h4>
+          <h4 id="calPanelTitle">Agenda Kegiatan</h4>
           <p class="cal-month-sub" id="calPanelSub">Pilih tanggal atau lihat semua agenda bulan ini.</p>
           <div class="cal-events" id="calEvents"></div>
         </div>
       </div>
-      <div class="note" style="max-width:820px;margin:34px auto 0;">
-        <strong>Catatan:</strong> Jadwal dapat berubah sewaktu-waktu. Informasi resmi disampaikan
-        melalui wali kelas dan papan pengumuman madrasah.
-      </div>
+      <p class="cal-note" data-i18n="cal.note">*) Sesuai Kalender Pendidikan Madrasah (KMA) &amp; kebijakan resmi madrasah — tanggal keagamaan merupakan perkiraan hisab menunggu ketetapan resmi Kemenag RI.</p>
     </div>
   </section>
 
@@ -567,37 +948,33 @@
   <section class="section">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-eyebrow">Testimoni</span>
+        <span class="section-eyebrow" data-i18n="tes.ey">Testimoni</span>
         <h2 data-i18n="tes.h">Apa Kata Mereka</h2>
-        <p>Pengalaman wali murid, alumni, dan santri bersama MTs Negeri 1 Kota Semarang.</p>
+        <p data-i18n="tes.p">Pengalaman wali murid, alumni, dan santri bersama MTs Negeri 1 Kota Semarang.</p>
       </div>
       <div class="testi-slider reveal" id="testiSlider" style="transition-delay:.1s;">
         <div class="testi-panel active">
-          <p class="testi-quote">Anak saya betah dan tumbuh menjadi anak yang lebih disiplin serta gemar membaca Al-Qur'an. Program boarding school-nya benar-benar membantu pembentukan karakter.</p>
+          <p class="testi-quote" data-i18n="tes.1q">Anak saya betah dan tumbuh menjadi anak yang lebih disiplin serta gemar membaca Al-Qur'an. Program boarding school-nya benar-benar membantu pembentukan karakter.</p>
           <div class="testi-author">
-            <img src="assets/avatars/testi-ortu.svg" alt="Wali murid">
-            <div style="text-align:left;"><b>Ibu (Wali Murid)</b><small>Orang tua santri boarding</small></div>
+            <span class="avatar-mono sm" aria-hidden="true">WM</span>
+            <div style="text-align:left;"><b data-i18n="tes.1b">Wali Murid Santri Boarding</b><small data-i18n="tes.1s">Orang tua santri boarding</small></div>
           </div>
         </div>
         <div class="testi-panel">
-          <p class="testi-quote">Pembinaan riset dan sains di madrasah ini sangat membekali saya. Saya bisa lolos seleksi MAN Insan Cendekia berkat pengalaman olimpiade dan KIR yang saya dapatkan di sini.</p>
+          <p class="testi-quote" data-i18n="tes.2q">Pembinaan riset dan sains di madrasah ini sangat membekali saya. Saya bisa lolos seleksi MAN Insan Cendekia berkat pengalaman olimpiade dan KIR yang saya dapatkan di sini.</p>
           <div class="testi-author">
-            <img src="assets/avatars/testi-alumni.svg" alt="Alumni">
-            <div style="text-align:left;"><b>Alumni Angkatan (Nama)</b><small>Diterima di MAN Insan Cendekia</small></div>
+            <span class="avatar-mono sm" aria-hidden="true">AL</span>
+            <div style="text-align:left;"><b data-i18n="tes.2b">Alumni MTsN 1 Kota Semarang</b><small data-i18n="tes.2s">Diterima di MAN Insan Cendekia</small></div>
           </div>
         </div>
         <div class="testi-panel">
-          <p class="testi-quote">Bangga rasanya menjadi bagian dari kemenangan tim riset di ajang internasional. Guru-guru di sini sangat suportif dalam mendampingi kami mengembangkan ide penelitian.</p>
+          <p class="testi-quote" data-i18n="tes.3q">Bangga rasanya menjadi bagian dari kemenangan tim riset di ajang internasional. Guru-guru di sini sangat suportif dalam mendampingi kami mengembangkan ide penelitian.</p>
           <div class="testi-author">
-            <img src="assets/avatars/testi-siswa.svg" alt="Siswa">
-            <div style="text-align:left;"><b>Siswa Kelas (Nama)</b><small>Medali AISEEF 2021</small></div>
+            <span class="avatar-mono sm" aria-hidden="true">IX</span>
+            <div style="text-align:left;"><b data-i18n="tes.3b">Siswa Kelas IX</b><small data-i18n="tes.3s">Medali AISEEF 2021</small></div>
           </div>
         </div>
         <div class="testi-dots" role="tablist" aria-label="Pilih testimoni"></div>
-      </div>
-      <div class="note" style="max-width:820px;margin:24px auto 0;">
-        <strong>Catatan:</strong> Kutipan merupakan contoh draf. Mohon diganti dengan testimoni
-        asli siswa, wali murid, atau alumni.
       </div>
     </div>
   </section>
@@ -606,53 +983,49 @@
   <section class="section section-alt">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-eyebrow">Pendidik &amp; Tenaga Kependidikan</span>
+        <span class="section-eyebrow" data-i18n="tea.ey">Pendidik &amp; Tenaga Kependidikan</span>
         <h2 data-i18n="tea.h">Guru &amp; Tenaga Kependidikan</h2>
-        <p>Tenaga pendidik profesional dan berdedikasi dalam mendampingi peserta didik.</p>
+        <p data-i18n="tea.p">Tenaga pendidik profesional dan berdedikasi dalam mendampingi peserta didik.</p>
       </div>
       <div class="teacher-grid">
         <div class="teacher-card reveal">
-          <img class="teacher-avatar" src="assets/avatars/kepala-madrasah.svg" alt="Foto guru">
+          <span class="avatar-mono lg" aria-hidden="true">HK</span>
           <h4>H. Kasturi, S.Ag., M.Pd.</h4>
-          <p>Kepala Madrasah</p>
-          <span class="teach-sub">Fikih &amp; Keagamaan</span>
+          <p data-i18n="tea.1p">Kepala Madrasah</p>
+          <span class="teach-sub" data-i18n="tea.1s">Fikih &amp; Keagamaan</span>
         </div>
         <div class="teacher-card reveal" style="transition-delay:.06s;">
-          <img class="teacher-avatar" src="assets/avatars/waka-kurikulum.svg" alt="Foto guru">
-          <h4>(Nama Guru)</h4>
-          <p>Waka Kurikulum</p>
-          <span class="teach-sub">Bahasa Inggris</span>
+          <span class="avatar-mono lg" aria-hidden="true">WKu</span>
+          <h4 data-i18n="tea.2h">Waka Kurikulum</h4>
+          <p data-i18n="tea.2p">Guru Bahasa Inggris</p>
+          <span class="teach-sub" data-i18n="tea.badge">Informasi resmi menyusul</span>
         </div>
         <div class="teacher-card reveal" style="transition-delay:.12s;">
-          <img class="teacher-avatar" src="assets/avatars/waka-kesiswaan.svg" alt="Foto guru">
-          <h4>(Nama Guru)</h4>
-          <p>Waka Kesiswaan</p>
-          <span class="teach-sub">Tahfidz &amp; Tafsir</span>
+          <span class="avatar-mono lg" aria-hidden="true">WKe</span>
+          <h4 data-i18n="tea.3h">Waka Kesiswaan</h4>
+          <p data-i18n="tea.3p">Tahfidz &amp; Tafsir</p>
+          <span class="teach-sub" data-i18n="tea.badge">Informasi resmi menyusul</span>
         </div>
         <div class="teacher-card reveal">
-          <img class="teacher-avatar" src="assets/avatars/guru-ipa.svg" alt="Foto guru">
-          <h4>(Nama Guru)</h4>
-          <p>Guru IPA</p>
-          <span class="teach-sub">Sains &amp; Riset</span>
+          <span class="avatar-mono lg" aria-hidden="true">IPA</span>
+          <h4 data-i18n="tea.4h">Guru IPA</h4>
+          <p data-i18n="tea.4p">Sains &amp; Riset</p>
+          <span class="teach-sub" data-i18n="tea.badge">Informasi resmi menyusul</span>
         </div>
         <div class="teacher-card reveal" style="transition-delay:.06s;">
-          <img class="teacher-avatar" src="assets/avatars/guru-mtk.svg" alt="Foto guru">
-          <h4>(Nama Guru)</h4>
-          <p>Guru Matematika</p>
-          <span class="teach-sub">Olimpiade &amp; Saintek</span>
+          <span class="avatar-mono lg" aria-hidden="true">MTK</span>
+          <h4 data-i18n="tea.5h">Guru Matematika</h4>
+          <p data-i18n="tea.5p">Olimpiade &amp; Saintek</p>
+          <span class="teach-sub" data-i18n="tea.badge">Informasi resmi menyusul</span>
         </div>
         <div class="teacher-card reveal" style="transition-delay:.12s;">
-          <img class="teacher-avatar" src="assets/avatars/boarding.svg" alt="Foto guru">
-          <h4>(Nama Guru)</h4>
-          <p>Kepala Boarding School</p>
-          <span class="teach-sub">Pembina Asrama</span>
+          <span class="avatar-mono lg" aria-hidden="true">BS</span>
+          <h4 data-i18n="tea.6h">Kepala Boarding School</h4>
+          <p data-i18n="tea.6p">Pembina Asrama</p>
+          <span class="teach-sub" data-i18n="tea.badge">Informasi resmi menyusul</span>
         </div>
       </div>
-      <div class="note" style="max-width:820px;margin:34px auto 0;">
-        <strong>Catatan:</strong> Foto guru perorangan merupakan ilustrasi (inisial) karena foto
-        resmi guru &amp; karyawan tidak tersedia di sumber publik. Mohon diganti dengan foto resmi
-        dari pihak madrasah.
-      </div>
+      <p class="teacher-note" data-i18n="tea.note">Foto dan nama tenaga pendidik lainnya sedang dalam proses validasi data resmi madrasah.</p>
     </div>
   </section>
 
@@ -660,46 +1033,79 @@
   <section class="section">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-eyebrow">Sarana &amp; Prasarana</span>
+        <span class="section-eyebrow" data-i18n="fas.ey">Sarana &amp; Prasarana</span>
         <h2 data-i18n="fas.h">Fasilitas Madrasah</h2>
-        <p>Fasilitas pendukung pembelajaran dan kenyamanan peserta didik.</p>
+        <p data-i18n="fas.p">Fasilitas pendukung pembelajaran dan kenyamanan peserta didik.</p>
       </div>
       <div class="fasilitas-grid img-card-preview">
         <div class="card reveal">
           <div class="card-img" style="background-image:url('assets/photos/dokumentasi.jpg');"></div>
           <div class="card-body">
-            <h4>🏢 Gedung &amp; Kampus</h4>
-            <p>Gedung dan kampus madrasah — termasuk gedung SBSN yang diresmikan Menteri Agama.</p>
-            <a href="fasilitas.html" style="font-size:.85rem;font-weight:700;color:var(--green-700);">Selengkapnya →</a>
+            <h4 data-i18n="fas.1t">Gedung &amp; Kampus</h4>
+            <p data-i18n="fas.1p">Gedung dan kampus madrasah — termasuk gedung SBSN yang diresmikan Menteri Agama.</p>
+            <a href="fasilitas.html" class="card-link" data-i18n="fas.more">Selengkapnya →</a>
           </div>
         </div>
         <div class="card reveal" style="transition-delay:.08s;">
           <div class="card-img" style="background-image:url('assets/photos/kegiatan.jpg');"></div>
           <div class="card-body">
-            <h4>🏫 Ruang Belajar &amp; Kegiatan</h4>
-            <p>Ruang kelas, aula, dan area kegiatan untuk pembelajaran aktif.</p>
-            <a href="fasilitas.html" style="font-size:.85rem;font-weight:700;color:var(--green-700);">Selengkapnya →</a>
+            <h4 data-i18n="fas.2t">Ruang Belajar &amp; Kegiatan</h4>
+            <p data-i18n="fas.2p">Ruang kelas, aula, dan area kegiatan untuk pembelajaran aktif.</p>
+            <a href="fasilitas.html" class="card-link" data-i18n="fas.more">Selengkapnya →</a>
           </div>
         </div>
         <div class="card reveal" style="transition-delay:.16s;">
           <div class="card-img" style="background-image:url('assets/photos/kurikulum-cinta.jpg');"></div>
           <div class="card-body">
-            <h4>📖 Kurikulum Merdeka</h4>
-            <p>Madrasah piloting Implementasi Kurikulum Merdeka sejak 2022/2023.</p>
-            <a href="fasilitas.html" style="font-size:.85rem;font-weight:700;color:var(--green-700);">Selengkapnya →</a>
+            <h4 data-i18n="fas.3t">Kurikulum Merdeka</h4>
+            <p data-i18n="fas.3p">Madrasah piloting Implementasi Kurikulum Merdeka sejak 2022/2023.</p>
+            <a href="fasilitas.html" class="card-link" data-i18n="fas.more">Selengkapnya →</a>
           </div>
         </div>
         <div class="card reveal" style="transition-delay:.24s;">
           <div class="card-img" style="background-image:url('assets/photos/gedung-masjid.jpg');"></div>
           <div class="card-body">
-            <h4>🕌 Masjid &amp; Ibadah</h4>
-            <p>Masjid Al-Karim dan sarana ibadah untuk pembinaan tahfidz &amp; kajian kitab.</p>
-            <a href="fasilitas.html" style="font-size:.85rem;font-weight:700;color:var(--green-700);">Selengkapnya →</a>
+            <h4 data-i18n="fas.4t">Masjid &amp; Ibadah</h4>
+            <p data-i18n="fas.4p">Masjid Al-Karim dan sarana ibadah untuk pembinaan tahfidz &amp; kajian kitab.</p>
+            <a href="fasilitas.html" class="card-link" data-i18n="fas.more">Selengkapnya →</a>
           </div>
         </div>
       </div>
       <div style="text-align:center; margin-top:40px;">
-        <a href="fasilitas.html" class="btn btn-ghost">Lihat Semua Fasilitas →</a>
+        <a href="fasilitas.html" class="btn btn-ghost" data-i18n="fas.btn">Lihat Semua Fasilitas →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ (tanya jawab umum) ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow" data-i18n="faq.ey">Pusat Bantuan</span>
+        <h2 data-i18n="faq.h">Pertanyaan yang Sering Diajukan</h2>
+        <p data-i18n="faq.p">Jawaban ringkas untuk pertanyaan umum seputar pendaftaran dan kehidupan madrasah.</p>
+      </div>
+      <div class="faq reveal" style="transition-delay:.1s;">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" data-i18n="faq.1q">Bagaimana cara mendaftar PPDB?</button>
+          <div class="faq-a"><p data-i18n="faq.1a">Pendaftaran melalui jalur resmi yang diumumkan panitia PPDB pada laman ini. Detail jadwal, kuota, dan berkas menyusul dari pihak madrasah.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" data-i18n="faq.2q">Apakah tersedia program tahfidz untuk semua siswa?</button>
+          <div class="faq-a"><p data-i18n="faq.2a">Ya. Tahfidzul Qur'an merupakan salah satu program unggulan yang dibina terstruktur, dilengkapi kajian kitab kuning dan pendampingan pengasuh.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" data-i18n="faq.3q">Bagaimana sistem Boarding School Idzatun Nasyi'in?</button>
+          <div class="faq-a"><p data-i18n="faq.3a">Asrama dikelola mandiri oleh madrasah dengan pendidikan ala pesantren — hafalan Al-Qur'an, kajian kitab, dan pembinaan karakter setiap hari. Kapasitas 100 santri putra dan 100 santriwati.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" data-i18n="faq.4q">Apa saja program unggulan selain tahfidz?</button>
+          <div class="faq-a"><p data-i18n="faq.4a">Riset dan Sains. Peserta didik dibina untuk kompetisi mulai tingkat kota hingga internasional, termasuk KSM dan AISEEF.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" data-i18n="faq.5q">Apakah saya bisa mengunjungi madrasah?</button>
+          <div class="faq-a"><p data-i18n="faq.5a">Tentu. Lihat halaman Kontak &amp; Lokasi untuk alamat, peta, dan jam layanan kantor (Senin–Jumat, 07.00–16.00 WIB).</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -708,8 +1114,8 @@
   <section class="link-bar">
     <div class="container link-bar-inner">
       <div style="min-width:220px;">
-        <h4>🔗 Link Terkait</h4>
-        <p>Portal resmi pemerintah &amp; Kementerian Agama.</p>
+        <h4 data-i18n="lb.h">Link Terkait</h4>
+        <p data-i18n="lb.p">Portal resmi pemerintah &amp; Kementerian Agama.</p>
       </div>
       <ul>
         <li><a href="https://www.kemenag.go.id" target="_blank" rel="noopener">Kementerian Agama RI</a></li>
@@ -728,18 +1134,15 @@
       <div class="cta-banner reveal" style="background:linear-gradient(120deg,#b45309,#f5b301);">
         <div>
           <h2 data-i18n="ppdb.h">Pendaftaran Peserta Didik Baru (PPDB)</h2>
-          <p>
+          <p data-i18n="ppdb.p">
             Bergabunglah bersama kami! Jadilah bagian dari keluarga besar MTs Negeri 1 Kota Semarang
             dengan program unggulan tahfidz, riset, dan sains.
           </p>
           <div class="countdown" id="ppdbCountdown" data-target="2026-02-15T00:00:00" style="margin-top:22px;justify-content:flex-start;"></div>
-          <div class="note" style="border-color:#7c2d12;color:#7c2d12;background:#ffedd5;margin-top:16px;">
-            <strong>Catatan:</strong> Hitung mundur mengarah ke rencana pembukaan PPDB. Informasi
-            jadwal resmi mohon hubungi panitia PPDB madrasah.
-          </div>
         </div>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
           <a href="ppdb.html" class="btn" style="background:var(--green-800);color:#fff;" data-i18n="ppdb.a">Info PPDB →</a>
+          <button type="button" class="btn btn-outline" id="ppdbVideoBtn" style="border-color:rgba(2,44,34,.5);color:var(--green-950);" data-i18n="ppdb.video">▶ Tonton Video PPDB</button>
           <a href="kontak.html" class="btn btn-outline" style="border-color:rgba(2,44,34,.5);color:var(--green-950);" data-i18n="ppdb.b">Hubungi Panitia</a>
         </div>
       </div>
@@ -751,12 +1154,12 @@
     <div class="container">
       <div class="newsletter reveal">
         <div>
-          <h3 data-i18n="newsletter.h">📧 Ikuti Kabar Madrasah</h3>
+          <h3 data-i18n="newsletter.h">Ikuti Kabar Madrasah</h3>
           <p data-i18n="newsletter.p">Berlangganan info kegiatan, jadwal, dan pengumuman terbaru langsung ke email Anda.</p>
         </div>
         <form id="nlForm">
-          <input type="email" placeholder="Alamat email Anda…" aria-label="Alamat email" required>
-          <button type="submit">Langganan</button>
+          <input type="email" placeholder="Alamat email Anda…" aria-label="Alamat email" data-i18n-ph="nl.placeholder" required>
+          <button type="submit" data-i18n="nl.btn">Langganan</button>
         </form>
         <p class="nl-msg"></p>
       </div>
@@ -765,68 +1168,77 @@
 
   </main>
 
+  <!-- ===== Modal Film / Pemutar Video ===== -->
+  <div class="film-modal" id="filmModal" role="dialog" aria-modal="true" aria-label="Pemutar video" data-i18n-aria="media.modalAria" hidden>
+    <button class="film-close" id="filmClose" type="button" aria-label="Tutup pemutar" data-i18n-aria="media.closeAria">✕</button>
+    <div class="film-frame" id="filmFrame"></div>
+  </div>
+
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <h4>MTs Negeri 1 Kota Semarang</h4>
-          <p>
+          <h4 data-i18n="ft.about">MTs Negeri 1 Kota Semarang</h4>
+          <p data-i18n="ft.aboutp">
             Madrasah Tsanawiyah Negeri di bawah Kementerian Agama RI yang berkomitmen
             mencetak generasi Qur'ani, cerdas, dan berprestasi melalui program unggulan
             tahfidz, riset, dan sains.
           </p>
           <div class="sosmed">
-            <a href="#" title="Instagram" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
-            </a>
-            <a href="#" title="Facebook" aria-label="Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="#" title="YouTube" aria-label="YouTube">
+            <a href="https://www.youtube.com/@mtsnegeri1kotasemarang356" target="_blank" rel="noopener" title="YouTube Resmi" aria-label="YouTube Resmi">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.5 3.8 12 3.8 12 3.8s-6.5 0-8.4.5A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.9.5 8.4.5 8.4.5s6.5 0 8.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"/><path d="m10 15 5-3-5-3z"/></svg>
             </a>
           </div>
         </div>
         <div>
-          <h4>Tautan Cepat</h4>
+          <h4 data-i18n="ft.q">Tautan Cepat</h4>
           <ul>
-            <li><a href="profil.html">Profil Madrasah</a></li>
-            <li><a href="program.html">Program Unggulan</a></li>
-            <li><a href="prestasi.html">Prestasi</a></li>
-            <li><a href="fasilitas.html">Fasilitas</a></li>
-            <li><a href="ppdb.html">Info PPDB</a></li>
+            <li><a href="profil.html" data-i18n="ft.q1">Profil Madrasah</a></li>
+            <li><a href="program.html" data-i18n="ft.q2">Program Unggulan</a></li>
+            <li><a href="prestasi.html" data-i18n="ft.q3">Prestasi</a></li>
+            <li><a href="fasilitas.html" data-i18n="ft.q4">Fasilitas</a></li>
+            <li><a href="ppdb.html" data-i18n="ft.q5">Info PPDB</a></li>
           </ul>
         </div>
         <div>
-          <h4>Layanan</h4>
+          <h4 data-i18n="ft.l">Layanan</h4>
           <ul>
-            <li><a href="kontak.html">Hubungi Kami</a></li>
-            <li><a href="ppdb.html">Pendaftaran Siswa</a></li>
-            <li><a href="profil.html">Struktur Organisasi</a></li>
-            <li><a href="kontak.html">Lokasi Madrasah</a></li>
+            <li><a href="kontak.html" data-i18n="ft.l1">Hubungi Kami</a></li>
+            <li><a href="ppdb.html" data-i18n="ft.l2">Pendaftaran Siswa</a></li>
+            <li><a href="profil.html" data-i18n="ft.l3">Struktur Organisasi</a></li>
+            <li><a href="kontak.html" data-i18n="ft.l4">Lokasi Madrasah</a></li>
+            <li><a href="kebijakan.html" data-i18n="ft.l5">Kebijakan Privasi</a></li>
           </ul>
         </div>
         <div>
-          <h4>Kontak</h4>
+          <h4 data-i18n="ft.k">Kontak</h4>
           <ul class="footer-contact">
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272</span>
+              <span data-i18n="ft.k1">Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
-              <span>(024) 000-0000 <small>(perlu diperbarui)</small></span>
+              <span data-i18n="ft.k2">(024) 6716521</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-              <span>humas@mtsn1semarang.sch.id <small>(perlu diperbarui)</small></span>
+              <span>humas@mtsn1semarang.sch.id</span>
             </li>
           </ul>
         </div>
       </div>
+      <div class="footer-cred" data-i18n="ft.cred"><b>Akreditasi A</b>&nbsp;·&nbsp;Madrasah Negeri (Kemenag RI)&nbsp;·&nbsp;Piloting Kurikulum Merdeka&nbsp;·&nbsp;AISEEF</div>
+      <div class="global-chips" aria-hidden="true">
+        <span>🇮🇩 Indonesia</span>
+        <span>🌍 19 Negara — AISEEF</span>
+        <span>🇲🇾 MIICA Malaysia</span>
+        <span>🏆 KSM</span>
+        <span>🕌 Kemenag RI</span>
+      </div>
       <div class="footer-bottom">
-        © <span id="year">2025</span> MTs Negeri 1 Kota Semarang — <span data-i18n="footer.tag">Website resmi madrasah. Dibuat dengan ❤️ untuk pendidikan.</span>
+        © <span id="year">2025</span> MTs Negeri 1 Kota Semarang — <span data-i18n="footer.tag">Website resmi madrasah, dibuat untuk pendidikan.</span>
       </div>
     </div>
   </footer>
@@ -836,12 +1248,12 @@
 
   <!-- ===== Sticky CTA mobile ===== -->
   <div class="sticky-cta" id="stickyCta">
-    <a href="ppdb.html" class="btn btn-gold" data-i18n="sticky.a">📝 Daftar PPDB 2025/2026</a>
+    <a href="ppdb.html" class="btn btn-gold" data-i18n="sticky.a">Daftar PPDB 2025/2026</a>
   </div>
 
   <!-- ===== WhatsApp ===== -->
-  <a class="wa-float" href="https://wa.me/6281234567890?text=Assalamu%27alaikum%2C%20saya%20ingin%20bertanya%20tentang%20MTs%20Negeri%201%20Kota%20Semarang." target="_blank" rel="noopener" aria-label="Chat WhatsApp" title="Chat WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <a class="wa-float" href="kontak.html" aria-label="Hubungi kami" title="Hubungi kami" data-i18n-aria="wa.aria" data-i18n-title="wa.aria">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
   </a>
 
   <script src="js/main.js"></script>

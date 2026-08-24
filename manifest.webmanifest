@@ -1,0 +1,19 @@
+{
+  "name": "MTs Negeri 1 Kota Semarang",
+  "short_name": "MTsN 1 Semarang",
+  "description": "Madrasah Tsanawiyah Negeri di Kota Semarang dengan program unggulan Tahfidz, Riset, dan Sains serta Boarding School Idzatun Nasyi'in.",
+  "lang": "id",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#022c22",
+  "theme_color": "#064e2e",
+  "icons": [
+    {
+      "src": "assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

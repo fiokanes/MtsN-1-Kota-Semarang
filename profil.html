@@ -3,8 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil — MTs Negeri 1 Kota Semarang</title>
-  <meta name="description" content="Profil MTs Negeri 1 Kota Semarang: sejarah, visi misi, identitas madrasah, dan struktur organisasi.">
+  <title data-i18n="prf.title">Profil — MTs Negeri 1 Kota Semarang</title>
+  <meta name="description" data-i18n-meta="prf.desc" content="Profil MTs Negeri 1 Kota Semarang: sejarah, visi misi, identitas madrasah, dan struktur organisasi.">
+  <link rel="canonical" href="https://mts-n-1-kota-semarang.vercel.app/profil.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MTs Negeri 1 Kota Semarang">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:url" content="https://mts-n-1-kota-semarang.vercel.app/profil.html">
+  <meta property="og:title" content="Profil — MTs Negeri 1 Kota Semarang">
+  <meta property="og:description" data-i18n-meta="prf.desc" content="Profil MTs Negeri 1 Kota Semarang: sejarah, visi misi, identitas madrasah, dan struktur organisasi.">
+  <meta property="og:image" content="https://mts-n-1-kota-semarang.vercel.app/assets/photos/gedung-masjid.jpg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Profil — MTs Negeri 1 Kota Semarang">
+  <meta name="twitter:description" data-i18n-meta="prf.desc" content="Profil MTs Negeri 1 Kota Semarang: sejarah, visi misi, identitas madrasah, dan struktur organisasi.">
+  <meta name="twitter:image" content="https://mts-n-1-kota-semarang.vercel.app/assets/photos/gedung-masjid.jpg">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,23 +63,23 @@
         </ul>
       </nav>
       <div class="header-tools">
-        <button class="icon-btn" id="searchBtn" aria-label="Cari di situs" title="Cari (Ctrl+K)">
+        <button class="icon-btn" id="searchBtn" data-i18n-aria="searchBtn.aria" data-i18n-title="searchBtn.title" aria-label="Cari di situs" title="Cari (Ctrl+K)">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
         </button>
-        <button class="icon-btn" id="themeBtn" aria-label="Ganti tema terang/gelap" title="Tema"><span class="theme-ico">🌙</span></button>
+        <button class="icon-btn" id="themeBtn" data-i18n-aria="themeBtn.aria" data-i18n-title="themeBtn.title" aria-label="Ganti tema terang/gelap" title="Tema"><span class="theme-ico">🌙</span></button>
         <button class="lang-switch" id="langBtn" title="Bahasa / Language">EN</button>
       </div>
-      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <button class="nav-toggle" data-i18n-aria="navToggle.aria" aria-label="Buka menu" aria-expanded="false">☰</button>
       <a href="ppdb.html" class="btn btn-gold nav-cta" data-i18n="nav.daftar">Daftar PPDB</a>
     </div>
   </header>
 
   <!-- ===== Overlay pencarian ===== -->
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Pencarian situs">
-    <button class="search-close" id="searchClose" aria-label="Tutup pencarian">✕</button>
+  <div class="search-overlay" id="searchOverlay" role="dialog" data-i18n-aria="search.overlayAria" aria-label="Pencarian situs">
+    <button class="search-close" id="searchClose" data-i18n-aria="search.closeAria" aria-label="Tutup pencarian">✕</button>
     <form role="search">
-      <input type="search" id="searchInput" placeholder="Cari: PPDB, tahfidz, boarding, prestasi…" autocomplete="off" aria-label="Kata kunci pencarian">
-      <button type="submit">Cari</button>
+      <input type="search" id="searchInput" data-i18n-ph="search.ph" placeholder="Cari: PPDB, tahfidz, boarding, prestasi…" autocomplete="off" data-i18n-aria="search.inputAria" aria-label="Kata kunci pencarian">
+      <button type="submit" data-i18n="search.btn">Cari</button>
     </form>
     <div class="search-results" id="searchResults"></div>
   </div>
@@ -73,8 +87,8 @@
   <!-- ===== Page Hero ===== -->
   <section class="page-hero" id="main">
     <div class="container">
-      <p class="breadcrumb"><a href="index.html">Beranda</a> / Profil</p>
-      <h1>Profil Madrasah</h1>
+      <p class="breadcrumb"><a href="index.html" data-i18n="nav.home">Beranda</a> <span data-i18n="prf.bc">/ Profil</span></p>
+      <h1 data-i18n="prf.h1">Profil Madrasah</h1>
     </div>
   </section>
 
@@ -82,18 +96,18 @@
   <section class="section" id="sejarah">
     <div class="container">
       <div class="section-head">
-        <span class="section-eyebrow">Tentang Kami</span>
-        <h2>Sejarah Singkat</h2>
+        <span class="section-eyebrow" data-i18n="prf.sej.ey">Tentang Kami</span>
+        <h2 data-i18n="prf.sej.h">Sejarah Singkat</h2>
       </div>
       <div style="max-width:820px;margin:0 auto;color:var(--ink-soft);">
-        <p>
+        <p data-i18n="prf.sej.p1">
           <strong style="color:var(--green-800);">MTs Negeri 1 Kota Semarang</strong> merupakan
           madrasah tsanawiyah negeri yang berlokasi di Jalan Ketileng Raya (Jalan Fatmawati),
           Kelurahan Sendangmulyo, Kecamatan Tembalang, Kota Semarang. Sebagai madrasah negeri,
           seluruh penyelenggaraan pendidikannya berada di bawah naungan Kementerian Agama Republik
           Indonesia.
         </p>
-        <p style="margin-top:14px;">
+        <p data-i18n="prf.sej.p2" style="margin-top:14px;">
           Madrasah ini dikenal sebagai salah satu madrasah favorit di Kota Semarang dengan animo
           pendaftar yang tinggi setiap tahunnya. Pada PPDB tahun 2022, kuota 352 siswa untuk
           11 rombongan belajar terpenuhi dalam waktu singkat — bahkan jumlah pendaftar melebihi
@@ -101,17 +115,13 @@
           tingkat kota, provinsi, nasional, maupun internasional, serta hadirnya program unggulan
           boarding school.
         </p>
-        <p style="margin-top:14px;">
+        <p data-i18n="prf.sej.p3" style="margin-top:14px;">
           Pada 7 Februari 2022, gedung SBSN (Surat Berharga Syariah Negara) MTs Negeri 1 Kota
           Semarang diresmikan langsung oleh Menteri Agama — sebuah kebanggaan bagi seluruh warga
           madrasah dan masyarakat Kota Semarang. Sejak tahun pelajaran 2022/2023, madrasah juga
           ditetapkan sebagai madrasah <em>piloting</em> Implementasi Kurikulum Merdeka (IKM).
         </p>
-        <div class="note">
-          <strong>Catatan:</strong> Detail sejarah berdirinya madrasah (tahun didirikan, tokoh
-          pendiri) belum tersedia di sumber daring. Mohon diperbarui dengan data resmi dari pihak
-          madrasah.
-        </div>
+
       </div>
     </div>
   </section>
@@ -120,38 +130,33 @@
   <section class="section section-alt" id="visi">
     <div class="container">
       <div class="section-head">
-        <span class="section-eyebrow">Arah &amp; Tujuan</span>
-        <h2>Visi &amp; Misi</h2>
+        <span class="section-eyebrow" data-i18n="prf.vm.ey">Arah &amp; Tujuan</span>
+        <h2 data-i18n="prf.vm.h">Visi &amp; Misi</h2>
       </div>
       <div class="grid-2" style="max-width:920px;margin:0 auto;">
         <div class="card">
-          <span class="tag">Visi</span>
-          <h3>Terwujudnya Madrasah Hebat dan Bermartabat</h3>
-          <p style="margin-top:10px;">
+          <span class="tag" data-i18n="prf.visi.tag">Visi</span>
+          <h3 data-i18n="prf.visi.h">Terwujudnya Madrasah Hebat dan Bermartabat</h3>
+          <p data-i18n="prf.visi.p" style="margin-top:10px;">
             Mencetak generasi Qur'ani yang beriman, bertakwa, berakhlak mulia, cerdas,
             terampil, serta mampu bersaing di era global tanpa meninggalkan nilai-nilai
             keislaman dan keindonesiaan.
           </p>
-          <div class="note" style="margin-top:16px;">
-            <strong>Catatan:</strong> Rumusan visi ini merupakan draf berdasarkan program
-            madrasah. Mohon disesuaikan dengan visi resmi madrasah.
-          </div>
+
         </div>
         <div class="card">
-          <span class="tag">Misi</span>
-          <h3>Langkah Menuju Visi</h3>
+          <span class="tag" data-i18n="prf.misi.tag">Misi</span>
+          <h3 data-i18n="prf.misi.h">Langkah Menuju Visi</h3>
           <ul class="check-list" style="margin-top:10px;">
-            <li>Menyelenggarakan pendidikan yang memadukan ilmu agama dan ilmu umum.</li>
-            <li>Mengembangkan program unggulan tahfidz, riset, dan sains.</li>
-            <li>Membina peserta didik dengan pendidikan ala pesantren melalui boarding school.</li>
-            <li>Menumbuhkan budaya literasi, riset, dan cinta ilmu pengetahuan.</li>
-            <li>Mengembangkan potensi dan bakat peserta didik melalui kegiatan ekstrakurikuler.</li>
-            <li>Mewujudkan madrasah ramah anak yang aman dan nyaman.</li>
-            <li>Membangun kemitraan dengan orang tua dan masyarakat.</li>
+            <li data-i18n="prf.misi.1">Menyelenggarakan pendidikan yang memadukan ilmu agama dan ilmu umum.</li>
+            <li data-i18n="prf.misi.2">Mengembangkan program unggulan tahfidz, riset, dan sains.</li>
+            <li data-i18n="prf.misi.3">Membina peserta didik dengan pendidikan ala pesantren melalui boarding school.</li>
+            <li data-i18n="prf.misi.4">Menumbuhkan budaya literasi, riset, dan cinta ilmu pengetahuan.</li>
+            <li data-i18n="prf.misi.5">Mengembangkan potensi dan bakat peserta didik melalui kegiatan ekstrakurikuler.</li>
+            <li data-i18n="prf.misi.6">Mewujudkan madrasah ramah anak yang aman dan nyaman.</li>
+            <li data-i18n="prf.misi.7">Membangun kemitraan dengan orang tua dan masyarakat.</li>
           </ul>
-          <div class="note" style="margin-top:16px;">
-            <strong>Catatan:</strong> Mohon disesuaikan dengan misi resmi madrasah.
-          </div>
+
         </div>
       </div>
     </div>
@@ -161,23 +166,23 @@
   <section class="section" id="identitas">
     <div class="container">
       <div class="section-head">
-        <span class="section-eyebrow">Data Pokok</span>
-        <h2>Identitas Madrasah</h2>
+        <span class="section-eyebrow" data-i18n="prf.id.ey">Data Pokok</span>
+        <h2 data-i18n="prf.id.h">Identitas Madrasah</h2>
       </div>
       <div class="table-wrap" style="max-width:820px;margin:0 auto;">
         <table>
           <tbody>
-            <tr><th style="width:220px;background:var(--green-800);">Nama Madrasah</th><td>MTs Negeri 1 Kota Semarang</td></tr>
-            <tr><th>Status</th><td>Negeri (Kementerian Agama RI)</td></tr>
-            <tr><th>Jenjang</th><td>Madrasah Tsanawiyah (setara SMP)</td></tr>
-            <tr><th>Alamat</th><td>Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272</td></tr>
-            <tr><th>Kecamatan</th><td>Tembalang</td></tr>
-            <tr><th>Kota</th><td>Kota Semarang, Jawa Tengah</td></tr>
-            <tr><th>Koordinat</th><td>-7.0334, 110.4677</td></tr>
-            <tr><th>Akreditasi</th><td>A <small style="color:#6b7280;">(perlu diverifikasi)</small></td></tr>
-            <tr><th>NPSN / NSM</th><td><em style="color:#6b7280;">(belum tersedia — mohon diisi)</em></td></tr>
-            <tr><th>Kepala Madrasah</th><td>H. Kasturi, S.Ag., M.Pd. <small style="color:#6b7280;">(per 2022–2023, mohon diperbarui)</small></td></tr>
-            <tr><th>Kurikulum</th><td>Implementasi Kurikulum Merdeka (madrasah piloting)</td></tr>
+            <tr><th data-i18n="prf.id.nama" style="width:220px;background:var(--green-800);">Nama Madrasah</th><td data-i18n="prf.id.namav">MTs Negeri 1 Kota Semarang</td></tr>
+            <tr><th data-i18n="prf.id.status">Status</th><td data-i18n="prf.id.statusv">Negeri (Kementerian Agama RI)</td></tr>
+            <tr><th data-i18n="prf.id.jenjang">Jenjang</th><td data-i18n="prf.id.jenjangv">Madrasah Tsanawiyah (setara SMP)</td></tr>
+            <tr><th data-i18n="prf.id.alamat">Alamat</th><td data-i18n="prf.id.alamatv">Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272</td></tr>
+            <tr><th data-i18n="prf.id.kec">Kecamatan</th><td data-i18n="prf.id.kecv">Tembalang</td></tr>
+            <tr><th data-i18n="prf.id.kota">Kota</th><td data-i18n="prf.id.kotav">Kota Semarang, Jawa Tengah</td></tr>
+            <tr><th data-i18n="prf.id.koordinat">Koordinat</th><td data-i18n="prf.id.koordinatv">-7.0334, 110.4677</td></tr>
+            <tr><th data-i18n="prf.id.akreditasi">Akreditasi</th><td>A <small data-i18n="prf.id.akrednote" style="color:#6b7280;">(perlu diverifikasi)</small></td></tr>
+            <tr><th data-i18n="prf.id.npsn">NPSN / NSM</th><td><em data-i18n="prf.id.npsnnote" style="color:#6b7280;">(belum tersedia — mohon diisi)</em></td></tr>
+            <tr><th data-i18n="prf.id.kepala">Kepala Madrasah</th><td>H. Kasturi, S.Ag., M.Pd. <small data-i18n="prf.id.kepalanote" style="color:#6b7280;">(per 2022–2023, mohon diperbarui)</small></td></tr>
+            <tr><th data-i18n="prf.id.kurikulum">Kurikulum</th><td data-i18n="prf.id.kurikulumv">Implementasi Kurikulum Merdeka (madrasah piloting)</td></tr>
           </tbody>
         </table>
       </div>
@@ -188,26 +193,23 @@
   <section class="section section-alt" id="struktur">
     <div class="container">
       <div class="section-head">
-        <span class="section-eyebrow">Organisasi</span>
-        <h2>Struktur Organisasi</h2>
-        <p>Kerangka pengelolaan madrasah (draf — mohon disesuaikan dengan kondisi aktual).</p>
+        <span class="section-eyebrow" data-i18n="prf.str.ey">Organisasi</span>
+        <h2 data-i18n="prf.str.h">Struktur Organisasi</h2>
+        <p data-i18n="prf.str.p">Kerangka pengelolaan madrasah (draf — mohon disesuaikan dengan kondisi aktual).</p>
       </div>
       <div style="max-width:900px;margin:0 auto;">
-        <div style="text-align:center;background:var(--green-800);color:#fff;border-radius:var(--radius);padding:20px;font-family:var(--font-head);font-weight:700;">
+        <div style="text-align:center;background:var(--green-800);color:#fff;border-radius:var(--radius);padding:20px;font-family:var(--font-head);font-weight:700;" data-i18n="prf.str.kepala">
           Kepala Madrasah
         </div>
         <div class="grid-3" style="margin-top:22px;">
-          <div class="card" style="text-align:center;padding:22px;"><strong>Waka Kurikulum</strong><p style="font-size:0.85rem;">Perencanaan &amp; implementasi pembelajaran</p></div>
-          <div class="card" style="text-align:center;padding:22px;"><strong>Waka Kesiswaan</strong><p style="font-size:0.85rem;">Pembinaan peserta didik &amp; tata tertib</p></div>
-          <div class="card" style="text-align:center;padding:22px;"><strong>Waka Sarpras</strong><p style="font-size:0.85rem;">Sarana &amp; prasarana madrasah</p></div>
-          <div class="card" style="text-align:center;padding:22px;"><strong>Waka Humas</strong><p style="font-size:0.85rem;">Hubungan masyarakat &amp; publikasi</p></div>
-          <div class="card" style="text-align:center;padding:22px;"><strong>Kepala Tata Usaha</strong><p style="font-size:0.85rem;">Administrasi &amp; layanan persuratan</p></div>
-          <div class="card" style="text-align:center;padding:22px;"><strong>Kepala Boarding School</strong><p style="font-size:0.85rem;">Pengelolaan asrama Idzatun Nasyi'in</p></div>
+          <div class="card" style="text-align:center;padding:22px;"><strong data-i18n="prf.str.kur">Waka Kurikulum</strong><p data-i18n="prf.str.kurp" style="font-size:0.85rem;">Perencanaan &amp; implementasi pembelajaran</p></div>
+          <div class="card" style="text-align:center;padding:22px;"><strong data-i18n="prf.str.kes">Waka Kesiswaan</strong><p data-i18n="prf.str.kesp" style="font-size:0.85rem;">Pembinaan peserta didik &amp; tata tertib</p></div>
+          <div class="card" style="text-align:center;padding:22px;"><strong data-i18n="prf.str.sar">Waka Sarpras</strong><p data-i18n="prf.str.sarp" style="font-size:0.85rem;">Sarana &amp; prasarana madrasah</p></div>
+          <div class="card" style="text-align:center;padding:22px;"><strong data-i18n="prf.str.hum">Waka Humas</strong><p data-i18n="prf.str.hump" style="font-size:0.85rem;">Hubungan masyarakat &amp; publikasi</p></div>
+          <div class="card" style="text-align:center;padding:22px;"><strong data-i18n="prf.str.tu">Kepala Tata Usaha</strong><p data-i18n="prf.str.tup" style="font-size:0.85rem;">Administrasi &amp; layanan persuratan</p></div>
+          <div class="card" style="text-align:center;padding:22px;"><strong data-i18n="prf.str.bs">Kepala Boarding School</strong><p data-i18n="prf.str.bsp" style="font-size:0.85rem;">Pengelolaan asrama Idzatun Nasyi'in</p></div>
         </div>
-        <div class="note" style="max-width:720px;margin:20px auto 0;">
-          <strong>Catatan:</strong> Nama-nama pejabat struktural mohon dilengkapi dari data resmi
-          madrasah.
-        </div>
+
       </div>
     </div>
   </section>
@@ -216,18 +218,16 @@
   <section class="section" id="video">
     <div class="container">
       <div class="section-head">
-        <span class="section-eyebrow">Multimedia</span>
-        <h2>Video Profil Madrasah</h2>
-        <p>Lihat suasana MTs Negeri 1 Kota Semarang melalui video promosi dan virtual tour.</p>
+        <span class="section-eyebrow" data-i18n="prf.vid.ey">Multimedia</span>
+        <h2 data-i18n="prf.vid.h">Video Profil Madrasah</h2>
+        <p data-i18n="prf.vid.p">Lihat suasana MTs Negeri 1 Kota Semarang melalui video promosi dan virtual tour.</p>
       </div>
       <div style="max-width:860px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);position:relative;">
         <div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;">
-          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube-nocookie.com/embed/2tGHqbadGgI" title="Video Profil MTs Negeri 1 Kota Semarang" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube-nocookie.com/embed/2tGHqbadGgI" title="Video Profil MTs Negeri 1 Kota Semarang" data-i18n-title="prf.vid.iframeTitle" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <p style="margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.8);">Video Informasi MTs Negeri 1 Kota Semarang (kanal resmi madrasah).</p>
-        <div class="note" style="margin-top:14px;">
-          <strong>Catatan:</strong> Ganti video dengan cara mengubah kode video pada atribut <em>src</em> iframe, misalnya <code>https://www.youtube-nocookie.com/embed/XXXXXXX</code>.
-        </div>
+        <p data-i18n="prf.vid.cap" style="margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.8);">Video Informasi MTs Negeri 1 Kota Semarang (kanal resmi madrasah).</p>
+
       </div>
     </div>
   </section>
@@ -237,58 +237,57 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <h4>MTs Negeri 1 Kota Semarang</h4>
-          <p>
+          <h4 data-i18n="ft.about">MTs Negeri 1 Kota Semarang</h4>
+          <p data-i18n="ft.aboutp">
             Madrasah Tsanawiyah Negeri di bawah Kementerian Agama RI yang berkomitmen
             mencetak generasi Qur'ani, cerdas, dan berprestasi melalui program unggulan
             tahfidz, riset, dan sains.
           </p>
           <div class="sosmed">
-            <a href="#" title="Instagram" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
-            <a href="#" title="Facebook" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-            <a href="#" title="YouTube" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.5 3.8 12 3.8 12 3.8s-6.5 0-8.4.5A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.9.5 8.4.5 8.4.5s6.5 0 8.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"/><path d="m10 15 5-3-5-3z"/></svg></a>
+            <a href="https://www.youtube.com/@mtsnegeri1kotasemarang356" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.5 3.8 12 3.8 12 3.8s-6.5 0-8.4.5A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.9.5 8.4.5 8.4.5s6.5 0 8.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"/><path d="m10 15 5-3-5-3z"/></svg></a>
           </div>
         </div>
         <div>
-          <h4>Tautan Cepat</h4>
+          <h4 data-i18n="ft.q">Tautan Cepat</h4>
           <ul>
-            <li><a href="profil.html">Profil Madrasah</a></li>
-            <li><a href="program.html">Program Unggulan</a></li>
-            <li><a href="prestasi.html">Prestasi</a></li>
-            <li><a href="fasilitas.html">Fasilitas</a></li>
-            <li><a href="ppdb.html">Info PPDB</a></li>
+            <li><a href="profil.html" data-i18n="ft.q1">Profil Madrasah</a></li>
+            <li><a href="program.html" data-i18n="ft.q2">Program Unggulan</a></li>
+            <li><a href="prestasi.html" data-i18n="ft.q3">Prestasi</a></li>
+            <li><a href="fasilitas.html" data-i18n="ft.q4">Fasilitas</a></li>
+            <li><a href="ppdb.html" data-i18n="ft.q5">Info PPDB</a></li>
           </ul>
         </div>
         <div>
-          <h4>Layanan</h4>
+          <h4 data-i18n="ft.l">Layanan</h4>
           <ul>
-            <li><a href="kontak.html">Hubungi Kami</a></li>
-            <li><a href="ppdb.html">Pendaftaran Siswa</a></li>
-            <li><a href="profil.html">Struktur Organisasi</a></li>
-            <li><a href="kontak.html">Lokasi Madrasah</a></li>
+            <li><a href="kontak.html" data-i18n="ft.l1">Hubungi Kami</a></li>
+            <li><a href="ppdb.html" data-i18n="ft.l2">Pendaftaran Siswa</a></li>
+            <li><a href="profil.html" data-i18n="ft.l3">Struktur Organisasi</a></li>
+            <li><a href="kontak.html" data-i18n="ft.l4">Lokasi Madrasah</a></li>
+            <li><a href="kebijakan.html" data-i18n="ft.l5">Kebijakan Privasi</a></li>
           </ul>
         </div>
         <div>
-          <h4>Kontak</h4>
+          <h4 data-i18n="ft.k">Kontak</h4>
           <ul class="footer-contact">
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272</span></li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg><span>(024) 000-0000 <small>(perlu diperbarui)</small></span></li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span>humas@mtsn1semarang.sch.id <small>(perlu diperbarui)</small></span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="ft.k1">Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg><span data-i18n="ft.k2">(024) 6716521</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span>humas@mtsn1semarang.sch.id</span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        © <span id="year">2025</span> MTs Negeri 1 Kota Semarang. Dibuat dengan ❤️ untuk pendidikan.
+        © <span id="year">2025</span> MTs Negeri 1 Kota Semarang — <span data-i18n="footer.tag">Website resmi madrasah, dibuat untuk pendidikan.</span>
       </div>
     </div>
   </footer>
 
   <!-- ===== WhatsApp ===== -->
-  <a class="wa-float" href="https://wa.me/6281234567890?text=Assalamu%27alaikum%2C%20saya%20ingin%20bertanya%20tentang%20MTs%20Negeri%201%20Kota%20Semarang." target="_blank" rel="noopener" aria-label="Chat WhatsApp" title="Chat WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <a class="wa-float" href="kontak.html" aria-label="Hubungi kami" title="Hubungi kami" data-i18n-aria="wa.aria" data-i18n-title="wa.aria">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
   </a>
 
-  <button class="to-top" aria-label="Kembali ke atas">↑</button>
+  <button class="to-top" data-i18n-aria="toTop.aria" aria-label="Kembali ke atas">↑</button>
 
   <script src="js/main.js"></script>
 </body>

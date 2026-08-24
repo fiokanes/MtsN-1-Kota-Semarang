@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mts-n-1-kota-semarang.vercel.app/sitemap.xml
