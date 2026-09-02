@@ -165,7 +165,8 @@ document.addEventListener('DOMContentLoaded', function () {
       { t: 'Program Unggulan', d: 'Tahfidz, riset, dan sains', u: 'program.html', k: 'program tahfidz riset sains kurikulum' },
       { t: 'Boarding School Idzatun Nasyi\u2019in', d: 'Asrama santri putra & putri, kajian kitab', u: 'program.html#boarding', k: 'boarding asrama santri pesantren kitab idzatun' },
       { t: 'Ekstrakurikuler', d: 'Pramuka, hadroh, futsal, PMR, jurnalistik', u: 'program.html#ekskul', k: 'ekstrakurikuler pramuka hadroh futsal pmr paskibra' },
-      { t: 'Prestasi', d: 'AISEEF, KSM, dan penghargaan siswa', u: 'prestasi.html', k: 'prestasi aiseef ksm lomba juara internasional' },
+      { t: 'Prestasi', d: 'RARE ICON, KSM, dan penghargaan siswa', u: 'prestasi.html', k: 'prestasi rare icon riset ksm lomba juara internasional' },
+      { t: 'Berita', d: 'Berita & kabar resmi madrasah', u: 'berita.html', k: 'berita news kabar kegiatan pengumuman prestasi u15 timnas sbsn porseni pramuka' },
       { t: 'Fasilitas', d: 'Gedung SBSN, lab, perpustakaan, asrama, masjid', u: 'fasilitas.html', k: 'fasilitas gedung sbsn lab laboratorium perpustakaan asrama masjid uks' },
       { t: 'PPDB', d: 'Pendaftaran peserta didik baru', u: 'ppdb.html', k: 'ppdb pendaftaran daftar siswa baru jalur' },
       { t: 'Kontak & Lokasi', d: 'Alamat, telepon, email, peta', u: 'kontak.html', k: 'kontak alamat telepon email peta lokasi maps' },
@@ -177,7 +178,8 @@ document.addEventListener('DOMContentLoaded', function () {
       { t: 'Flagship Programs', d: 'Tahfidz, research, and science', u: 'program.html', k: 'program tahfidz research science curriculum' },
       { t: 'Idzatun Nasyi\u2019in Boarding School', d: 'Boys\u2019 & girls\u2019 dormitory, classical book studies', u: 'program.html#boarding', k: 'boarding dormitory santri pesantren kitab idzatun' },
       { t: 'Extracurriculars', d: 'Scouting, hadroh, futsal, PMR, journalism', u: 'program.html#ekskul', k: 'extracurricular scout hadroh futsal pmr paskibra' },
-      { t: 'Achievements', d: 'AISEEF, KSM, and student awards', u: 'prestasi.html', k: 'achievement aiseef ksm medal international award' },
+      { t: 'Achievements', d: 'RARE ICON, KSM, and student awards', u: 'prestasi.html', k: 'achievement rare icon research ksm medal international award' },
+      { t: 'News', d: 'Official madrasah news & announcements', u: 'berita.html', k: 'news berita activities announcement u15 timnas sbsn porseni scout achievement' },
       { t: 'Facilities', d: 'SBSN building, labs, library, dormitory, mosque', u: 'fasilitas.html', k: 'facilities sbsn building lab laboratory library dormitory mosque uks' },
       { t: 'Admissions (PPDB)', d: 'New student registration', u: 'ppdb.html', k: 'ppdb admission registration new student track' },
       { t: 'Contact & Location', d: 'Address, phone, email, map', u: 'kontak.html', k: 'contact address phone email map location' },
@@ -249,7 +251,15 @@ document.addEventListener('DOMContentLoaded', function () {
       'hero.a4': 'Tentang Boarding',
       'samb.h': 'Sambutan Kepala Madrasah', 'samb.j': 'Assalamu\'alaikum Warahmatullahi Wabarakatuh',
       'stat.1': 'Kuota Siswa / Angkatan', 'stat.2': 'Rombongan Belajar', 'stat.3': 'Program Unggulan',
-      'stat.4': 'Kapasitas Boarding', 'stat.5': 'Negara (AISEEF)', 'stat.6': 'Akreditasi',
+      'stat.4': 'Kapasitas Boarding', 'stat.5': 'Medali (2022)', 'stat.6': 'Akreditasi',
+      'stat.src': 'Sumber: Kanwil Kemenag Jawa Tengah & kanal YouTube resmi madrasah.',
+      'hero.prospekt': 'Prospektus (PDF)',
+      'nws.src': 'Sumber berita: Kanwil Kementerian Agama Provinsi Jawa Tengah (jateng.kemenag.go.id).',
+      'tea.2s': 'Pembina Asrama',
+      'tea.3s': 'Ka. Gudep Putra',
+      'tea.4s': 'Pelatih Seni',
+      'tea.5s': 'Pelatih Seni',
+      'nav.berita': 'Berita',
       'prg.h': 'Tiga Pilar Keunggulan Madrasah', 'prg.btn': 'Selengkapnya tentang Program →',
       'png.h': 'Pengumuman Madrasah', 'eks.h': 'Ekstrakurikuler & Kegiatan Siswa',
       'brd.h': 'Boarding School "Idzatun Nasyi\'in"', 'brd.btn': 'Selengkapnya →',
@@ -262,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'sticky.a': 'Daftar PPDB 2025/2026', 'footer.tag': 'Website resmi madrasah, dibuat untuk pendidikan.',
       'topbar.siswa': 'Siswa', 'topbar.ortu': 'Orang Tua', 'topbar.alumni': 'Alumni', 'topbar.hours': 'Senin–Jumat, 07.00–16.00 WIB',
       'hero.c1': 'Akreditasi A', 'hero.c2': 'Madrasah Negeri (Kemenag RI)', 'hero.c3': 'Piloting Kurikulum Merdeka', 'hero.c4': 'Boarding School',
-      'hero.c5': "Tahfidzul Qur'an", 'hero.c6': 'Riset & Penelitian', 'hero.c7': 'Olimpiade Sains', 'hero.c8': 'AISEEF & KSM',
+      'hero.c5': "Tahfidzul Qur'an", 'hero.c6': 'Riset & Penelitian', 'hero.c7': 'Olimpiade Sains', 'hero.c8': 'Riset Internasional & KSM',
       'hero.c9': 'Pendidikan Pesantren', 'hero.c10': 'Kajian Kitab Kuning', 'hero.c11': '100 Putra + 100 Putri',
       'trust.label': 'Terakreditasi & Diakui', 'trust.1': 'Akreditasi A', 'trust.2': 'Madrasah Negeri', 'trust.3': 'Kurikulum Merdeka', 'trust.5': 'Boarding School',
       'why.ey': 'Keunggulan', 'why.h': 'Mengapa Memilih MTs Negeri 1', 'why.p': 'Alasan keluarga mempercayakan pendidikan putra-putrinya kepada kami.',
@@ -310,6 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'media.ey': 'Media & Film', 'media.h': 'Media Center Madrasah',
       'media.p': 'Video resmi dari kanal YouTube MTs Negeri 1 Kota Semarang — pilih untuk memutar langsung di sini.',
       'media.channel': '▶ Kunjungi Kanal YouTube Resmi',
+      'media.watch': '▶ Jika video tidak muncul, buka langsung di YouTube',
       'media.modalAria': 'Pemutar video', 'media.closeAria': 'Tutup pemutar video',
       'media.tagProfile': 'Profil', 'media.tagPPDB': 'PPDB', 'media.tagGlobal': 'Global', 'media.tagFaith': 'Keislaman', 'media.tagArts': 'Seni', 'media.tagMars': 'Mars',
       'media.m1t': 'Kurikulum Berbasis Cinta — Profil Madrasah', 'media.m1d': 'Film profil resmi madrasah: kurikulum berbasis cinta, pembelajaran, dan kehidupan kampus.',
@@ -321,11 +332,11 @@ document.addEventListener('DOMContentLoaded', function () {
       'media.m7t': 'Mars MTsN 1 Kota Semarang', 'media.m7d': 'Mars madrasah, ciptaan Bapak H. Kasturi, S.Ag., M.Pd.',
       'ppdb.video': '▶ Tonton Video PPDB', 'vtr.playAria': 'Putar film profil madrasah',
       'hero.note1': 'Pendaftaran Dibuka', 'hero.note2': 'TP 2025/2026',
-      'hero.qt1': 'Akreditasi', 'hero.qt2': 'Kuota Siswa', 'hero.qt3': 'Negara AISEEF',
+      'hero.qt1': 'Akreditasi', 'hero.qt2': 'Kuota Siswa', 'hero.qt3': 'Medali (2022)',
       'hero.apply': 'Daftar Sekarang →', 'hero.visit': 'Kunjungi Kampus',
       'path.ey': 'Global Engagement', 'path.h': 'Dari Semarang, Berkarya di Panggung Dunia',
       'path.p': 'Jejaring prestasi dan kesempatan global untuk peserta didik — dari kompetisi internasional hingga melanjutkan studi di sekolah unggulan.',
-      'path.1t': 'Riset Internasional', 'path.1d': 'Silver Medal AISEEF 2021 — bersaing dengan peserta didik dari 19 negara di kancah riset dunia.',
+      'path.1t': 'Riset Internasional', 'path.1d': 'Medali perak RARE ICON (IFPRI) 2022 — bersaing di kancah riset internasional.',
       'path.2t': 'Kolaborasi ASEAN', 'path.2d': '13C Challenge — MIICA Malaysia 2025: kolaborasi kreatif lintas negara.',
       'path.3t': 'Kompetisi Nasional', 'path.3d': 'Kompetisi Sains Madrasah (KSM) hingga tingkat provinsi dan nasional.',
       'path.4t': 'Lanjutan Studi Gemilang', 'path.4d': 'Alumni berhasil melaju ke MAN Insan Cendekia, MA/SMA unggulan, dan pesantren ternama.',
@@ -343,13 +354,31 @@ document.addEventListener('DOMContentLoaded', function () {
       'news.v2t': 'Peresmian Masjid Al-Karim MTsN 1 Kota Semarang', 'news.v2p': 'Dokumentasi peresmian masjid madrasah sebagai pusat ibadah dan pembinaan tahfidz.',
       'news.v3t': 'MTsN 1 Kota Semarang di Ajang Riset Internasional', 'news.v3p': 'Kiprah peserta didik madrasah pada kompetisi dan pameran riset tingkat internasional.',
       'nws.h': 'Cerita, Berita & Prestasi', 'nws.p': 'Kabar dan capaian MTs Negeri 1 Kota Semarang dari berbagai kegiatan.',
-      'nws.1t': 'Silver Medal di Ajang Riset Internasional AISEEF', 'nws.1p': 'Peserta didik meraih medali perak pada ajang riset internasional yang diikuti siswa dari 19 negara.', 'nws.1d': '2021 · Internasional',
-      'nws.2t': 'Gedung SBSN Diresmikan Menteri Agama', 'nws.2p': 'Gedung baru madrasah yang dibangun lewat skema SBSN diresmikan untuk menunjang kegiatan belajar.',
-      'nws.3t': 'Bertanding di Kompetisi Sains Madrasah (KSM)', 'nws.3p': 'Tiga siswa maju mewakili madrasah ke tingkat provinsi pada Kompetisi Sains Madrasah.',
-      'nws.4t': "Boarding School \"Idzatun Nasyi'in\" Resmi Beroperasi", 'nws.4p': 'Pendidikan ala pesantren dengan pembinaan hafalan dan kajian kitab mulai berjalan penuh.',
+      'nws.1t': 'Peserta Didik Lolos Seleksi U-15 Timnas Indonesia', 'nws.1p': 'Salah satu peserta didik kelas IX lolos seleksi U-15 Timnas Indonesia dan bersiap menuju Portugal.', 'nws.1d': '6 Sep 2023 · Nasional',
+      'trust.4': 'Riset Internasional',
+      'trust.4s': 'Medali perak RARE ICON (IFPRI) 2022',
+      'nws.2d': '29 Mar 2022 · Nasional',
+      'nws.3d': '8 Feb 2022 · Fasilitas',
+      'nws.4d': '4 Jun 2022 · Internasional',
+      'nws.5d': '11 Jun 2022 · Kwartir',
+      'nws.6d': '25 Mar 2022 · Alumni',
+      'nws.2t': '132 Medali dari 10 Ajang Kompetisi', 'nws.2p': 'Putra-putri terbaik madrasah menyumbangkan 132 medali dalam 10 macam perlombaan olimpiade dan sains.',
+      'nws.3t': 'Gedung SBSN Diresmikan Menteri Agama', 'nws.3p': 'Gedung baru madrasah yang dibangun lewat skema SBSN diresmikan untuk menunjang kegiatan belajar.',
+      'nws.4t': 'Medali Perak Riset Internasional (RARE ICON)', 'nws.4p': 'Riset pasta gigi dari kulit jeruk keprok meraih medali perak tingkat internasional pada RARE ICON 2022.',
       'nws.5t': 'Juara 1 LCTP Pramuka Tingkat Kwartir', 'nws.5p': 'Tim pramuka madrasah meraih juara pertama Lomba Cepat Tepat Pramuka tingkat kwartir.',
-      'nws.6t': 'Komitmen Madrasah Ramah Anak', 'nws.6p': 'Madrasah berkomitmen menghadirkan lingkungan belajar yang aman, nyaman, dan ramah anak.',
-      'nws.btn': 'Lihat Semua Berita & Prestasi →',
+      'nws.6t': 'Alumni Diterima di MAN Insan Cendekia & MAN PK', 'nws.6p': 'Peserta didik diterima di MAN Insan Cendekia (Pekalongan, Pasuruan) dan MAN Program Keagamaan Surakarta.',
+      'nws.btn': 'Lihat Semua Berita →',
+      'brt.title': 'Berita — MTs Negeri 1 Kota Semarang',
+      'brt.bc': '/ Berita',
+      'brt.h1': 'Berita Madrasah',
+      'brt.ey': 'Newsroom',
+      'brt.h2': 'Kabar, Kegiatan & Prestasi Terbaru',
+      'brt.p': 'Berita yang ditampilkan bersumber dari rilis resmi Kanwil Kementerian Agama Provinsi Jawa Tengah dan kanal YouTube resmi madrasah.',
+      'brt.src': 'Sumber: Kanwil Kementerian Agama Provinsi Jawa Tengah (jateng.kemenag.go.id) — klik judul untuk membaca rilis lengkapnya.',
+      'brt.prestasi': 'Lihat Semua Prestasi →',
+      'brt.cta.h': 'Ikuti Kabar Madrasah',
+      'brt.cta.p': 'Dapatkan info terbaru seputar kegiatan, prestasi, dan pendaftaran langsung dari sumber resmi madrasah.',
+      'brt.cta.btn': 'Info PPDB →',
       'vtr.tag': 'Campus Experience', 'vtr.h': 'Jelajahi Lingkungan Madrasah Kami', 'vtr.p': "Tonton tur virtual kampus, fasilitas, dan kehidupan Boarding School Idzatun Nasyi'in — dari mana saja.",
       'vtr.b1': 'Tonton Video →', 'vtr.b2': 'Kunjungi Kami',
       'gal.ey': 'Dokumentasi', 'gal.p': 'Potret suasana dan aktivitas di lingkungan MTs Negeri 1 Kota Semarang.',
@@ -363,14 +392,14 @@ document.addEventListener('DOMContentLoaded', function () {
       'tes.2q': 'Pembinaan riset dan sains di madrasah ini sangat membekali saya. Saya bisa lolos seleksi MAN Insan Cendekia berkat pengalaman olimpiade dan KIR yang saya dapatkan di sini.',
       'tes.2b': 'Alumni MTsN 1 Kota Semarang', 'tes.2s': 'Diterima di MAN Insan Cendekia',
       'tes.3q': 'Bangga rasanya menjadi bagian dari kemenangan tim riset di ajang internasional. Guru-guru di sini sangat suportif dalam mendampingi kami mengembangkan ide penelitian.',
-      'tes.3b': 'Siswa Kelas IX', 'tes.3s': 'Medali AISEEF 2021',
+      'tes.3b': 'Siswa Kelas IX', 'tes.3s': 'Medali Perak RARE ICON 2022',
       'tea.ey': 'Pendidik & Tenaga Kependidikan', 'tea.p': 'Tenaga pendidik profesional dan berdedikasi dalam mendampingi peserta didik.',
       'tea.1p': 'Kepala Madrasah', 'tea.1s': 'Fikih & Keagamaan',
-      'tea.2h': 'Waka Kurikulum', 'tea.2p': 'Guru Bahasa Inggris',
-      'tea.3h': 'Waka Kesiswaan', 'tea.3p': 'Tahfidz & Tafsir',
-      'tea.4h': 'Guru IPA', 'tea.4p': 'Sains & Riset',
-      'tea.5h': 'Guru Matematika', 'tea.5p': 'Olimpiade & Saintek',
-      'tea.6h': 'Kepala Boarding School', 'tea.6p': 'Pembina Asrama',
+      'tea.2h': 'M. Fajar Anshari', 'tea.2p': 'Kepala Boarding School',
+      'tea.3h': 'Saptono', 'tea.3p': 'Pembina Pramuka',
+      'tea.4h': 'Agus Prapto Sukoco', 'tea.4p': 'Guru Seni & Paduan Suara',
+      'tea.5h': 'Agus Trisnoto', 'tea.5p': 'Guru Seni & Paduan Suara',
+      'tea.6h': 'Tenaga Pendidik Lainnya', 'tea.6p': 'Guru & Karyawan',
       'tea.badge': 'Informasi resmi menyusul', 'tea.note': 'Foto dan nama tenaga pendidik lainnya sedang dalam proses validasi data resmi madrasah.',
       'fas.ey': 'Sarana & Prasarana', 'fas.p': 'Fasilitas pendukung pembelajaran dan kenyamanan peserta didik.',
       'fas.1t': 'Gedung & Kampus', 'fas.1p': 'Gedung dan kampus madrasah — termasuk gedung SBSN yang diresmikan Menteri Agama.',
@@ -382,7 +411,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'faq.1q': 'Bagaimana cara mendaftar PPDB?', 'faq.1a': 'Pendaftaran melalui jalur resmi yang diumumkan panitia PPDB pada laman ini. Detail jadwal, kuota, dan berkas menyusul dari pihak madrasah.',
       'faq.2q': 'Apakah tersedia program tahfidz untuk semua siswa?', 'faq.2a': "Ya. Tahfidzul Qur'an merupakan salah satu program unggulan yang dibina terstruktur, dilengkapi kajian kitab kuning dan pendampingan pengasuh.",
       'faq.3q': "Bagaimana sistem Boarding School Idzatun Nasyi'in?", 'faq.3a': "Asrama dikelola mandiri oleh madrasah dengan pendidikan ala pesantren — hafalan Al-Qur'an, kajian kitab, dan pembinaan karakter setiap hari. Kapasitas 100 santri putra dan 100 santriwati.",
-      'faq.4q': 'Apa saja program unggulan selain tahfidz?', 'faq.4a': 'Riset dan Sains. Peserta didik dibina untuk kompetisi mulai tingkat kota hingga internasional, termasuk KSM dan AISEEF.',
+      'faq.4q': 'Apa saja program unggulan selain tahfidz?', 'faq.4a': 'Riset dan Sains. Peserta didik dibina untuk kompetisi mulai tingkat kota hingga internasional, termasuk KSM dan riset internasional.',
       'faq.5q': 'Apakah saya bisa mengunjungi madrasah?', 'faq.5a': 'Tentu. Lihat halaman Kontak & Lokasi untuk alamat, peta, dan jam layanan kantor (Senin–Jumat, 07.00–16.00 WIB).',
       'lb.h': 'Link Terkait', 'lb.p': 'Portal resmi pemerintah & Kementerian Agama.',
       'ppdb.p': 'Bergabunglah bersama kami! Jadilah bagian dari keluarga besar MTs Negeri 1 Kota Semarang dengan program unggulan tahfidz, riset, dan sains.',
@@ -392,7 +421,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'ft.q': 'Tautan Cepat', 'ft.q1': 'Profil Madrasah', 'ft.q2': 'Program Unggulan', 'ft.q3': 'Prestasi', 'ft.q4': 'Fasilitas', 'ft.q5': 'Info PPDB',
       'ft.l': 'Layanan', 'ft.l1': 'Hubungi Kami', 'ft.l2': 'Pendaftaran Siswa', 'ft.l3': 'Struktur Organisasi', 'ft.l4': 'Lokasi Madrasah',
       'ft.k': 'Kontak', 'ft.k1': 'Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272', 'ft.k2': '(024) 6716521',
-      'ft.cred': '<b>Akreditasi A</b>&nbsp;·&nbsp;Madrasah Negeri (Kemenag RI)&nbsp;·&nbsp;Piloting Kurikulum Merdeka&nbsp;·&nbsp;AISEEF',
+      'ft.cred': '<b>Akreditasi A</b>&nbsp;·&nbsp;Madrasah Negeri (Kemenag RI)&nbsp;·&nbsp;Piloting Kurikulum Merdeka&nbsp;·&nbsp;Riset Internasional',
       // ===== Pencarian & aksesibilitas =====
       'search.ph': 'Cari: PPDB, tahfidz, boarding, prestasi…',
       'search.btn': 'Cari',
@@ -419,7 +448,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'cal.none': 'Tidak ada agenda di bulan ini.',
       // ===== Halaman Prestasi =====
       'pst.title': 'Prestasi — MTs Negeri 1 Kota Semarang',
-      'pst.desc': 'Prestasi MTs Negeri 1 Kota Semarang: Silver Medal AISEEF 2021, KSM 2023, LCTP Pramuka, dan lainnya.',
+      'pst.desc': 'Prestasi MTs Negeri 1 Kota Semarang: Medali Perak Riset Internasional (RARE ICON), 132 medali, KSM, LCTP Pramuka, dan lainnya.',
       'pst.bc': '/ Prestasi',
       'pst.h1': 'Prestasi Madrasah',
       'pst.ey': 'Kebanggaan Kami',
@@ -443,8 +472,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'pst.t6': 'Lulusan Diterima di MAN Bergengsi',
       'pst.d6': 'Peserta didik diterima di madrasah unggulan nasional berbasis asrama: MAN Insan Cendekia (IC), MAN Program Keagamaan (PK), dan MAKN melalui SNPDB.',
       'pst.s6': 'Sumber: Kemenag Jateng, 2022',
-      'pst.t7': 'Silver Medal AISEEF 2021',
-      'pst.d7': 'Tim riset MTs Negeri 1 Kota Semarang meraih medali perak pada ajang internasional AISEEF 2021, bersaing dengan 19 negara di dunia.',
+      'pst.t7': 'Medali Perak Riset Internasional (RARE ICON)',
+      'pst.d7': 'Tim riset madrasah meraih medali perak tingkat internasional pada RARE ICON 2022 (IFPRI) lewat riset pasta gigi kulit jeruk keprok.',
       'pst.s7': 'Sumber: Kemenag Jateng, Februari 2021',
       'pst.cta.h': 'Ingin Anak Anda Berprestasi?',
       'pst.cta.p': 'Bergabunglah dengan madrasah yang telah terbukti mencetak juara di tingkat nasional dan internasional.',
@@ -554,7 +583,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'pro.l2a': 'Pelatihan metode penelitian ilmiah sejak dini.',
       'pro.l2b': 'Bimbingan khusus persiapan kompetisi riset.',
       'pro.l2c': 'Pembelajaran presentasi ilmiah berbahasa asing.',
-      'pro.l2d': 'Terbukti meraih medali perak AISEEF 2021 (internasional).',
+      'pro.l2d': 'Terbukti meraih medali perak riset internasional (RARE ICON 2022).',
       'pro.t3': 'Sains',
       'pro.l3a': 'Pembelajaran sains aktif berbasis praktikum.',
       'pro.l3b': 'Pembinaan olimpiade sains (KSM, KSN, dan lainnya).',
@@ -665,7 +694,15 @@ document.addEventListener('DOMContentLoaded', function () {
       'hero.a4': 'About Boarding',
       'samb.h': 'Principal\'s Welcome', 'samb.j': 'Assalamu\'alaikum Warahmatullahi Wabarakatuh',
       'stat.1': 'Student Quota / Year', 'stat.2': 'Study Groups', 'stat.3': 'Flagship Programs',
-      'stat.4': 'Boarding Capacity', 'stat.5': 'Countries (AISEEF)', 'stat.6': 'Accreditation',
+      'stat.4': 'Boarding Capacity', 'stat.5': 'Medals (2022)', 'stat.6': 'Accreditation',
+      'stat.src': 'Source: Kanwil Kemenag Jawa Tengah & official madrasah YouTube channel.',
+      'hero.prospekt': 'Prospectus (PDF)',
+      'nws.src': 'News source: Kanwil Kementerian Agama Provinsi Jawa Tengah (jateng.kemenag.go.id).',
+      'tea.2s': 'Dormitory Mentor',
+      'tea.3s': 'Boys Scout Leader',
+      'tea.4s': 'Arts Coach',
+      'tea.5s': 'Arts Coach',
+      'nav.berita': 'News',
       'prg.h': 'Three Pillars of Excellence', 'prg.btn': 'Learn More About Programs →',
       'png.h': 'School Announcements', 'eks.h': 'Extracurriculars & Student Life',
       'brd.h': '"Idzatun Nasyi\'in" Boarding School', 'brd.btn': 'Learn More →',
@@ -678,7 +715,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'sticky.a': 'Apply for PPDB 2025/2026', 'footer.tag': 'Official school website, made for education.',
       'topbar.siswa': 'Students', 'topbar.ortu': 'Parents', 'topbar.alumni': 'Alumni', 'topbar.hours': 'Mon–Fri, 07.00–16.00 WIB',
       'hero.c1': 'Accreditation A', 'hero.c2': 'Public Madrasah (MoRA)', 'hero.c3': 'Kurikulum Merdeka Pilot', 'hero.c4': 'Boarding School',
-      'hero.c5': 'Quran Memorization', 'hero.c6': 'Research & Inquiry', 'hero.c7': 'Science Olympiad', 'hero.c8': 'AISEEF & KSM',
+      'hero.c5': 'Quran Memorization', 'hero.c6': 'Research & Inquiry', 'hero.c7': 'Science Olympiad', 'hero.c8': 'International Research & KSM',
       'hero.c9': 'Pesantren Education', 'hero.c10': 'Classical Books Study', 'hero.c11': '100 Boys + 100 Girls',
       'trust.label': 'Accredited & Recognized', 'trust.1': 'Accreditation A', 'trust.2': 'Public Madrasah', 'trust.3': 'Kurikulum Merdeka', 'trust.5': 'Boarding School',
       'why.ey': 'Excellence', 'why.h': 'Why Choose MTs Negeri 1', 'why.p': 'Reasons families entrust their children\'s education to us.',
@@ -726,6 +763,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'media.ey': 'Media & Film', 'media.h': 'School Media Center',
       'media.p': 'Official videos from the MTs Negeri 1 Kota Semarang YouTube channel — select one to play right here.',
       'media.channel': '▶ Visit Our Official YouTube Channel',
+      'media.watch': '▶ If the video does not load, open it on YouTube',
       'media.modalAria': 'Video player', 'media.closeAria': 'Close video player',
       'media.tagProfile': 'Profile', 'media.tagPPDB': 'Admissions', 'media.tagGlobal': 'Global', 'media.tagFaith': 'Faith', 'media.tagArts': 'Arts', 'media.tagMars': 'Anthem',
       'media.m1t': 'Curriculum of Love — School Profile', 'media.m1d': 'The official school profile film: the love-based curriculum, learning, and campus life.',
@@ -737,11 +775,11 @@ document.addEventListener('DOMContentLoaded', function () {
       'media.m7t': 'Anthem of MTsN 1 Kota Semarang', 'media.m7d': 'The school anthem, composed by H. Kasturi, S.Ag., M.Pd.',
       'ppdb.video': '▶ Watch Admissions Video', 'vtr.playAria': 'Play the school profile film',
       'hero.note1': 'Admissions Open', 'hero.note2': 'AY 2025/2026',
-      'hero.qt1': 'Accreditation', 'hero.qt2': 'Student Seats', 'hero.qt3': 'AISEEF Countries',
+      'hero.qt1': 'Accreditation', 'hero.qt2': 'Student Seats', 'hero.qt3': 'Medals (2022)',
       'hero.apply': 'Apply Now →', 'hero.visit': 'Book a Campus Tour',
       'path.ey': 'Global Engagement', 'path.h': 'From Semarang, Shining on the World Stage',
       'path.p': 'A network of achievement and global opportunity for our students — from international competitions to continuing studies at top schools.',
-      'path.1t': 'International Research', 'path.1d': 'AISEEF 2021 Silver Medal — competing with students from 19 countries on the world research stage.',
+      'path.1t': 'International Research', 'path.1d': 'Silver medal at RARE ICON (IFPRI) 2022 — competing on the international research stage.',
       'path.2t': 'ASEAN Collaboration', 'path.2d': '13C Challenge — MIICA Malaysia 2025: creative collaboration across borders.',
       'path.3t': 'National Competitions', 'path.3d': 'Madrasah Science Competition (KSM) up to provincial and national levels.',
       'path.4t': 'Bright Academic Futures', 'path.4d': 'Alumni go on to MAN Insan Cendekia, top madrasah aliyah/senior high schools, and renowned boarding schools.',
@@ -759,13 +797,31 @@ document.addEventListener('DOMContentLoaded', function () {
       'news.v2t': 'Al-Karim Mosque Inauguration at MTsN 1 Kota Semarang', 'news.v2p': 'Documentation of the mosque inauguration as a center for worship and tahfidz coaching.',
       'news.v3t': 'MTsN 1 Kota Semarang at an International Research Competition', 'news.v3p': 'Our students\' participation in research competitions and exhibitions at international level.',
       'nws.h': 'Stories, News & Achievements', 'nws.p': 'Latest news and accomplishments of MTs Negeri 1 Kota Semarang.',
-      'nws.1t': 'Silver Medal at the AISEEF International Research Competition', 'nws.1p': 'Our students won silver at an international research event with participants from 19 countries.', 'nws.1d': '2021 · International',
-      'nws.2t': 'SBSN Building Inaugurated by the Minister of Religious Affairs', 'nws.2p': 'A new school building built under the SBSN scheme was inaugurated to support learning.',
-      'nws.3t': 'Competing in the Madrasah Science Competition (KSM)', 'nws.3p': 'Three students represented the school at the provincial level of the Madrasah Science Competition.',
-      'nws.4t': '"Idzatun Nasyi\'in" Boarding School Officially Operating', 'nws.4p': 'Pesantren-style education with Quran memorization and classical book studies is now fully running.',
+      'nws.1t': 'Student Selected for Indonesia U-15 National Team', 'nws.1p': 'A ninth-grade student passed the Indonesia U-15 national team selection and is heading to Portugal.', 'nws.1d': '6 Sep 2023 · National',
+      'trust.4': 'International Research',
+      'trust.4s': 'Silver medal at RARE ICON (IFPRI) 2022',
+      'nws.2d': '29 Mar 2022 · National',
+      'nws.3d': '8 Feb 2022 · Facilities',
+      'nws.4d': '4 Jun 2022 · International',
+      'nws.5d': '11 Jun 2022 · District',
+      'nws.6d': '25 Mar 2022 · Alumni',
+      'nws.2t': '132 Medals from 10 Competitions', 'nws.2p': 'Our best students contributed 132 medals across 10 science and olympiad competitions.',
+      'nws.3t': 'SBSN Building Inaugurated by the Minister of Religious Affairs', 'nws.3p': 'A new school building built under the SBSN scheme was inaugurated to support learning.',
+      'nws.4t': 'Medali Perak Riset Internasional (RARE ICON)', 'nws.4p': 'Research on toothpaste from tangerine peel won an international silver medal at RARE ICON 2022.',
       'nws.5t': '1st Place in Scout Quiz Competition (Kwartir Level)', 'nws.5p': 'Our scout team won first place in the fast-and-accurate scout quiz at the district level.',
-      'nws.6t': 'A Child-Friendly Madrasah Commitment', 'nws.6p': 'The school is committed to providing a safe, comfortable, and child-friendly learning environment.',
-      'nws.btn': 'View All News & Achievements →',
+      'nws.6t': 'Alumni Admitted to MAN Insan Cendekia & MAN PK', 'nws.6p': 'Students were admitted to MAN Insan Cendekia (Pekalongan, Pasuruan) and MAN Program Keagamaan Surakarta.',
+      'nws.btn': 'View All News →',
+      'brt.title': 'News — MTs Negeri 1 Kota Semarang',
+      'brt.bc': '/ News',
+      'brt.h1': 'School News',
+      'brt.ey': 'Newsroom',
+      'brt.h2': 'Latest News, Activities & Achievements',
+      'brt.p': 'News shown here is sourced from official releases by the Regional Office of the Ministry of Religious Affairs, Central Java, and the official madrasah YouTube channel.',
+      'brt.src': 'Source: Regional Office of the Ministry of Religious Affairs, Central Java (jateng.kemenag.go.id) — click a title to read the full release.',
+      'brt.prestasi': 'View All Achievements →',
+      'brt.cta.h': 'Follow School News',
+      'brt.cta.p': 'Get the latest updates on activities, achievements, and admissions straight from official school sources.',
+      'brt.cta.btn': 'PPDB Info →',
       'vtr.tag': 'Campus Experience', 'vtr.h': 'Explore Our Campus', 'vtr.p': 'Watch a virtual tour of our campus, facilities, and daily life at Idzatun Nasyi\'in Boarding School — from anywhere.',
       'vtr.b1': 'Watch Video →', 'vtr.b2': 'Visit Us',
       'gal.ey': 'Documentation', 'gal.p': 'Snapshots of life and activities at MTs Negeri 1 Kota Semarang.',
@@ -779,14 +835,14 @@ document.addEventListener('DOMContentLoaded', function () {
       'tes.2q': 'The research and science coaching here equipped me well. I was accepted into MAN Insan Cendekia thanks to the olympiad and KIR experience I gained here.',
       'tes.2b': 'Alumnus of MTsN 1 Kota Semarang', 'tes.2s': 'Accepted at MAN Insan Cendekia',
       'tes.3q': 'I\'m proud to be part of the research team\'s win at an international event. The teachers here are very supportive in guiding our research ideas.',
-      'tes.3b': 'Grade IX Student', 'tes.3s': 'AISEEF 2021 Medal',
+      'tes.3b': 'Grade IX Student', 'tes.3s': 'RARE ICON 2022 Silver Medal',
       'tea.ey': 'Educators & Staff', 'tea.p': 'Professional and dedicated educators supporting every student.',
       'tea.1p': 'Head of Madrasah', 'tea.1s': 'Fiqh & Islamic Studies',
-      'tea.2h': 'Vice Principal, Curriculum', 'tea.2p': 'English Teacher',
-      'tea.3h': 'Vice Principal, Student Affairs', 'tea.3p': 'Tahfidz & Tafsir',
-      'tea.4h': 'Science Teacher', 'tea.4p': 'Science & Research',
-      'tea.5h': 'Mathematics Teacher', 'tea.5p': 'Olympiad & Science-Tech',
-      'tea.6h': 'Head of Boarding School', 'tea.6p': 'Dormitory Mentor',
+      'tea.2h': 'M. Fajar Anshari', 'tea.2p': 'Head of Boarding School',
+      'tea.3h': 'Saptono', 'tea.3p': 'Scout Mentor',
+      'tea.4h': 'Agus Prapto Sukoco', 'tea.4p': 'Arts & Choir Teacher',
+      'tea.5h': 'Agus Trisnoto', 'tea.5p': 'Arts & Choir Teacher',
+      'tea.6h': 'Other Educators', 'tea.6p': 'Teachers & Staff',
       'tea.badge': 'Official info coming soon', 'tea.note': 'Photos and names of other educators are being validated against official school records.',
       'fas.ey': 'Facilities', 'fas.p': 'Facilities that support learning and student comfort.',
       'fas.1t': 'Buildings & Campus', 'fas.1p': 'The school buildings and campus — including the SBSN building inaugurated by the Minister of Religious Affairs.',
@@ -798,7 +854,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'faq.1q': 'How do I apply for admission (PPDB)?', 'faq.1a': 'Apply through the official channels announced by the PPDB committee on this page. Detailed schedule, quota, and documents will follow from the school.',
       'faq.2q': 'Is the tahfidz program available to all students?', 'faq.2a': 'Yes. Quran memorization is one of our flagship programs, structured with classical book studies and caregiver support.',
       'faq.3q': 'How does the Idzatun Nasyi\'in Boarding School work?', 'faq.3a': 'The dormitory is managed independently by the school with a pesantren-style education — Quran memorization, classical book studies, and daily character building. Capacity: 100 boys and 100 girls.',
-      'faq.4q': 'What flagship programs are available besides tahfidz?', 'faq.4a': 'Research and Science. Students are coached for competitions from city to international level, including KSM and AISEEF.',
+      'faq.4q': 'What flagship programs are available besides tahfidz?', 'faq.4a': 'Research and Science. Students are coached for competitions from city to international level, including KSM and international research.',
       'faq.5q': 'Can I visit the school?', 'faq.5a': 'Of course. See the Contact & Location page for the address, map, and office hours (Monday–Friday, 07.00–16.00 WIB).',
       'lb.h': 'Related Links', 'lb.p': 'Official government & Ministry of Religious Affairs portals.',
       'ppdb.p': 'Join us! Become part of the MTs Negeri 1 Kota Semarang family with our flagship tahfidz, research, and science programs.',
@@ -808,7 +864,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'ft.q': 'Quick Links', 'ft.q1': 'School Profile', 'ft.q2': 'Flagship Programs', 'ft.q3': 'Achievements', 'ft.q4': 'Facilities', 'ft.q5': 'Admissions (PPDB)',
       'ft.l': 'Services', 'ft.l1': 'Contact Us', 'ft.l2': 'Student Admission', 'ft.l3': 'Organization Structure', 'ft.l4': 'School Location',
       'ft.k': 'Contact', 'ft.k1': 'Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Tembalang District, Semarang, Central Java 50272', 'ft.k2': '(024) 6716521',
-      'ft.cred': '<b>Accreditation A</b>&nbsp;·&nbsp;Public Madrasah (MoRA)&nbsp;·&nbsp;Kurikulum Merdeka Pilot&nbsp;·&nbsp;AISEEF',
+      'ft.cred': '<b>Accreditation A</b>&nbsp;·&nbsp;Public Madrasah (MoRA)&nbsp;·&nbsp;Kurikulum Merdeka Pilot&nbsp;·&nbsp;International Research',
       // ===== Search & accessibility =====
       'search.ph': 'Search: PPDB, tahfidz, boarding, achievements…',
       'search.btn': 'Search',
@@ -835,7 +891,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'cal.none': 'No events this month.',
       // ===== Achievements page =====
       'pst.title': 'Achievements — MTs Negeri 1 Kota Semarang',
-      'pst.desc': 'Achievements of MTs Negeri 1 Kota Semarang: AISEEF 2021 Silver Medal, KSM 2023, Scout LCTP, and more.',
+      'pst.desc': 'Achievements of MTs Negeri 1 Kota Semarang: International Research Silver Medal (RARE ICON), 132 medals, KSM, Scout LCTP, and more.',
       'pst.bc': '/ Achievements',
       'pst.h1': 'School Achievements',
       'pst.ey': 'Our Pride',
@@ -859,8 +915,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'pst.t6': 'Graduates Accepted at Prestigious MAN Schools',
       'pst.d6': 'Students were accepted into elite national boarding-based madrasahs: MAN Insan Cendekia (IC), MAN Religious Program (PK), and MAKN via SNPDB.',
       'pst.s6': 'Source: Kemenag Central Java, 2022',
-      'pst.t7': 'Silver Medal at AISEEF 2021',
-      'pst.d7': 'The research team of MTs Negeri 1 Kota Semarang won a silver medal at the AISEEF 2021 international event, competing with 19 countries worldwide.',
+      'pst.t7': 'International Research Silver Medal (RARE ICON)',
+      'pst.d7': 'The research team won an international silver medal at RARE ICON 2022 (IFPRI) through research on toothpaste from tangerine peel.',
       'pst.s7': 'Source: Kemenag Central Java, February 2021',
       'pst.cta.h': 'Want Your Child to Achieve?',
       'pst.cta.p': 'Join a madrasah proven to produce champions at the national and international level.',
@@ -970,7 +1026,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'pro.l2a': 'Scientific research method training from an early age.',
       'pro.l2b': 'Dedicated coaching to prepare for research competitions.',
       'pro.l2c': 'Scientific presentation practice in foreign languages.',
-      'pro.l2d': 'Proven by the silver medal at AISEEF 2021 (international).',
+      'pro.l2d': 'Proven by an international research silver medal (RARE ICON 2022).',
       'pro.t3': 'Science',
       'pro.l3a': 'Active, practice-based science learning.',
       'pro.l3b': 'Science olympiad coaching (KSM, KSN, and others).',
@@ -1299,10 +1355,20 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       const input = nlForm.querySelector('input[type="email"]');
       const msg = nlForm.parentElement.querySelector('.nl-msg');
-      if (input && input.value) {
-        msg.textContent = (I18N[lang] || I18N.id)['nl.thanks'];
+      if (!input || !input.value) return;
+      const cur = I18N[lang] || I18N.id;
+      msg.textContent = cur['nl.sending'] || 'Mengirim…';
+      msg.style.color = '';
+      fetch('https://formsubmit.co/ajax/humas@mtsn1semarang.sch.id', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email: input.value, _subject: 'Newsletter MTsN 1 Kota Semarang' })
+      }).then(function (r) { return r.json(); }).then(function () {
+        msg.textContent = cur['nl.thanks'];
         input.value = '';
-      }
+      }).catch(function () {
+        msg.textContent = cur['nl.fail'] || 'Gagal mengirim. Silakan coba lagi.';
+      });
     });
   }
 
@@ -1502,7 +1568,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const filmClose = document.getElementById('filmClose');
 
   function ytEmbed(id, autoplay) {
-    return '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
+    return '<iframe src="https://www.youtube.com/embed/' + id +
       '?rel=0&modestbranding=1&playsinline=1&hl=' + (lang === 'en' ? 'en' : 'id') + (autoplay ? '&autoplay=1' : '') +
       '" title="YouTube video player" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
   }
@@ -1546,6 +1612,15 @@ document.addEventListener('DOMContentLoaded', function () {
     mediaTag.textContent = resolveKey(card.getAttribute('data-tag'));
     mediaTitle.textContent = resolveKey(card.getAttribute('data-title'));
     mediaDesc.textContent = resolveKey(card.getAttribute('data-desc'));
+    const mediaWatch = document.getElementById('mediaWatch');
+    if (mediaWatch) {
+      if (card.getAttribute('data-kind') === 'yt') {
+        mediaWatch.href = 'https://www.youtube.com/watch?v=' + card.getAttribute('data-id');
+        mediaWatch.style.display = '';
+      } else {
+        mediaWatch.style.display = 'none';
+      }
+    }
   }
   mediaCards.forEach(function (card) {
     card.addEventListener('click', function () { showMedia(card); });
@@ -1591,7 +1666,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const ppdbVideoBtn = document.getElementById('ppdbVideoBtn');
   if (ppdbVideoBtn && window.__openFilm) {
     ppdbVideoBtn.addEventListener('click', function () {
-      window.__openFilm('local', { src: 'assets/videos/ppdb-2026.mp4', poster: 'assets/photos/gedung-masjid.jpg', title: 'PPDB MTsN 1 Kota Semarang' });
+      window.__openFilm('yt', 'ZmfHvMNzVWw');
     });
   }
 
@@ -1603,7 +1678,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ================= FORMULIR KONTAK (mailto + konfirmasi) =================
+  // ================= FORMULIR KONTAK (FormSubmit + fallback mailto) =================
   const ctForm = document.getElementById('ctForm');
   if (ctForm) {
     ctForm.addEventListener('submit', function (e) {
@@ -1612,11 +1687,23 @@ document.addEventListener('DOMContentLoaded', function () {
       const email = (ctForm.querySelector('#email') || {}).value || '';
       const subjek = (ctForm.querySelector('#subjek') || {}).value || '';
       const pesan = (ctForm.querySelector('#pesan') || {}).value || '';
-      const line = encodeURIComponent('Nama: ' + nama + '\nEmail: ' + email + '\n\n' + pesan);
-      window.location.href = 'mailto:humas@mtsn1semarang.sch.id?subject=' + encodeURIComponent(subjek) + '&body=' + line;
       const m = document.getElementById('formMsg');
-      if (m) m.textContent = 'Terima kasih — aplikasi email Anda akan terbuka untuk mengirim pesan.';
-      ctForm.reset();
+      if (!m) return;
+      m.textContent = 'Mengirim…';
+      fetch('https://formsubmit.co/ajax/humas@mtsn1semarang.sch.id', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ _subject: subjek, Nama: nama, Email: email, Pesan: pesan })
+      }).then(function (r) { return r.json(); }).then(function () {
+        m.textContent = 'Terima kasih! Pesan Anda telah terkirim. Tim kami akan segera menghubungi Anda.';
+        ctForm.reset();
+      }).catch(function () {
+        // fallback: buka aplikasi email
+        const line = encodeURIComponent('Nama: ' + nama + '\nEmail: ' + email + '\n\n' + pesan);
+        window.location.href = 'mailto:humas@mtsn1semarang.sch.id?subject=' + encodeURIComponent(subjek) + '&body=' + line;
+        m.textContent = 'Terima kasih — aplikasi email Anda akan terbuka untuk mengirim pesan.';
+        ctForm.reset();
+      });
     });
   }
 

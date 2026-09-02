@@ -1377,7 +1377,7 @@ html[data-theme="dark"] .sambutan-foto img { filter: brightness(.9); }
   padding: 30px 26px; box-shadow: var(--shadow);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-.why-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--green-300); }
+.why-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--green-500); }
 .why-ico {
   width: 56px; height: 56px; border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
@@ -1729,7 +1729,8 @@ body, .site-header, .section-alt, .dropdown, .main-nav, .card, .why-card,
   overflow: hidden; padding: 14px 0; position: relative; z-index: 4;
 }
 .global-track { display: flex; gap: 56px; width: max-content; animation: globalScroll 42s linear infinite; }
-.global-track span { color: rgba(255, 255, 255, 0.85); font-size: 0.85rem; font-weight: 500; white-space: nowrap; letter-spacing: 0.3px; }
+.global-track span { color: rgba(255, 255, 255, 0.85); font-size: 0.85rem; font-weight: 500; white-space: nowrap; letter-spacing: 0.3px; display: inline-flex; align-items: center; gap: 8px; }
+.global-track svg { color: var(--gold); flex-shrink: 0; }
 .global-track b { color: var(--gold); font-weight: 700; }
 @keyframes globalScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .global-strip:hover .global-track { animation-play-state: paused; }
@@ -1774,6 +1775,8 @@ body, .site-header, .section-alt, .dropdown, .main-nav, .card, .why-card,
 .media-stage-meta .tag-kategori { display: inline-block; margin-bottom: 8px; }
 .media-stage-meta h3 { font-family: var(--font-head); font-size: 1.1rem; color: var(--green-900); margin-bottom: 6px; }
 .media-stage-meta p { font-size: 0.9rem; color: var(--ink-soft); }
+.media-stage-meta .media-watch { display: inline-block; margin-top: 10px; font-size: 0.82rem; color: var(--green-700); border: 1px solid rgba(6,95,52,.3); padding: 6px 12px; border-radius: 999px; text-decoration: none; transition: all .2s; }
+.media-stage-meta .media-watch:hover { background: var(--green-700); color: #fff; }
 
 .media-list { display: grid; grid-template-columns: 1fr; gap: 12px; min-width: 0; }
 .media-card {
@@ -1811,7 +1814,14 @@ body, .site-header, .section-alt, .dropdown, .main-nav, .card, .why-card,
 
 /* ---------- Virtual tour: latar video ---------- */
 .vtour { position: relative; overflow: hidden; }
-.vtour-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; z-index: 0; }
+.vtour .vtour-video { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.vtour .vtour-video iframe {
+  position: absolute; top: 50%; left: 50%;
+  width: 100vw; height: 56.25vw;
+  min-width: 177.78vh; min-height: 100vh;
+  transform: translate(-50%, -50%);
+  border: 0; opacity: 0.5;
+}
 .vtour > * { position: relative; z-index: 1; }
 .vtour-play { border: none; cursor: pointer; flex-shrink: 0; }
 
@@ -1845,6 +1855,11 @@ body.film-open { overflow: hidden; }
   font-size: 0.72rem; font-weight: 600; letter-spacing: 0.4px; color: rgba(255, 255, 255, 0.75);
   background: rgba(245, 179, 1, 0.1); border: 1px solid rgba(245, 179, 1, 0.28);
   padding: 4px 12px; border-radius: 50px;
+  display: inline-flex; align-items: center; gap: 7px;
+}
+.global-chips span::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
 }
 
 /* ---------- Tema gelap ---------- */
@@ -1935,6 +1950,7 @@ section[id] { scroll-margin-top: 92px; }
   background: rgba(245, 179, 1, 0.14); border: 1px solid rgba(245, 179, 1, 0.3);
   margin-bottom: 16px;
 }
+.pathway-flag svg { color: var(--gold); }
 .pathway-card h3 { font-family: var(--font-head); font-size: 1rem; color: #fff; margin-bottom: 8px; }
 .pathway-card p { font-size: 0.86rem; color: rgba(255, 255, 255, 0.78); margin-bottom: 14px; line-height: 1.6; }
 .pathway-card em { font-style: normal; font-size: 0.78rem; font-weight: 700; color: var(--gold); letter-spacing: 0.3px; }
@@ -1991,6 +2007,10 @@ body.err404 {
 @media (max-width: 1100px) {
   .hero-side { display: none; }
   .pathway-grid { grid-template-columns: repeat(2, 1fr); }
+}
+/* Cegah kartu info hero menimpa teks utama di lebar layar sedang */
+@media (max-width: 1159px) {
+  .hero-side { display: none; }
 }
 @media (max-width: 640px) {
   .pathway-grid { grid-template-columns: 1fr; }
