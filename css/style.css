@@ -2036,3 +2036,158 @@ html[data-theme="dark"] .form-msg { color: #6ee7b7; }
 @media (prefers-reduced-motion: reduce) {
   .hero > .slide.active { animation: none; }
 }
+
+/* ============================================================
+   REDESIGN V2 — International School Style (beranda)
+   ============================================================ */
+
+/* ---------- Toggle hamburger & tema berbasis SVG ---------- */
+.nav-toggle .ico-close { display: none; }
+.nav-toggle.active .ico-close { display: block; }
+.nav-toggle.active .ico-burger { display: none; }
+#themeBtn .ico-sun { display: none; }
+
+/* ---------- Hero: lebih lapang & foto-forward ---------- */
+.hero { min-height: clamp(560px, 78vh, 760px); }
+.hero > .slide::before {
+  background: linear-gradient(100deg, rgba(2,44,34,.93) 0%, rgba(6,95,52,.62) 48%, rgba(2,44,34,.28) 100%);
+}
+.hero-slide-content { padding: 130px 0 150px; }
+.hero-inner { max-width: 780px; }
+.hero h1 { font-size: clamp(2.35rem, 5.4vw, 3.9rem); text-wrap: balance; }
+.hero p.lead { font-size: 1.12rem; max-width: 640px; }
+.slider-arrow {
+  width: 52px; height: 52px;
+  background: rgba(2,44,34,.35);
+  border-color: rgba(255,255,255,.28);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+}
+.hero-film { top: 30px; right: 30px; background: rgba(2,44,34,.55); }
+.hero-bismillah { font-size: 1.9rem; }
+
+/* ---------- Statistik: band minimalis, bukan kartu menimpa ---------- */
+.stats-bar {
+  margin-top: 0;
+  position: static;
+  z-index: auto;
+  background: var(--cream);
+  border-top: 1px solid rgba(6,78,46,.06);
+  border-bottom: 1px solid rgba(6,78,46,.06);
+  padding: 10px 0;
+}
+.stats-grid,
+.stats-grid.six {
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  gap: 12px;
+}
+.stat-item { border: none !important; padding: 24px 12px; }
+.stat-num { font-size: 2.35rem; letter-spacing: -.5px; }
+.stat-label {
+  text-transform: uppercase;
+  letter-spacing: .9px;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.stat-src { margin-top: 14px !important; }
+
+/* ---------- Ruang napas editorial ---------- */
+.section { padding: 100px 0; }
+.section-head { margin-bottom: 58px; }
+.section-head h2 { font-size: clamp(1.8rem, 3.6vw, 2.7rem); }
+.section-eyebrow { letter-spacing: 2.4px; }
+
+/* ---------- Kilau emas lebih halus ---------- */
+.btn-gold { box-shadow: 0 4px 14px rgba(245,179,1,.20); }
+.cta-banner, .newsletter { box-shadow: 0 18px 46px rgba(2,44,34,.16); }
+
+/* ---------- Sambutan: panel gelap tanpa foto berulang ---------- */
+.sambutan-foto {
+  background: linear-gradient(160deg, #022c22, #065f34 45%, #03301f);
+}
+.sambutan-quote { background: transparent; box-shadow: none; }
+.sambutan-quote p { font-size: 1.38rem; }
+
+/* ---------- Avatar premium (pengganti foto placeholder) ---------- */
+.avatar-mono {
+  background: linear-gradient(150deg, #03301f, #0a5a3a 65%, #055043);
+  border: 1px solid rgba(245,179,1,.55);
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  box-shadow: 0 0 0 4px rgba(245,179,1,.10), inset 0 -16px 26px rgba(2,44,34,.5);
+  position: relative;
+}
+.avatar-mono::after {
+  content: ""; position: absolute; inset: 5px;
+  border-radius: 50%; border: 1px dashed rgba(245,179,1,.32);
+}
+.avatar-mono.lg { font-size: 1.85rem; }
+.avatar-mono.sm { border-color: rgba(245,179,1,.6); }
+html[data-theme="dark"] .avatar-mono {
+  background: linear-gradient(150deg, #0a2e22, #0d4c34);
+  border-color: rgba(245,179,1,.4);
+}
+
+/* ---------- Grid guru: 5 kartu rata tengah ---------- */
+.teacher-grid {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 26px;
+}
+.teacher-card { width: calc((100% - 52px) / 3); box-sizing: border-box; }
+
+/* ---------- Countdown lebih tenang ---------- */
+.countdown .cd-item {
+  background: rgba(2,44,34,.88);
+  border-color: rgba(255,255,255,.18);
+  min-width: 94px;
+}
+.countdown .cd-num { color: #fff; }
+.countdown .cd-label { color: rgba(255,255,255,.75); }
+
+/* ---------- Tombol melayang tidak saling tindih ---------- */
+.to-top { right: 26px; bottom: 94px; }
+body.sticky-active .to-top { bottom: 170px; }
+.wa-float { right: 26px; bottom: 26px; }
+
+/* ---------- Dark mode tambahan ---------- */
+html[data-theme="dark"] .stats-bar {
+  background: #0a1612;
+  border-top-color: rgba(255,255,255,.06);
+  border-bottom-color: rgba(255,255,255,.06);
+}
+html[data-theme="dark"] .sambutan-foto {
+  background: linear-gradient(160deg, #06231b, #0a3a28 45%, #06231b);
+}
+html[data-theme="dark"] .to-top { right: 20px; bottom: 92px; }
+
+/* ---------- Responsif penyesuaian ---------- */
+@media (max-width: 960px) {
+  .teacher-card { width: calc((100% - 26px) / 2); }
+  .hero-film { top: 16px; right: 14px; }
+  .hero-scroll { right: 18px; }
+}
+@media (max-width: 620px) {
+  .teacher-card { width: 100%; }
+  .stat-item { padding: 18px 6px; }
+  .stat-num { font-size: 1.9rem; }
+  .hero-slide-content { padding: 118px 0 130px; }
+  .hero p.lead { font-size: 1.04rem; }
+  .section { padding: 74px 0; }
+  .sambutan-quote p { font-size: 1.16rem; }
+}
+
+/* ---------- Video: tombol cadangan di modal (desktop) ---------- */
+.film-open {
+  position: relative; z-index: 2;
+  margin-top: 16px;
+  display: inline-flex; align-items: center; gap: 8px;
+  color: #fff; background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.35); border-radius: 50px;
+  padding: 10px 20px; font-size: .88rem; font-weight: 600;
+  text-decoration: none; transition: all .2s;
+}
+.film-open:hover { background: var(--gold); color: var(--green-950); border-color: var(--gold); }
+html[data-theme="dark"] .film-open { background: rgba(255,255,255,.1); }

@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
     toggle.addEventListener('click', function () {
       nav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
-      toggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
+      toggle.classList.toggle('active', nav.classList.contains('open'));
     });
 
     nav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         nav.classList.remove('open');
-        toggle.textContent = '☰';
+        toggle.classList.remove('active');
       });
     });
   }
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'tea.h': 'Guru & Tenaga Kependidikan',
       'ppdb.h': 'Pendaftaran Peserta Didik Baru (PPDB)', 'ppdb.a': 'Info PPDB →', 'ppdb.b': 'Hubungi Panitia',
       'newsletter.h': 'Ikuti Kabar Madrasah', 'newsletter.p': 'Berlangganan info kegiatan, jadwal, dan pengumuman terbaru langsung ke email Anda.',
-      'sticky.a': 'Daftar PPDB 2025/2026', 'footer.tag': 'Website resmi madrasah, dibuat untuk pendidikan.',
+      'sticky.a': 'Daftar PPDB', 'footer.tag': 'Website resmi madrasah, dibuat untuk pendidikan.',
       'topbar.siswa': 'Siswa', 'topbar.ortu': 'Orang Tua', 'topbar.alumni': 'Alumni', 'topbar.hours': 'Senin–Jumat, 07.00–16.00 WIB',
       'hero.c1': 'Akreditasi A', 'hero.c2': 'Madrasah Negeri (Kemenag RI)', 'hero.c3': 'Piloting Kurikulum Merdeka', 'hero.c4': 'Boarding School',
       'hero.c5': "Tahfidzul Qur'an", 'hero.c6': 'Riset & Penelitian', 'hero.c7': 'Olimpiade Sains', 'hero.c8': 'Riset Internasional & KSM',
@@ -320,6 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'media.ey': 'Media & Film', 'media.h': 'Media Center Madrasah',
       'media.p': 'Video resmi dari kanal YouTube MTs Negeri 1 Kota Semarang — pilih untuk memutar langsung di sini.',
       'media.channel': '▶ Kunjungi Kanal YouTube Resmi',
+      'media.noteTouch': 'Di ponsel, klik video akan otomatis membuka aplikasi YouTube — pastikan aplikasi YouTube terpasang.',
       'media.watch': '▶ Jika video tidak muncul, buka langsung di YouTube',
       'media.modalAria': 'Pemutar video', 'media.closeAria': 'Tutup pemutar video',
       'media.tagProfile': 'Profil', 'media.tagPPDB': 'PPDB', 'media.tagGlobal': 'Global', 'media.tagFaith': 'Keislaman', 'media.tagArts': 'Seni', 'media.tagMars': 'Mars',
@@ -712,7 +713,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'tea.h': 'Teachers & Staff',
       'ppdb.h': 'New Student Admissions (PPDB)', 'ppdb.a': 'Admissions →', 'ppdb.b': 'Contact Committee',
       'newsletter.h': 'Stay Updated', 'newsletter.p': 'Subscribe for the latest activities, schedules, and announcements straight to your inbox.',
-      'sticky.a': 'Apply for PPDB 2025/2026', 'footer.tag': 'Official school website, made for education.',
+      'sticky.a': 'Apply for PPDB', 'footer.tag': 'Official school website, made for education.',
       'topbar.siswa': 'Students', 'topbar.ortu': 'Parents', 'topbar.alumni': 'Alumni', 'topbar.hours': 'Mon–Fri, 07.00–16.00 WIB',
       'hero.c1': 'Accreditation A', 'hero.c2': 'Public Madrasah (MoRA)', 'hero.c3': 'Kurikulum Merdeka Pilot', 'hero.c4': 'Boarding School',
       'hero.c5': 'Quran Memorization', 'hero.c6': 'Research & Inquiry', 'hero.c7': 'Science Olympiad', 'hero.c8': 'International Research & KSM',
@@ -763,6 +764,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'media.ey': 'Media & Film', 'media.h': 'School Media Center',
       'media.p': 'Official videos from the MTs Negeri 1 Kota Semarang YouTube channel — select one to play right here.',
       'media.channel': '▶ Visit Our Official YouTube Channel',
+      'media.noteTouch': 'On mobile, tapping a video opens the YouTube app automatically — please make sure the YouTube app is installed.',
       'media.watch': '▶ If the video does not load, open it on YouTube',
       'media.modalAria': 'Video player', 'media.closeAria': 'Close video player',
       'media.tagProfile': 'Profile', 'media.tagPPDB': 'Admissions', 'media.tagGlobal': 'Global', 'media.tagFaith': 'Faith', 'media.tagArts': 'Arts', 'media.tagMars': 'Anthem',
@@ -1170,13 +1172,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ================= TEMA GELAP =================
   const themeBtn = document.getElementById('themeBtn');
-  const themeIco = themeBtn ? themeBtn.querySelector('.theme-ico') : null;
+  const themeMoon = themeBtn ? themeBtn.querySelector('.ico-moon') : null;
+  const themeSun = themeBtn ? themeBtn.querySelector('.ico-sun') : null;
   let theme = localStorage.getItem('mtsn1-theme') ||
     (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   function applyTheme(t) {
     theme = t;
     localStorage.setItem('mtsn1-theme', t);
     document.documentElement.setAttribute('data-theme', t);
+    if (themeMoon) themeMoon.style.display = t === 'dark' ? 'none' : 'block';
+    if (themeSun) themeSun.style.display = t === 'dark' ? 'block' : 'none';
+    const themeIco = themeBtn ? themeBtn.querySelector('.theme-ico') : null;
     if (themeIco) themeIco.textContent = t === 'dark' ? '☀️' : '🌙';
   }
   if (themeBtn) {
@@ -1572,6 +1578,12 @@ document.addEventListener('DOMContentLoaded', function () {
       '?rel=0&modestbranding=1&playsinline=1&hl=' + (lang === 'en' ? 'en' : 'id') + (autoplay ? '&autoplay=1' : '') +
       '" title="YouTube video player" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
   }
+  function watchUrl(id) {
+    return 'https://www.youtube.com/watch?v=' + id;
+  }
+  function isTouchDevice() {
+    return ('ontouchstart' in window) || (navigator.maxTouchPoints || 0) > 0;
+  }
   function localEmbed(src, poster, ttl) {
     return '<video src="' + src + '" poster="' + poster + '" controls autoplay playsinline preload="metadata" aria-label="' + (ttl || '') + '"></video>';
   }
@@ -1601,6 +1613,11 @@ document.addEventListener('DOMContentLoaded', function () {
     mediaCards.forEach(function (c) { c.classList.remove('active'); });
     card.classList.add('active');
     mediaActive = card;
+    if (isTouchDevice() && card.getAttribute('data-kind') !== 'local') {
+      // Di HP: buka langsung aplikasi/website YouTube (iframe sering diblokir browser in-app)
+      window.location.href = watchUrl(card.getAttribute('data-id'));
+      return;
+    }
     mediaPlayerEl.innerHTML = mediaCover(card);
     const cover = mediaPlayerEl.querySelector('.media-cover');
     if (cover) {
@@ -1636,6 +1653,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // ================= MODAL FILM =================
   if (filmModal) {
     window.__openFilm = function (kind, payload) {
+      if (kind === 'yt') {
+        if (isTouchDevice()) {
+          // Di HP: buka langsung aplikasi/website YouTube — dijamin bisa diputar
+          window.location.href = watchUrl(payload);
+          return;
+        }
+        const filmOpen = document.getElementById('filmOpen');
+        if (filmOpen) { filmOpen.href = watchUrl(payload); filmOpen.style.display = ''; }
+      }
       filmFrame.innerHTML = kind === 'local'
         ? localEmbed(payload.src, payload.poster, payload.title || '')
         : ytEmbed(payload, true);

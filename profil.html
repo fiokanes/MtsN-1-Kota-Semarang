@@ -218,21 +218,119 @@
     </div>
   </section>
 
-  <!-- ===== Video Profil ===== -->
+  <!-- ===== Media & Video (Media Center) ===== -->
   <section class="section" id="video">
     <div class="container">
       <div class="section-head">
         <span class="section-eyebrow" data-i18n="prf.vid.ey">Multimedia</span>
         <h2 data-i18n="prf.vid.h">Video Profil Madrasah</h2>
-        <p data-i18n="prf.vid.p">Lihat suasana MTs Negeri 1 Kota Semarang melalui video promosi dan virtual tour.</p>
+        <p data-i18n="prf.vid.p">Lihat suasana MTs Negeri 1 Kota Semarang melalui video promosi dan virtual tour — pilih video untuk memutar.</p>
       </div>
-      <div style="max-width:860px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);position:relative;">
-        <div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;">
-          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube-nocookie.com/embed/2tGHqbadGgI" title="Video Profil MTs Negeri 1 Kota Semarang" data-i18n-title="prf.vid.iframeTitle" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <p data-i18n="prf.vid.cap" style="margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.8);">Video Informasi MTs Negeri 1 Kota Semarang (kanal resmi madrasah).</p>
 
+      <div class="media-center reveal" style="transition-delay:.1s;">
+        <div class="media-stage">
+          <div class="media-stage-frame" id="mediaStage">
+            <div class="media-player" id="mediaPlayer"></div>
+          </div>
+          <div class="media-stage-meta">
+            <span class="tag-kategori" id="mediaTag" data-i18n="media.tagProfile">Profil</span>
+            <h3 id="mediaTitle" data-i18n="media.m1t">Kurikulum Berbasis Cinta — Profil Madrasah</h3>
+            <p id="mediaDesc" data-i18n="media.m1d">Film profil resmi madrasah: kurikulum berbasis cinta, pembelajaran, dan kehidupan kampus.</p>
+            <a id="mediaWatch" class="media-watch" href="https://www.youtube.com/watch?v=D0foM9tPhiw" target="_blank" rel="noopener" data-i18n="media.watch">▶ Jika video tidak muncul, buka langsung di YouTube</a>
+          </div>
+        </div>
+        <div class="media-list" id="mediaList">
+          <button type="button" class="media-card active" data-kind="yt" data-id="D0foM9tPhiw" data-tag="media.tagProfile" data-title="media.m1t" data-desc="media.m1d" data-thumb="https://i.ytimg.com/vi/D0foM9tPhiw/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/D0foM9tPhiw/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m1t">Kurikulum Berbasis Cinta — Profil Madrasah</b>
+              <small data-i18n="media.m1d">Film profil resmi madrasah: kurikulum berbasis cinta, pembelajaran, dan kehidupan kampus.</small>
+              <em class="media-card-sub" data-i18n="media.tagProfile">Profil</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="yt" data-id="ZmfHvMNzVWw" data-tag="media.tagPPDB" data-title="media.m2t" data-desc="media.m2d" data-thumb="https://i.ytimg.com/vi/ZmfHvMNzVWw/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/ZmfHvMNzVWw/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m2t">Menyambut PPDB 2025/2026</b>
+              <small data-i18n="media.m2d">Video promosi PPDB: "Madrasah Paling Tepat Untuk Generasi Emas" oleh Emtessa.</small>
+              <em class="media-card-sub" data-i18n="media.tagPPDB">PPDB</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="yt" data-id="fkoqwhx7GNQ" data-tag="media.tagGlobal" data-title="media.m3t" data-desc="media.m3d" data-thumb="https://i.ytimg.com/vi/fkoqwhx7GNQ/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/fkoqwhx7GNQ/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m3t">MTsN 1 di Ajang Riset Internasional</b>
+              <small data-i18n="media.m3d">Dokumentasi kiprah peserta didik di kompetisi dan pameran riset internasional.</small>
+              <em class="media-card-sub" data-i18n="media.tagGlobal">Global</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="yt" data-id="yd0-x8zGgW0" data-tag="media.tagGlobal" data-title="media.m4t" data-desc="media.m4d" data-thumb="https://i.ytimg.com/vi/yd0-x8zGgW0/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/yd0-x8zGgW0/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m4t">13C Challenge — MIICA Malaysia 2025</b>
+              <small data-i18n="media.m4d">Video challenge kreatif siswa dalam ajang internasional MIICA Malaysia.</small>
+              <em class="media-card-sub" data-i18n="media.tagGlobal">Global</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="yt" data-id="PjDR-QOTodM" data-tag="media.tagFaith" data-title="media.m5t" data-desc="media.m5d" data-thumb="https://i.ytimg.com/vi/PjDR-QOTodM/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/PjDR-QOTodM/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m5t">Peresmian Masjid Al-Karim</b>
+              <small data-i18n="media.m5d">Dokumentasi peresmian masjid madrasah sebagai pusat ibadah dan tahfidz.</small>
+              <em class="media-card-sub" data-i18n="media.tagFaith">Keislaman</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="yt" data-id="MnJr7Ve5Z5c" data-tag="media.tagArts" data-title="media.m6t" data-desc="media.m6d" data-thumb="https://i.ytimg.com/vi/MnJr7Ve5Z5c/hq720.jpg">
+            <span class="media-thumb" style="background-image:url('https://i.ytimg.com/vi/MnJr7Ve5Z5c/hq720.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m6t">Emtessa Music — Spesial Kemerdekaan</b>
+              <small data-i18n="media.m6d">Penampilan seni Emtessa Music dalam memperingati kemerdekaan RI.</small>
+              <em class="media-card-sub" data-i18n="media.tagArts">Seni</em>
+            </span>
+          </button>
+          <button type="button" class="media-card" data-kind="local" data-src="assets/videos/mars-mtsn-1.mp4" data-tag="media.tagMars" data-title="media.m7t" data-desc="media.m7d" data-thumb="assets/photos/mars-seni.jpg">
+            <span class="media-thumb" style="background-image:url('assets/photos/mars-seni.jpg');"><span class="media-play-badge">▶</span></span>
+            <span class="media-card-body">
+              <b data-i18n="media.m7t">Mars MTsN 1 Kota Semarang</b>
+              <small data-i18n="media.m7d">Mars madrasah, ciptaan Bapak H. Kasturi, S.Ag., M.Pd.</small>
+              <em class="media-card-sub" data-i18n="media.tagMars">Mars</em>
+            </span>
+          </button>
+        </div>
       </div>
+      <p style="margin-top:18px;font-size:.85rem;color:var(--ink-soft);text-align:center;" data-i18n="media.noteTouch">Di ponsel, klik video akan otomatis membuka aplikasi YouTube — pastikan aplikasi YouTube terpasang.</p>
+    </div>
+  </section>
+
+  <!-- ===== Agenda / Kalender Akademik ===== -->
+  <section class="section section-alt" id="agenda">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow" data-i18n="age.ey">Kalender Madrasah</span>
+        <h2 data-i18n="age.h">Agenda Kegiatan</h2>
+        <p data-i18n="age.p">Kalender akademik TP 2026/2027 — jadwal kegiatan, ujian, dan libur madrasah. Klik tanggal untuk detail.</p>
+      </div>
+      <div class="cal-wrap reveal" style="transition-delay:.1s;">
+        <div class="cal" id="cal">
+          <div class="cal-head">
+            <h4>Kalender Akademik</h4>
+            <div class="cal-nav">
+              <button class="cal-prev" aria-label="Bulan sebelumnya">‹</button>
+              <button class="cal-next" aria-label="Bulan berikutnya">›</button>
+            </div>
+          </div>
+          <div class="cal-days">
+            <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span>
+          </div>
+          <div class="cal-grid"></div>
+        </div>
+        <div class="cal-panel">
+          <h4 id="calPanelTitle">Agenda Kegiatan</h4>
+          <p class="cal-month-sub" id="calPanelSub">Pilih tanggal atau lihat semua agenda bulan ini.</p>
+          <div class="cal-events" id="calEvents"></div>
+        </div>
+      </div>
+      <p class="cal-note" data-i18n="cal.note">*) Sesuai Kalender Pendidikan Madrasah (KMA) &amp; kebijakan resmi madrasah — tanggal keagamaan merupakan perkiraan hisab menunggu ketetapan resmi Kemenag RI.</p>
     </div>
   </section>
 
