@@ -1581,8 +1581,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function watchUrl(id) {
     return 'https://www.youtube.com/watch?v=' + id;
   }
-  function isTouchDevice() {
-    return ('ontouchstart' in window) || (navigator.maxTouchPoints || 0) > 0;
+  function isCoarseTouch() {
+    // Benar-benar perangkat sentuh (HP/tablet). Laptop layar sentuh tetap fine -> pakai modal embed.
+    return window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
   }
   function localEmbed(src, poster, ttl) {
     return '<video src="' + src + '" poster="' + poster + '" controls autoplay playsinline preload="metadata" aria-label="' + (ttl || '') + '"></video>';
@@ -1613,7 +1614,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mediaCards.forEach(function (c) { c.classList.remove('active'); });
     card.classList.add('active');
     mediaActive = card;
-    if (isTouchDevice() && card.getAttribute('data-kind') !== 'local') {
+    if (isCoarseTouch() && card.getAttribute('data-kind') !== 'local') {
       // Di HP: buka langsung aplikasi/website YouTube (iframe sering diblokir browser in-app)
       window.location.href = watchUrl(card.getAttribute('data-id'));
       return;
@@ -1654,7 +1655,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (filmModal) {
     window.__openFilm = function (kind, payload) {
       if (kind === 'yt') {
-        if (isTouchDevice()) {
+        if (isCoarseTouch()) {
           // Di HP: buka langsung aplikasi/website YouTube — dijamin bisa diputar
           window.location.href = watchUrl(payload);
           return;
