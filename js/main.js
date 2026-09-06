@@ -49,10 +49,16 @@ document.addEventListener('DOMContentLoaded', function () {
     let timer = null;
     const DURATION = 6500;
 
+    var SLIDE_NAMES = { id: ['Profil madrasah', 'Program unggulan', 'Boarding school'], en: ['School profile', 'Flagship programs', 'Boarding school'] };
+    var slideLang = 'id';
+    try { slideLang = localStorage.getItem('mtsn1-lang') || 'id'; } catch (e) {}
     slides.forEach(function (_, i) {
       const b = document.createElement('button');
-      b.setAttribute('aria-label', 'Slide ' + (i + 1));
-      if (i === 0) b.classList.add('active');
+      b.setAttribute('role', 'tab');
+      const nm = (SLIDE_NAMES[slideLang] || SLIDE_NAMES.id)[i] || ('Slide ' + (i + 1));
+      b.setAttribute('aria-label', 'Tampilkan: ' + nm);
+      if (i === 0) { b.classList.add('active'); b.setAttribute('aria-selected', 'true'); }
+      else { b.setAttribute('aria-selected', 'false'); }
       b.addEventListener('click', function () { go(i, true); });
       dotsWrap.appendChild(b);
     });
@@ -65,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         s.setAttribute('aria-hidden', i === current ? 'false' : 'true');
       });
       panels.forEach(function (p, i) { p.classList.toggle('active', i === current); });
-      dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+      dots.forEach(function (d, i) { d.classList.toggle('active', i === current); d.setAttribute('aria-selected', i === current ? 'true' : 'false'); });
       restart(user);
     }
     function startAuto() {
@@ -399,7 +405,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'vtr.tag': 'Campus Experience', 'vtr.h': 'Jelajahi Lingkungan Madrasah Kami', 'vtr.p': "Tonton tur virtual kampus, fasilitas, dan kehidupan Boarding School Idzatun Nasyi'in — dari mana saja.",
       'vtr.b1': 'Tonton Video →', 'vtr.b2': 'Kunjungi Kami',
       'gal.ey': 'Dokumentasi', 'gal.p': 'Potret suasana dan aktivitas di lingkungan MTs Negeri 1 Kota Semarang.',
-      'gal.1': 'Dokumentasi Resmi Madrasah', 'gal.2': 'Peresmian Masjid Al-Karim', 'gal.3': 'Kegiatan & Karya Siswa', 'gal.4': 'Kurikulum Berbasis Cinta',
+      'gal.1': 'Peresmian Masjid Al-Karim', 'gal.2': 'Peresmian Masjid Al-Karim', 'gal.3': 'Kegiatan & Karya Siswa', 'gal.4': 'Kurikulum Berbasis Cinta',
       'gal.5': 'LKBB & Paskibra', 'gal.6': 'Boarding School', 'gal.7': 'Mars MTsN 1 Kota Semarang', 'gal.8': 'Ajang Riset Internasional',
       'age.ey': 'Kalender Madrasah', 'age.h': 'Agenda Kegiatan', 'ag.1t': 'Penilaian Sumatif Tengah Semester Ganjil', 'ag.1d': 'Penilaian tengah semester ganjil kelas VII\u2013IX.', 'ag.2t': 'Peringatan Hari Santri Nasional', 'ag.2d': 'Apel Hari Santri dan kegiatan keagamaan bersama.', 'ag.3t': 'Penilaian Akhir Semester (PAS) Ganjil', 'ag.3d': 'Ujian akhir semester ganjil kelas VII\u2013IX.', 'ag.4t': 'Pembagian Rapor Semester Ganjil', 'ag.4d': 'Rapor dibagikan oleh wali kelas masing-masing.', 'ag.btn': 'Lihat Kalender Lengkap \u2192', 'stp.ey': 'Langkah Pendaftaran', 'stp.h': 'Alur Pendaftaran PPDB', 'stp.p': 'Empat langkah mudah bergabung dengan MTs Negeri 1 Kota Semarang.', 'stp.1t': 'Isi Formulir', 'stp.1d': 'Daftar online atau datang langsung ke madrasah.', 'stp.2t': 'Verifikasi Berkas', 'stp.2d': 'Akta lahir, KK, ijazah/SKL, rapor, dan pas foto.', 'stp.3t': 'Ikuti Seleksi', 'stp.3d': 'Tes akademik/non-akademik atau seleksi berkas.', 'stp.4t': 'Daftar Ulang', 'stp.4d': 'Pantau pengumuman dan daftar ulang sesuai jadwal.', 'stp.btn': 'Mulai Pendaftaran \u2192', 'age.p': 'Kalender akademik TP 2026/2027 — jadwal kegiatan, ujian, dan libur madrasah. Klik tanggal untuk detail.',
       'cal.note': '*) Sesuai Kalender Pendidikan Madrasah (KMA) & kebijakan resmi madrasah — tanggal keagamaan merupakan perkiraan hisab menunggu ketetapan resmi Kemenag RI.',
@@ -417,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'tea.4h': 'Agus Prapto Sukoco', 'tea.4p': 'Guru Seni & Paduan Suara',
       'tea.5h': 'Agus Trisnoto', 'tea.5p': 'Guru Seni & Paduan Suara',
       'tea.6h': 'Tenaga Pendidik Lainnya', 'tea.6p': 'Guru & Karyawan',
-      'tea.badge': 'Informasi resmi menyusul', 'tea.note': 'Foto dan nama tenaga pendidik lainnya sedang dalam proses validasi data resmi madrasah.',
+      'tea.badge': 'Informasi resmi menyusul', 'tea.note': 'Daftar lengkap pendidik & tenaga kependidikan tersedia di papan informasi madrasah dan profil resmi.',
       'fas.ey': 'Sarana & Prasarana', 'fas.p': 'Fasilitas pendukung pembelajaran dan kenyamanan peserta didik.',
       'fas.1t': 'Gedung & Kampus', 'fas.1p': 'Gedung dan kampus madrasah — termasuk gedung SBSN yang diresmikan Menteri Agama.',
       'fas.2t': 'Ruang Belajar & Kegiatan', 'fas.2p': 'Ruang kelas, aula, dan area kegiatan untuk pembelajaran aktif.',
@@ -845,7 +851,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'vtr.tag': 'Campus Experience', 'vtr.h': 'Explore Our Campus', 'vtr.p': 'Watch a virtual tour of our campus, facilities, and daily life at Idzatun Nasyi\'in Boarding School — from anywhere.',
       'vtr.b1': 'Watch Video →', 'vtr.b2': 'Visit Us',
       'gal.ey': 'Documentation', 'gal.p': 'Snapshots of life and activities at MTs Negeri 1 Kota Semarang.',
-      'gal.1': 'Official School Documentation', 'gal.2': 'Al-Karim Mosque Inauguration', 'gal.3': 'Student Activities & Works', 'gal.4': 'Love-Based Curriculum',
+      'gal.1': 'Al-Karim Mosque Inauguration', 'gal.2': 'Al-Karim Mosque Inauguration', 'gal.3': 'Student Activities & Works', 'gal.4': 'Love-Based Curriculum',
       'gal.5': 'LKBB & Paskibra', 'gal.6': 'Boarding School', 'gal.7': 'School Anthem (Mars)', 'gal.8': 'International Research Competition',
       'age.ey': 'School Calendar', 'age.h': 'Upcoming Events', 'ag.1t': 'Mid-Semester Assessment (Odd)', 'ag.1d': 'Mid-semester assessment for grades VII\u2013IX.', 'ag.2t': 'National Santri Day', 'ag.2d': 'Santri Day assembly and religious activities.', 'ag.3t': 'Final Semester Assessment (Odd)', 'ag.3d': 'End-of-semester exams for grades VII\u2013IX.', 'ag.4t': 'Odd-Semester Report Cards', 'ag.4d': 'Report cards distributed by homeroom teachers.', 'ag.btn': 'View Full Calendar \u2192', 'stp.ey': 'Admission Steps', 'stp.h': 'PPDB Registration Flow', 'stp.p': 'Four easy steps to join MTs Negeri 1 Kota Semarang.', 'stp.1t': 'Fill the Form', 'stp.1d': 'Register online or visit the madrasah.', 'stp.2t': 'Verify Documents', 'stp.2d': 'Birth certificate, family card, diploma/SKL, reports, photo.', 'stp.3t': 'Take the Selection', 'stp.3d': 'Academic/non-academic test or document screening.', 'stp.4t': 'Re-register', 'stp.4d': 'Check the announcement and re-register on schedule.', 'stp.btn': 'Start Registration \u2192', 'age.p': 'Academic calendar 2026/2027 — schedules for activities, exams, and school holidays. Click a date for details.',
       'cal.note': '*) Based on the Madrasah Education Calendar (KMA) & official school policy — religious dates are approximate (hisab) pending the official MoRA decree.',
@@ -863,7 +869,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'tea.4h': 'Agus Prapto Sukoco', 'tea.4p': 'Arts & Choir Teacher',
       'tea.5h': 'Agus Trisnoto', 'tea.5p': 'Arts & Choir Teacher',
       'tea.6h': 'Other Educators', 'tea.6p': 'Teachers & Staff',
-      'tea.badge': 'Official info coming soon', 'tea.note': 'Photos and names of other educators are being validated against official school records.',
+      'tea.badge': 'Official info coming soon', 'tea.note': 'The full directory of educators & staff is available on the school notice board and official profile.',
       'fas.ey': 'Facilities', 'fas.p': 'Facilities that support learning and student comfort.',
       'fas.1t': 'Buildings & Campus', 'fas.1p': 'The school buildings and campus — including the SBSN building inaugurated by the Minister of Religious Affairs.',
       'fas.2t': 'Classrooms & Activity Spaces', 'fas.2p': 'Classrooms, halls, and activity areas for active learning.',
@@ -1222,6 +1228,7 @@ document.addEventListener('DOMContentLoaded', function () {
     tPanels.forEach(function (_, i) {
       const b = document.createElement('button');
       b.setAttribute('aria-label', 'Testimoni ' + (i + 1));
+      b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
       if (i === 0) b.classList.add('active');
       b.addEventListener('click', function () { tGo(i); });
       tDotsWrap.appendChild(b);
@@ -1231,9 +1238,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function tGo(i) {
       tIdx = (i + tPanels.length) % tPanels.length;
       tPanels.forEach(function (p, j) { p.classList.toggle('active', j === tIdx); });
-      tDots.forEach(function (d, j) { d.classList.toggle('active', j === tIdx); });
+      tDots.forEach(function (d, j) { d.classList.toggle('active', j === tIdx); d.setAttribute('aria-selected', j === tIdx ? 'true' : 'false'); });
     }
-    setInterval(function () { tGo(tIdx + 1); }, 6000);
+    let tTimer = setInterval(function () { tGo(tIdx + 1); }, 6000);
+    testiEl.addEventListener('mouseenter', function () { clearInterval(tTimer); });
+    testiEl.addEventListener('mouseleave', function () { clearInterval(tTimer); tTimer = setInterval(function () { tGo(tIdx + 1); }, 6000); });
+    testiEl.addEventListener('focusin', function () { clearInterval(tTimer); });
+    testiEl.addEventListener('focusout', function () { clearInterval(tTimer); tTimer = setInterval(function () { tGo(tIdx + 1); }, 6000); });
   }
 
   // ================= KALENDER AGENDA =================
@@ -1711,6 +1722,10 @@ document.addEventListener('DOMContentLoaded', function () {
   if (heroFilmBtn && window.__openFilm) {
     heroFilmBtn.addEventListener('click', function () { window.__openFilm('yt', 'D0foM9tPhiw'); });
   }
+  const sambutanVideoBtn = document.getElementById('sambutanVideo');
+  if (sambutanVideoBtn && window.__openFilm) {
+    sambutanVideoBtn.addEventListener('click', function () { window.__openFilm('yt', 'D0foM9tPhiw'); });
+  }
   const vtourPlayBtn = document.getElementById('vtourPlay');
   if (vtourPlayBtn && window.__openFilm) {
     vtourPlayBtn.addEventListener('click', function () { window.__openFilm('yt', 'D0foM9tPhiw'); });
@@ -1772,11 +1787,16 @@ document.addEventListener('DOMContentLoaded', function () {
     wrap.innerHTML = '<p>' + (m['cookie.txt'] || '') + '</p>' +
       '<button type="button" class="btn btn-gold">' + (m['cookie.btn'] || 'OK') + '</button>';
     document.body.appendChild(wrap);
-    wrap.querySelector('button').addEventListener('click', function () {
+    function dismissCookie() {
       try { localStorage.setItem('mtsn1-cookie-ok', '1'); } catch (e) {}
       wrap.classList.add('hide');
+      document.body.classList.remove('cookie-visible');
       setTimeout(function () { wrap.remove(); }, 400);
-    });
-    setTimeout(function () { wrap.classList.add('show'); }, 1200);
+    }
+    wrap.querySelector('button').addEventListener('click', dismissCookie);
+    setTimeout(function () {
+      wrap.classList.add('show');
+      document.body.classList.add('cookie-visible');
+    }, 1200);
   })();
 });
