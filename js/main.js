@@ -1186,6 +1186,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     if (window.__forceSearch) window.__forceSearch();
     if (window.__calRender) window.__calRender();
+    if (window.__homeAgenda) window.__homeAgenda();
     if (window.__cdTick) window.__cdTick();
     if (window.__mediaSync) window.__mediaSync();
   }
@@ -1248,9 +1249,70 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ================= KALENDER AGENDA =================
+  window.MTSN_EVENTS = window.MTSN_EVENTS || null;
+  function loadAgendaSync() {
+    if (window.MTSN_EVENTS && window.MTSN_EVENTS.id && window.MTSN_EVENTS.id.length) return true;
+    try {
+      var __agXhr = new XMLHttpRequest();
+      __agXhr.open('GET', 'assets/data/agenda.json', false);
+      __agXhr.send(null);
+      if (__agXhr.status === 200 || (__agXhr.status === 0 && __agXhr.responseText)) {
+        var parsed = JSON.parse(__agXhr.responseText);
+        if (parsed && parsed.id && parsed.id.length) { window.MTSN_EVENTS = parsed; return true; }
+      }
+    } catch (e) {}
+    return !!(window.MTSN_EVENTS && window.MTSN_EVENTS.id && window.MTSN_EVENTS.id.length);
+  }
+  var AGENDA_FALLBACK = {
+    id: [
+      { d: '2026-09-28', t: 'Penilaian Sumatif Tengah Semester Ganjil', c: 'Akademik', p: 'Penilaian sumatif tengah semester ganjil untuk kelas VII\u2013IX.' },
+      { d: '2026-10-22', t: 'Peringatan Hari Santri Nasional', c: 'Keagamaan', p: 'Apel Hari Santri dan rangkaian kegiatan keagamaan.' },
+      { d: '2026-12-01', t: 'Penilaian Akhir Semester (PAS) Ganjil', c: 'Akademik', p: 'Ujian akhir semester ganjil untuk seluruh jenjang kelas VII\u2013IX.' },
+      { d: '2026-12-18', t: 'Pembagian Rapor Semester Ganjil', c: 'Akademik', p: 'Rapor semester ganjil TP 2026/2027 dibagikan oleh wali kelas.' }
+    ],
+    en: [
+      { d: '2026-09-28', t: 'Mid-Semester Summative Assessment (Odd)', c: 'Academics', p: 'Mid-semester assessment for grades VII\u2013IX.' },
+      { d: '2026-10-22', t: 'National Santri Day Commemoration', c: 'Religious', p: 'Santri Day assembly and religious activities.' },
+      { d: '2026-12-01', t: 'Final Semester Assessment (PAS) \u2014 Odd', c: 'Academics', p: 'Odd-semester final exams for grades VII\u2013IX.' },
+      { d: '2026-12-18', t: 'Odd-Semester Report Cards', c: 'Academics', p: 'Report cards distributed by homeroom teachers.' }
+    ]
+  };
+  function agendaData(langKey) {
+    loadAgendaSync();
+    if (window.MTSN_EVENTS && window.MTSN_EVENTS.id && window.MTSN_EVENTS.id.length) {
+      return window.MTSN_EVENTS[langKey] || window.MTSN_EVENTS.id;
+    }
+    var fb = window.MTSN_EVENTS_FALLBACK || AGENDA_FALLBACK;
+    return (fb[langKey] && fb[langKey].length ? fb[langKey] : fb.id);
+  }
+  // Render agenda ringkas beranda (sumber sama: agenda.json, fallback inline)
+  function renderHomeAgenda() {
+    var list = document.getElementById('homeAgenda');
+    if (!list) return;
+    var lang2 = 'id';
+    try { lang2 = localStorage.getItem('mtsn1-lang') || 'id'; } catch (e) {}
+    var now = new Date(); now.setHours(0, 0, 0, 0);
+    var upcoming = agendaData(lang2).filter(function (e) {
+      return new Date(e.d + 'T00:00:00') >= now;
+    }).slice(0, 4);
+    var months = lang2 === 'en'
+      ? ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      : ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+    list.innerHTML = upcoming.map(function (e) {
+      var dt = new Date(e.d + 'T00:00:00');
+      var label = ('0' + dt.getDate()).slice(-2) + ' ' + months[dt.getMonth()] + ' ' + dt.getFullYear();
+      return '<div class="agenda-item"><div class="agenda-date"><b>' + dt.getDate() + '</b><small>' +
+        months[dt.getMonth()] + ' ' + dt.getFullYear() + '</small></div>' +
+        '<div class="agenda-body"><h4>' + e.t + '</h4><p>' + e.p + '</p></div>' +
+        '<span class="agenda-tag">' + e.c + '</span></div>';
+    }).join('');
+    window.__homeAgenda = renderHomeAgenda;
+  }
+  renderHomeAgenda();
   const calEl = document.getElementById('cal');
   if (calEl) {
-    const EVENTS = {
+    loadAgendaSync();
+    const EVENTS = window.MTSN_EVENTS || {
       id: [
         { d: '2026-07-13', t: 'Awal Tahun Pelajaran 2026/2027 & MPLS', c: 'Akademik', p: 'Hari pertama masuk dan Masa Pengenalan Lingkungan Sekolah bagi kelas VII.' },
         { d: '2026-07-20', t: 'Pembinaan Tahfidz & Ekstrakurikuler Dimulai', c: 'Kesiswaan', p: 'Pembinaan tahfidz, riset, sains, dan ekstrakurikuler berjalan penuh.' },
@@ -1383,6 +1445,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     renderCal();
     window.__calRender = renderCal;
+    window.MTSN_EVENTS_FALLBACK = EVENTS;
+    if (typeof renderHomeAgenda === 'function') renderHomeAgenda();
   }
 
   // ================= NEWSLETTER =================
