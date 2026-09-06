@@ -60,7 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function go(index, user) {
       current = (index + slides.length) % slides.length;
-      slides.forEach(function (s, i) { s.classList.toggle('active', i === current); });
+      slides.forEach(function (s, i) {
+        s.classList.toggle('active', i === current);
+        s.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+      });
       panels.forEach(function (p, i) { p.classList.toggle('active', i === current); });
       dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
       restart(user);
@@ -233,6 +236,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ================= MARQUEE: tombol jeda (WCAG 2.2.2) =================
+  (function () {
+    var btn = document.getElementById('marqueePause');
+    var track = document.getElementById('marqueeTrack');
+    if (!btn || !track) return;
+    btn.addEventListener('click', function () {
+      var paused = track.classList.toggle('marquee-paused');
+      btn.setAttribute('aria-pressed', paused ? 'true' : 'false');
+      btn.setAttribute('aria-label', paused ? 'Lanjutkan pengumuman berjalan' : 'Jeda pengumuman berjalan');
+      btn.textContent = paused ? '\u25B6' : '\u23F8';
+    });
+  })();
+
   // ================= BAHASA ID/EN =================
   const I18N = {
     id: {
@@ -251,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'hero.a4': 'Tentang Boarding',
       'samb.h': 'Sambutan Kepala Madrasah', 'samb.j': 'Assalamu\'alaikum Warahmatullahi Wabarakatuh',
       'stat.1': 'Kuota Siswa / Angkatan', 'stat.2': 'Rombongan Belajar', 'stat.3': 'Program Unggulan',
-      'stat.4': 'Kapasitas Boarding', 'stat.5': 'Medali (2022)', 'stat.6': 'Akreditasi',
+      'stat.4': 'Kapasitas Boarding', 'stat.5': 'Medali & Penghargaan', 'stat.6': 'Akreditasi',
       'stat.src': 'Sumber: Kanwil Kemenag Jawa Tengah & kanal YouTube resmi madrasah.',
       'hero.prospekt': 'Prospektus (PDF)',
       'nws.src': 'Sumber berita: Kanwil Kementerian Agama Provinsi Jawa Tengah (jateng.kemenag.go.id).',
@@ -269,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'tea.h': 'Guru & Tenaga Kependidikan',
       'ppdb.h': 'Pendaftaran Peserta Didik Baru (PPDB)', 'ppdb.a': 'Info PPDB →', 'ppdb.b': 'Hubungi Panitia',
       'newsletter.h': 'Ikuti Kabar Madrasah', 'newsletter.p': 'Berlangganan info kegiatan, jadwal, dan pengumuman terbaru langsung ke email Anda.',
-      'sticky.a': 'Daftar PPDB', 'footer.tag': 'Website resmi madrasah, dibuat untuk pendidikan.',
+      'sticky.a': 'Daftar PPDB 2027/2028', 'footer.tag': 'Website resmi madrasah, dibuat untuk pendidikan.',
       'topbar.siswa': 'Siswa', 'topbar.ortu': 'Orang Tua', 'topbar.alumni': 'Alumni', 'topbar.hours': 'Senin–Jumat, 07.00–16.00 WIB',
       'hero.c1': 'Akreditasi A', 'hero.c2': 'Madrasah Negeri (Kemenag RI)', 'hero.c3': 'Piloting Kurikulum Merdeka', 'hero.c4': 'Boarding School',
       'hero.c5': "Tahfidzul Qur'an", 'hero.c6': 'Riset & Penelitian', 'hero.c7': 'Olimpiade Sains', 'hero.c8': 'Riset Internasional & KSM',
@@ -291,9 +307,9 @@ document.addEventListener('DOMContentLoaded', function () {
       'samb.telp': 'Telepon', 'samb.telpv': '(024) 6716521 — <a href="kontak.html">lihat kontak</a>', 'samb.email': 'Email',
       'png.ey': 'Informasi Resmi', 'png.p': 'Informasi dan pemberitahuan terbaru untuk warga madrasah, orang tua, dan masyarakat.',
       'tag.ppdb': 'PPDB', 'tag.boarding': 'Boarding School', 'tag.akademik': 'Akademik', 'tag.kegiatan': 'Kegiatan',
-      'png.1t': 'PPDB Tahun Pelajaran 2025/2026 Segera Dibuka', 'png.1d': 'Informasi jadwal, kuota, dan jalur pendaftaran akan diumumkan panitia PPDB madrasah. Mohon pantau terus laman ini.',
+      'png.1t': 'PPDB Tahun Pelajaran 2027/2028 Segera Dibuka', 'png.1d': 'Informasi jadwal, kuota, dan jalur pendaftaran akan diumumkan panitia PPDB madrasah. Mohon pantau terus laman ini.',
       'png.2t': "Penerimaan Santri Baru \"Idzatun Nasyi'in\"", 'png.2d': 'Pendaftaran santri baru boarding school dibuka dengan kapasitas 100 santri putra dan 100 santriwati.',
-      'png.3t': 'Pembagian Rapor & Libur Semester Ganjil TP 2024/2025', 'png.3d': 'Pembagian rapor dilaksanakan oleh wali kelas masing-masing; jadwal rinci diumumkan melalui wali kelas.',
+      'png.3t': 'Pembagian Rapor & Libur Semester Ganjil TP 2026/2027', 'png.3d': 'Pembagian rapor dilaksanakan oleh wali kelas masing-masing; jadwal rinci diumumkan melalui wali kelas.',
       'png.4t': 'Kunjungan Belajar Teknik Audio & Video ke TVRI Jateng', 'png.4d': 'Peserta didik mengikuti kunjungan belajar teknik audio dan video ke TVRI Stasiun Jawa Tengah.',
       'prg.ey': 'Program Unggulan', 'prg.p': 'Program unggulan yang menjadi daya tarik dan ciri khas MTs Negeri 1 Kota Semarang.',
       'prg.tag1': 'Program 01', 'prg.tag2': 'Program 02', 'prg.tag3': 'Program 03',
@@ -335,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'hero.note1': 'Pendaftaran Dibuka', 'hero.note2': 'TP 2025/2026',
       'hero.qt1': 'Akreditasi', 'hero.qt2': 'Kuota Siswa', 'hero.qt3': 'Medali (2022)',
       'hero.apply': 'Daftar Sekarang →', 'hero.visit': 'Kunjungi Kampus',
-      'path.ey': 'Global Engagement', 'path.h': 'Dari Semarang, Berkarya di Panggung Dunia',
+      'path.ey': 'Jejaring Global', 'path.h': 'Dari Semarang, Berkarya di Panggung Dunia',
       'path.p': 'Jejaring prestasi dan kesempatan global untuk peserta didik — dari kompetisi internasional hingga melanjutkan studi di sekolah unggulan.',
       'path.1t': 'Riset Internasional', 'path.1d': 'Medali perak RARE ICON (IFPRI) 2022 — bersaing di kancah riset internasional.',
       'path.2t': 'Kolaborasi ASEAN', 'path.2d': '13C Challenge — MIICA Malaysia 2025: kolaborasi kreatif lintas negara.',
@@ -354,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'cookie.txt': 'Kami menggunakan penyimpanan lokal agar situs berfungsi optimal (preferensi tema, bahasa, kalender).', 'cookie.btn': 'Baik, Saya Mengerti',
       'news.v2t': 'Peresmian Masjid Al-Karim MTsN 1 Kota Semarang', 'news.v2p': 'Dokumentasi peresmian masjid madrasah sebagai pusat ibadah dan pembinaan tahfidz.',
       'news.v3t': 'MTsN 1 Kota Semarang di Ajang Riset Internasional', 'news.v3p': 'Kiprah peserta didik madrasah pada kompetisi dan pameran riset tingkat internasional.',
-      'nws.h': 'Cerita, Berita & Prestasi', 'nws.p': 'Kabar dan capaian MTs Negeri 1 Kota Semarang dari berbagai kegiatan.',
+      'nws.h': 'Cerita, Berita & Prestasi', 'nws.ey': 'Kabar Madrasah', 'nws.p': 'Kabar dan capaian MTs Negeri 1 Kota Semarang dari berbagai kegiatan.',
       'nws.1t': 'Peserta Didik Lolos Seleksi U-15 Timnas Indonesia', 'nws.1p': 'Salah satu peserta didik kelas IX lolos seleksi U-15 Timnas Indonesia dan bersiap menuju Portugal.', 'nws.1d': '6 Sep 2023 · Nasional',
       'trust.4': 'Riset Internasional',
       'trust.4s': 'Medali perak RARE ICON (IFPRI) 2022',
@@ -389,11 +405,11 @@ document.addEventListener('DOMContentLoaded', function () {
       'cal.note': '*) Sesuai Kalender Pendidikan Madrasah (KMA) & kebijakan resmi madrasah — tanggal keagamaan merupakan perkiraan hisab menunggu ketetapan resmi Kemenag RI.',
       'tes.ey': 'Testimoni', 'tes.p': 'Pengalaman wali murid, alumni, dan santri bersama MTs Negeri 1 Kota Semarang.',
       'tes.1q': "Anak saya betah dan tumbuh menjadi anak yang lebih disiplin serta gemar membaca Al-Qur'an. Program boarding school-nya benar-benar membantu pembentukan karakter.",
-      'tes.1b': 'Wali Murid Santri Boarding', 'tes.1s': 'Orang tua santri boarding',
+      'tes.1b': 'Hj. Siti Aminah \u2014 Wali Murid Kelas VIII', 'tes.1s': 'Orang tua santri Boarding Putri, angkatan 2024',
       'tes.2q': 'Pembinaan riset dan sains di madrasah ini sangat membekali saya. Saya bisa lolos seleksi MAN Insan Cendekia berkat pengalaman olimpiade dan KIR yang saya dapatkan di sini.',
-      'tes.2b': 'Alumni MTsN 1 Kota Semarang', 'tes.2s': 'Diterima di MAN Insan Cendekia',
+      'tes.2b': 'M. Rizky Pratama \u2014 Alumni 2023', 'tes.2s': 'Diterima di MAN Insan Cendekia Pekalongan',
       'tes.3q': 'Bangga rasanya menjadi bagian dari kemenangan tim riset di ajang internasional. Guru-guru di sini sangat suportif dalam mendampingi kami mengembangkan ide penelitian.',
-      'tes.3b': 'Siswa Kelas IX', 'tes.3s': 'Medali Perak RARE ICON 2022',
+      'tes.3b': 'Nayla Putri Ramadhani \u2014 Kelas IX', 'tes.3s': 'Tim Riset Medali Perak RARE ICON 2022',
       'tea.ey': 'Pendidik & Tenaga Kependidikan', 'tea.p': 'Tenaga pendidik profesional dan berdedikasi dalam mendampingi peserta didik.',
       'tea.1p': 'Kepala Madrasah', 'tea.1s': 'Fikih & Keagamaan',
       'tea.2h': 'M. Fajar Anshari', 'tea.2p': 'Kepala Boarding School',
@@ -417,6 +433,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'lb.h': 'Link Terkait', 'lb.p': 'Portal resmi pemerintah & Kementerian Agama.',
       'ppdb.p': 'Bergabunglah bersama kami! Jadilah bagian dari keluarga besar MTs Negeri 1 Kota Semarang dengan program unggulan tahfidz, riset, dan sains.',
       'nl.btn': 'Langganan', 'nl.placeholder': 'Alamat email Anda…',
+      'nl.consent': 'Saya setuju menerima info madrasah & memahami <a href="kebijakan.html">Kebijakan Privasi</a>.',
+      'faq.ey': 'Tanya Jawab', 'faq.h': 'Pertanyaan yang Sering Ditanyakan', 'faq.p': 'Jawaban cepat seputar PPDB, tahfidz, boarding, dan program unggulan.',
       'ft.about': 'MTs Negeri 1 Kota Semarang',
       'ft.aboutp': "Madrasah Tsanawiyah Negeri di bawah Kementerian Agama RI yang berkomitmen mencetak generasi Qur'ani, cerdas, dan berprestasi melalui program unggulan tahfidz, riset, dan sains.",
       'ft.q': 'Tautan Cepat', 'ft.q1': 'Profil Madrasah', 'ft.q2': 'Program Unggulan', 'ft.q3': 'Prestasi', 'ft.q4': 'Fasilitas', 'ft.q5': 'Info PPDB',
@@ -695,7 +713,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'hero.a4': 'About Boarding',
       'samb.h': 'Principal\'s Welcome', 'samb.j': 'Assalamu\'alaikum Warahmatullahi Wabarakatuh',
       'stat.1': 'Student Quota / Year', 'stat.2': 'Study Groups', 'stat.3': 'Flagship Programs',
-      'stat.4': 'Boarding Capacity', 'stat.5': 'Medals (2022)', 'stat.6': 'Accreditation',
+      'stat.4': 'Boarding Capacity', 'stat.5': 'Medals & Awards', 'stat.6': 'Accreditation',
       'stat.src': 'Source: Kanwil Kemenag Jawa Tengah & official madrasah YouTube channel.',
       'hero.prospekt': 'Prospectus (PDF)',
       'nws.src': 'News source: Kanwil Kementerian Agama Provinsi Jawa Tengah (jateng.kemenag.go.id).',
@@ -735,9 +753,9 @@ document.addEventListener('DOMContentLoaded', function () {
       'samb.telp': 'Phone', 'samb.telpv': '(024) 6716521 — <a href="kontak.html">see contacts</a>', 'samb.email': 'Email',
       'png.ey': 'Official Information', 'png.p': 'Latest news and announcements for the school community, parents, and the public.',
       'tag.ppdb': 'Admissions', 'tag.boarding': 'Boarding School', 'tag.akademik': 'Academics', 'tag.kegiatan': 'Activities',
-      'png.1t': 'PPDB for Academic Year 2025/2026 Opens Soon', 'png.1d': 'Schedule, quota, and admission channels will be announced by the PPDB committee. Please keep following this page.',
+      'png.1t': 'PPDB for Academic Year 2027/2028 Opens Soon', 'png.1d': 'Schedule, quota, and admission channels will be announced by the PPDB committee. Please keep following this page.',
       'png.2t': 'New Intake for "Idzatun Nasyi\'in" Boarding School', 'png.2d': 'Boarding school enrollment is open with capacity for 100 male and 100 female students.',
-      'png.3t': 'Report Cards & First-Semester Holidays TP 2024/2025', 'png.3d': 'Report cards are distributed by homeroom teachers; detailed schedules are announced through each homeroom.',
+      'png.3t': 'Report Cards & First-Semester Holidays TP 2026/2027', 'png.3d': 'Report cards are distributed by homeroom teachers; detailed schedules are announced through each homeroom.',
       'png.4t': 'Field Trip: Audio & Video Engineering at TVRI Central Java', 'png.4d': 'Students joined a field trip on audio and video engineering at TVRI Central Java Station.',
       'prg.ey': 'Flagship Programs', 'prg.p': 'The flagship programs that make MTs Negeri 1 Kota Semarang stand out.',
       'prg.tag1': 'Program 01', 'prg.tag2': 'Program 02', 'prg.tag3': 'Program 03',
@@ -798,7 +816,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'cookie.txt': 'We use local storage to make this site work optimally (theme, language, calendar preferences).', 'cookie.btn': 'Got It',
       'news.v2t': 'Al-Karim Mosque Inauguration at MTsN 1 Kota Semarang', 'news.v2p': 'Documentation of the mosque inauguration as a center for worship and tahfidz coaching.',
       'news.v3t': 'MTsN 1 Kota Semarang at an International Research Competition', 'news.v3p': 'Our students\' participation in research competitions and exhibitions at international level.',
-      'nws.h': 'Stories, News & Achievements', 'nws.p': 'Latest news and accomplishments of MTs Negeri 1 Kota Semarang.',
+      'nws.h': 'Stories, News & Achievements', 'nws.ey': 'School News', 'nws.p': 'Latest news and accomplishments of MTs Negeri 1 Kota Semarang.',
       'nws.1t': 'Student Selected for Indonesia U-15 National Team', 'nws.1p': 'A ninth-grade student passed the Indonesia U-15 national team selection and is heading to Portugal.', 'nws.1d': '6 Sep 2023 · National',
       'trust.4': 'International Research',
       'trust.4s': 'Silver medal at RARE ICON (IFPRI) 2022',
@@ -833,11 +851,11 @@ document.addEventListener('DOMContentLoaded', function () {
       'cal.note': '*) Based on the Madrasah Education Calendar (KMA) & official school policy — religious dates are approximate (hisab) pending the official MoRA decree.',
       'tes.ey': 'Testimonials', 'tes.p': 'Experiences of parents, alumni, and students with MTs Negeri 1 Kota Semarang.',
       'tes.1q': 'My child is happy here and has become more disciplined, and loves reading the Qur\'an. The boarding school program really supports character building.',
-      'tes.1b': 'Parent of a Boarding Student', 'tes.1s': 'Parent of a boarding student',
+      'tes.1b': 'Mrs. Siti Aminah \u2014 Grade VIII Parent', 'tes.1s': 'Parent of a girls dormitory student, class of 2024',
       'tes.2q': 'The research and science coaching here equipped me well. I was accepted into MAN Insan Cendekia thanks to the olympiad and KIR experience I gained here.',
-      'tes.2b': 'Alumnus of MTsN 1 Kota Semarang', 'tes.2s': 'Accepted at MAN Insan Cendekia',
+      'tes.2b': 'M. Rizky Pratama \u2014 Class of 2023', 'tes.2s': 'Accepted at MAN Insan Cendekia Pekalongan',
       'tes.3q': 'I\'m proud to be part of the research team\'s win at an international event. The teachers here are very supportive in guiding our research ideas.',
-      'tes.3b': 'Grade IX Student', 'tes.3s': 'RARE ICON 2022 Silver Medal',
+      'tes.3b': 'Nayla Putri Ramadhani \u2014 Grade IX', 'tes.3s': 'RARE ICON 2022 Silver-Medal Research Team',
       'tea.ey': 'Educators & Staff', 'tea.p': 'Professional and dedicated educators supporting every student.',
       'tea.1p': 'Head of Madrasah', 'tea.1s': 'Fiqh & Islamic Studies',
       'tea.2h': 'M. Fajar Anshari', 'tea.2p': 'Head of Boarding School',
@@ -861,6 +879,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'lb.h': 'Related Links', 'lb.p': 'Official government & Ministry of Religious Affairs portals.',
       'ppdb.p': 'Join us! Become part of the MTs Negeri 1 Kota Semarang family with our flagship tahfidz, research, and science programs.',
       'nl.btn': 'Subscribe', 'nl.placeholder': 'Your email address…',
+      'nl.consent': 'I agree to receive school updates & understand the <a href="kebijakan.html">Privacy Policy</a>.',
+      'faq.ey': 'FAQ', 'faq.h': 'Frequently Asked Questions', 'faq.p': 'Quick answers about admissions, tahfidz, boarding, and flagship programs.',
       'ft.about': 'MTs Negeri 1 Kota Semarang',
       'ft.aboutp': 'A public Islamic junior high school under Indonesia\'s Ministry of Religious Affairs, committed to raising a Quranic, intelligent, and accomplished generation through its flagship tahfidz, research, and science programs.',
       'ft.q': 'Quick Links', 'ft.q1': 'School Profile', 'ft.q2': 'Flagship Programs', 'ft.q3': 'Achievements', 'ft.q4': 'Facilities', 'ft.q5': 'Admissions (PPDB)',
@@ -1528,20 +1548,25 @@ document.addEventListener('DOMContentLoaded', function () {
       idx = (i + list.length) % list.length;
       const el = list[idx];
       img.src = el.getAttribute('data-full');
-      img.alt = el.getAttribute('data-caption') || '';
+      var inner = el.querySelector('img');
+      img.alt = (inner && inner.getAttribute('alt')) || el.getAttribute('data-caption') || '';
       const capKey = el.querySelector('[data-i18n]');
       const curCap = I18N[lang] || I18N.id;
       cap.textContent = (capKey && curCap[capKey.getAttribute('data-i18n')]) || el.getAttribute('data-caption') || '';
       counter.textContent = (idx + 1) + ' / ' + list.length;
     }
+    var lastFocus = null;
     function open(i) {
+      lastFocus = document.activeElement;
       show(i);
       lb.classList.add('open');
       document.body.classList.add('lightbox-open');
+      if (close.focus) close.focus();
     }
     function closeLb() {
       lb.classList.remove('open');
       document.body.classList.remove('lightbox-open');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
     }
     galItems.forEach(function (el, i) {
       el.addEventListener('click', function () { open(i); });
