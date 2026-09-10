@@ -3,7 +3,7 @@
 import os
 from fpdf import FPDF
 
-OUT = r'D:/web_MtsN 1 Kota Semarang/assets/dokumen/prospektus-2026.pdf'
+OUT = r'D:/web_MtsN 1 Kota Semarang/assets/dokumen/prospektus-2027.pdf'
 FONT_DIR = 'C:/Windows/Fonts/'
 
 GREEN = (6, 78, 46)
@@ -18,7 +18,7 @@ class Prospectus(FPDF):
             return
         self.set_font('Calibri', '', 8)
         self.set_text_color(120, 120, 120)
-        self.cell(0, 6, 'MTs Negeri 1 Kota Semarang  |  Prospektus TP 2026/2027', ln=1, align='R')
+        self.cell(0, 6, 'MTs Negeri 1 Kota Semarang  |  Prospektus TP 2027/2028', ln=1, align='R')
         self.set_draw_color(*GOLD)
         self.set_line_width(0.4)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
@@ -63,7 +63,7 @@ pdf.rect(0, 70, pdf.w, 3, 'F')
 pdf.set_xy(16, 20)
 pdf.set_font('Calibri', 'B', 30)
 pdf.set_text_color(255, 255, 255)
-pdf.multi_cell(0, 13, 'Prospektus\nTahun Pelajaran 2026/2027', align='L')
+pdf.multi_cell(0, 13, 'Prospektus\nTahun Pelajaran 2027/2028', align='L')
 pdf.set_xy(16, 58)
 pdf.set_font('Calibri', '', 13)
 pdf.set_text_color(248, 246, 213)
@@ -142,7 +142,7 @@ pdf.section('Facilities', 'Fasilitas', (
     'asrama Boarding School yang nyaman dan aman.'
 ))
 pdf.section('Admission & Contact', 'PPDB & Kontak', (
-    'PPDB TP 2026/2027 dibuka melalui jalur resmi madrasah. Kuota 352 siswa (11 rombongan belajar), '
+    'PPDB TP 2027/2028 dibuka melalui jalur resmi madrasah. Kuota 522 siswa (jalur reguler, prestasi, boarding, afirmasi), '
     'termasuk pendaftaran santri baru Boarding School. Informasi resmi menunggu pengumuman panitia PPDB.\n\n'
     'Alamat  : Jl. Ketileng Raya (Jl. Fatmawati), Sendangmulyo, Kec. Tembalang, Kota Semarang 50272\n'
     'Telepon : (024) 6716521\n'

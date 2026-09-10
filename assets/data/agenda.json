@@ -131,6 +131,18 @@
       "t": "Libur Akhir Tahun Pelajaran 2026/2027",
       "c": "Akademik",
       "p": "Libur akhir tahun pelajaran menuju TP 2027/2028."
+    },
+    {
+      "d": "2027-07-12",
+      "t": "Awal TP 2027/2028 & MPLS",
+      "c": "Akademik",
+      "p": "Hari pertama masuk TP 2027/2028 dan MPLS kelas VII (jadwal rinci menunggu kalender resmi)."
+    },
+    {
+      "d": "2027-08-17",
+      "t": "Upacara HUT ke-82 Kemerdekaan RI",
+      "c": "Kesiswaan",
+      "p": "Upacara bendera memperingati kemerdekaan RI."
     }
   ],
   "en": [
@@ -265,6 +277,18 @@
       "t": "End-of-Year Holidays 2026/2027",
       "c": "Academics",
       "p": "End-of-year holidays ahead of the 2027/2028 academic year."
+    },
+    {
+      "d": "2027-07-12",
+      "t": "Start of AY 2027/2028 & MPLS",
+      "c": "Academics",
+      "p": "First day of AY 2027/2028 and MPLS for Grade VII (details await the official calendar)."
+    },
+    {
+      "d": "2027-08-17",
+      "t": "82nd Indonesian Independence Day Ceremony",
+      "c": "Student Affairs",
+      "p": "Flag ceremony for Independence Day."
     }
   ]
 }

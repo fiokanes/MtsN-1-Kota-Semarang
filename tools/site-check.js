@@ -20,7 +20,7 @@ let broken = 0;
 const files = new Set(fs.readdirSync(ROOT));
 fs.readdirSync(path.join(ROOT, 'assets', 'photos')).forEach(f => files.add('assets/photos/' + f));
 fs.readdirSync(path.join(ROOT, 'assets', 'videos')).forEach(f => files.add('assets/videos/' + f));
-['assets/dokumen/prospektus-2026.pdf', 'css/style.css', 'js/main.js', 'manifest.webmanifest', 'sw.js',
+['assets/dokumen/prospektus-2027.pdf', 'css/style.css', 'js/main.js', 'manifest.webmanifest', 'sw.js',
  'assets/logo.svg', 'assets/icon-192.png', 'assets/icon-512.png', 'assets/apple-touch-icon.png',
  'assets/data/agenda.json', 'assets/data/ppdb.json', 'assets/data/prestasi.json', 'assets/data/guru.json', 'assets/data/alumni.json'
 ].forEach(f => files.add(f));

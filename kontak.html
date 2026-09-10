@@ -106,7 +106,7 @@
         <span class="section-eyebrow">Lokasi &amp; Layanan</span>
         <h2>Informasi Kontak</h2>
       </div>
-      <div class="grid-3" style="margin-bottom:50px;">
+      <div class="grid-3 gap-bottom-md">
         <div class="card info-card">
           <div class="info-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -151,15 +151,15 @@
         <span class="section-eyebrow">Peta Lokasi</span>
         <h2>Temukan Kami di Peta</h2>
       </div>
-      <div class="map-frame" style="overflow:hidden;">
+      <div class="map-frame">
         <iframe
           src="https://www.google.com/maps?q=MTs%20Negeri%201%20Kota%20Semarang&z=16&output=embed"
-          width="100%" height="420" style="border:0;"
+          width="100%" height="420" class="map-iframe"
           allowfullscreen loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Peta lokasi MTs Negeri 1 Kota Semarang"></iframe>
       </div>
-      <p style="text-align:center;margin-top:14px;font-size:0.9rem;color:var(--ink-soft);">
+      <p class="map-caption">
         Koordinat: -7.0334, 110.4677 — Plus code: XF89+J3H
       </p>
     </div>
@@ -176,7 +176,7 @@
           (<em>mailto</em>). Anda juga dapat menghubungi kami melalui WhatsApp/telepon madrasah.
         </p>
       </div>
-      <div style="max-width:760px;margin:0 auto;">
+      <div class="wrap-form">
         <form class="form-grid" id="ctForm" action="https://formsubmit.co/humas@mtsn1semarang.sch.id" method="post" novalidate>
           <div class="form-field">
             <label for="nama">Nama Lengkap</label>
@@ -195,7 +195,7 @@
             <textarea id="pesan" name="Pesan" rows="6" placeholder="Tulis pesan Anda di sini..." required></textarea>
           </div>
           <div class="form-field full">
-            <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;">Kirim Pesan</button>
+            <button type="submit" class="btn btn-green btn-block">Kirim Pesan</button>
           </div>
           <p class="form-msg" id="formMsg" role="status"></p>
         </form>

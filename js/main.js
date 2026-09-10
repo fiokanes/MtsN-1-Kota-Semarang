@@ -347,14 +347,14 @@ document.addEventListener('DOMContentLoaded', function () {
       'media.modalAria': 'Pemutar video', 'media.closeAria': 'Tutup pemutar video',
       'media.tagProfile': 'Profil', 'media.tagPPDB': 'PPDB', 'media.tagGlobal': 'Global', 'media.tagFaith': 'Keislaman', 'media.tagArts': 'Seni', 'media.tagMars': 'Mars',
       'media.m1t': 'Kurikulum Berbasis Cinta — Profil Madrasah', 'media.m1d': 'Film profil resmi madrasah: kurikulum berbasis cinta, pembelajaran, dan kehidupan kampus.',
-      'media.m2t': 'Menyambut PPDB 2025/2026', 'media.m2d': 'Video promosi PPDB: "Madrasah Paling Tepat Untuk Generasi Emas" oleh Emtessa.',
+      'media.m2t': 'Menyambut PPDB 2027/2028', 'media.m2d': 'Video promosi PPDB: "Madrasah Paling Tepat Untuk Generasi Emas" oleh Emtessa.',
       'media.m3t': 'MTsN 1 di Ajang Riset Internasional', 'media.m3d': 'Dokumentasi kiprah peserta didik di kompetisi dan pameran riset internasional.',
       'media.m4t': '13C Challenge — MIICA Malaysia 2025', 'media.m4d': 'Video challenge kreatif siswa dalam ajang internasional MIICA Malaysia.',
       'media.m5t': 'Peresmian Masjid Al-Karim', 'media.m5d': 'Dokumentasi peresmian masjid madrasah sebagai pusat ibadah dan tahfidz.',
       'media.m6t': 'Emtessa Music — Spesial Kemerdekaan', 'media.m6d': 'Penampilan seni Emtessa Music dalam memperingati kemerdekaan RI.',
       'media.m7t': 'Mars MTsN 1 Kota Semarang', 'media.m7d': 'Mars madrasah, ciptaan Bapak H. Kasturi, S.Ag., M.Pd.',
       'ppdb.video': '▶ Tonton Video PPDB', 'vtr.playAria': 'Putar film profil madrasah',
-      'hero.note1': 'Pendaftaran Dibuka', 'hero.note2': 'TP 2025/2026',
+      'hero.note1': 'Pendaftaran Dibuka', 'hero.note2': 'TP 2027/2028',
       'hero.qt1': 'Akreditasi', 'hero.qt2': 'Kuota Siswa', 'hero.qt3': 'Medali (2022)',
       'hero.apply': 'Daftar Sekarang →', 'hero.visit': 'Kunjungi Kampus',
       'path.ey': 'Jejaring Global', 'path.h': 'Dari Semarang, Berkarya di Panggung Dunia',
@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'gal.ey': 'Dokumentasi', 'gal.p': 'Potret suasana dan aktivitas di lingkungan MTs Negeri 1 Kota Semarang.',
       'gal.1': 'Peresmian Masjid Al-Karim', 'gal.2': 'Peresmian Masjid Al-Karim', 'gal.3': 'Kegiatan & Karya Siswa', 'gal.4': 'Kurikulum Berbasis Cinta',
       'gal.5': 'LKBB & Paskibra', 'gal.6': 'Boarding School', 'gal.7': 'Mars MTsN 1 Kota Semarang', 'gal.8': 'Ajang Riset Internasional',
-      'age.ey': 'Kalender Madrasah', 'age.h': 'Agenda Kegiatan', 'ag.1t': 'Penilaian Sumatif Tengah Semester Ganjil', 'ag.1d': 'Penilaian tengah semester ganjil kelas VII\u2013IX.', 'ag.2t': 'Peringatan Hari Santri Nasional', 'ag.2d': 'Apel Hari Santri dan kegiatan keagamaan bersama.', 'ag.3t': 'Penilaian Akhir Semester (PAS) Ganjil', 'ag.3d': 'Ujian akhir semester ganjil kelas VII\u2013IX.', 'ag.4t': 'Pembagian Rapor Semester Ganjil', 'ag.4d': 'Rapor dibagikan oleh wali kelas masing-masing.', 'ag.btn': 'Lihat Kalender Lengkap \u2192', 'stp.ey': 'Langkah Pendaftaran', 'stp.h': 'Alur Pendaftaran PPDB', 'stp.p': 'Empat langkah mudah bergabung dengan MTs Negeri 1 Kota Semarang.', 'stp.1t': 'Isi Formulir', 'stp.1d': 'Daftar online atau datang langsung ke madrasah.', 'stp.2t': 'Verifikasi Berkas', 'stp.2d': 'Akta lahir, KK, ijazah/SKL, rapor, dan pas foto.', 'stp.3t': 'Ikuti Seleksi', 'stp.3d': 'Tes akademik/non-akademik atau seleksi berkas.', 'stp.4t': 'Daftar Ulang', 'stp.4d': 'Pantau pengumuman dan daftar ulang sesuai jadwal.', 'stp.btn': 'Mulai Pendaftaran \u2192', 'age.p': 'Kalender akademik TP 2026/2027 — jadwal kegiatan, ujian, dan libur madrasah. Klik tanggal untuk detail.',
+      'age.ey': 'Kalender Madrasah', 'age.h': 'Agenda Kegiatan', 'ag.1t': 'Penilaian Sumatif Tengah Semester Ganjil', 'ag.1d': 'Penilaian tengah semester ganjil kelas VII\u2013IX.', 'ag.2t': 'Peringatan Hari Santri Nasional', 'ag.2d': 'Apel Hari Santri dan kegiatan keagamaan bersama.', 'ag.3t': 'Penilaian Akhir Semester (PAS) Ganjil', 'ag.3d': 'Ujian akhir semester ganjil kelas VII\u2013IX.', 'ag.4t': 'Pembagian Rapor Semester Ganjil', 'ag.4d': 'Rapor dibagikan oleh wali kelas masing-masing.', 'ag.btn': 'Lihat Kalender Lengkap \u2192', 'ag.empty': 'Jadwal TP berikutnya menunggu kalender resmi madrasah.', 'stp.ey': 'Langkah Pendaftaran', 'stp.h': 'Alur Pendaftaran PPDB', 'stp.p': 'Empat langkah mudah bergabung dengan MTs Negeri 1 Kota Semarang.', 'stp.1t': 'Isi Formulir', 'stp.1d': 'Daftar online atau datang langsung ke madrasah.', 'stp.2t': 'Verifikasi Berkas', 'stp.2d': 'Akta lahir, KK, ijazah/SKL, rapor, dan pas foto.', 'stp.3t': 'Ikuti Seleksi', 'stp.3d': 'Tes akademik/non-akademik atau seleksi berkas.', 'stp.4t': 'Daftar Ulang', 'stp.4d': 'Pantau pengumuman dan daftar ulang sesuai jadwal.', 'stp.btn': 'Mulai Pendaftaran \u2192', 'age.p': 'Kalender akademik TP 2026/2027 (tahun berjalan) — jadwal kegiatan, ujian, dan libur madrasah. Klik tanggal untuk detail.',
       'cal.note': '*) Sesuai Kalender Pendidikan Madrasah (KMA) & kebijakan resmi madrasah — tanggal keagamaan merupakan perkiraan hisab menunggu ketetapan resmi Kemenag RI.',
       'tes.ey': 'Testimoni', 'tes.p': 'Pengalaman wali murid, alumni, dan santri bersama MTs Negeri 1 Kota Semarang.',
       'tes.1q': "Anak saya betah dan tumbuh menjadi anak yang lebih disiplin serta gemar membaca Al-Qur'an. Program boarding school-nya benar-benar membantu pembentukan karakter.",
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'tea.4h': 'Agus Prapto Sukoco', 'tea.4p': 'Guru Seni & Paduan Suara',
       'tea.5h': 'Agus Trisnoto', 'tea.5p': 'Guru Seni & Paduan Suara',
       'tea.6h': 'Tenaga Pendidik Lainnya', 'tea.6p': 'Guru & Karyawan',
-      'tea.badge': 'Informasi resmi menyusul', 'tea.note': 'Daftar lengkap pendidik & tenaga kependidikan tersedia di papan informasi madrasah dan profil resmi.',
+      'tea.badge': 'Informasi resmi menyusul', 'tea.note': 'Foto resmi menyusul — daftar lengkap pendidik & tenaga kependidikan tersedia di papan informasi madrasah.',
       'fas.ey': 'Sarana & Prasarana', 'fas.p': 'Fasilitas pendukung pembelajaran dan kenyamanan peserta didik.',
       'fas.1t': 'Gedung & Kampus', 'fas.1p': 'Gedung dan kampus madrasah — termasuk gedung SBSN yang diresmikan Menteri Agama.',
       'fas.2t': 'Ruang Belajar & Kegiatan', 'fas.2p': 'Ruang kelas, aula, dan area kegiatan untuk pembelajaran aktif.',
@@ -544,12 +544,12 @@ document.addEventListener('DOMContentLoaded', function () {
       'prf.id.koordinat': 'Koordinat',
       'prf.id.koordinatv': '-7.0334, 110.4677',
       'prf.id.akreditasi': 'Akreditasi',
-      'prf.id.akrednote': '(perlu diverifikasi)',
+      'prf.id.akrednote': '',
       'prf.id.npsn': 'NPSN / NSM',
-      'prf.id.npsnnote': '(belum tersedia — mohon diisi)',
+      'prf.id.npsnv': 'Tertera pada papan data madrasah',
       'prf.id.kepala': 'Kepala Madrasah',
       'prf.id.kepalav': 'H. Kasturi, S.Ag., M.Pd.',
-      'prf.id.kepalanote': '(per 2022–2023, mohon diperbarui)',
+      'prf.id.kepalanote': '',
       'prf.id.kurikulum': 'Kurikulum',
       'prf.id.kurikulumv': 'Implementasi Kurikulum Merdeka (madrasah piloting)',
       'prf.str.ey': 'Organisasi',
@@ -816,14 +816,14 @@ document.addEventListener('DOMContentLoaded', function () {
       'media.modalAria': 'Video player', 'media.closeAria': 'Close video player',
       'media.tagProfile': 'Profile', 'media.tagPPDB': 'Admissions', 'media.tagGlobal': 'Global', 'media.tagFaith': 'Faith', 'media.tagArts': 'Arts', 'media.tagMars': 'Anthem',
       'media.m1t': 'Curriculum of Love — School Profile', 'media.m1d': 'The official school profile film: the love-based curriculum, learning, and campus life.',
-      'media.m2t': 'Welcome to PPDB 2025/2026', 'media.m2d': 'Our admissions promo: "The Most Suitable Madrasah for the Golden Generation" by Emtessa.',
+      'media.m2t': 'Welcome to PPDB 2027/2028', 'media.m2d': 'Our admissions promo: "The Most Suitable Madrasah for the Golden Generation" by Emtessa.',
       'media.m3t': 'MTsN 1 at an International Research Arena', 'media.m3d': 'Documentation of our students at international research competitions and exhibitions.',
       'media.m4t': '13C Challenge — MIICA Malaysia 2025', 'media.m4d': 'A creative student challenge video for the international MIICA Malaysia arena.',
       'media.m5t': 'Inauguration of Al-Karim Mosque', 'media.m5d': 'Documentation of the mosque inauguration as a center for worship and tahfidz coaching.',
       'media.m6t': 'Emtessa Music — Independence Special', 'media.m6d': 'Emtessa Music performing for Indonesia\'s Independence Day.',
       'media.m7t': 'Anthem of MTsN 1 Kota Semarang', 'media.m7d': 'The school anthem, composed by H. Kasturi, S.Ag., M.Pd.',
       'ppdb.video': '▶ Watch Admissions Video', 'vtr.playAria': 'Play the school profile film',
-      'hero.note1': 'Admissions Open', 'hero.note2': 'AY 2025/2026',
+      'hero.note1': 'Admissions Open', 'hero.note2': 'AY 2027/2028',
       'hero.qt1': 'Accreditation', 'hero.qt2': 'Student Seats', 'hero.qt3': 'Medals (2022)',
       'hero.apply': 'Apply Now →', 'hero.visit': 'Book a Campus Tour',
       'path.ey': 'Global Engagement', 'path.h': 'From Semarang, Shining on the World Stage',
@@ -876,7 +876,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'gal.ey': 'Documentation', 'gal.p': 'Snapshots of life and activities at MTs Negeri 1 Kota Semarang.',
       'gal.1': 'Al-Karim Mosque Inauguration', 'gal.2': 'Al-Karim Mosque Inauguration', 'gal.3': 'Student Activities & Works', 'gal.4': 'Love-Based Curriculum',
       'gal.5': 'LKBB & Paskibra', 'gal.6': 'Boarding School', 'gal.7': 'School Anthem (Mars)', 'gal.8': 'International Research Competition',
-      'age.ey': 'School Calendar', 'age.h': 'Upcoming Events', 'ag.1t': 'Mid-Semester Assessment (Odd)', 'ag.1d': 'Mid-semester assessment for grades VII\u2013IX.', 'ag.2t': 'National Santri Day', 'ag.2d': 'Santri Day assembly and religious activities.', 'ag.3t': 'Final Semester Assessment (Odd)', 'ag.3d': 'End-of-semester exams for grades VII\u2013IX.', 'ag.4t': 'Odd-Semester Report Cards', 'ag.4d': 'Report cards distributed by homeroom teachers.', 'ag.btn': 'View Full Calendar \u2192', 'stp.ey': 'Admission Steps', 'stp.h': 'PPDB Registration Flow', 'stp.p': 'Four easy steps to join MTs Negeri 1 Kota Semarang.', 'stp.1t': 'Fill the Form', 'stp.1d': 'Register online or visit the madrasah.', 'stp.2t': 'Verify Documents', 'stp.2d': 'Birth certificate, family card, diploma/SKL, reports, photo.', 'stp.3t': 'Take the Selection', 'stp.3d': 'Academic/non-academic test or document screening.', 'stp.4t': 'Re-register', 'stp.4d': 'Check the announcement and re-register on schedule.', 'stp.btn': 'Start Registration \u2192', 'age.p': 'Academic calendar 2026/2027 — schedules for activities, exams, and school holidays. Click a date for details.',
+      'age.ey': 'School Calendar', 'age.h': 'Upcoming Events', 'ag.1t': 'Mid-Semester Assessment (Odd)', 'ag.1d': 'Mid-semester assessment for grades VII\u2013IX.', 'ag.2t': 'National Santri Day', 'ag.2d': 'Santri Day assembly and religious activities.', 'ag.3t': 'Final Semester Assessment (Odd)', 'ag.3d': 'End-of-semester exams for grades VII\u2013IX.', 'ag.4t': 'Odd-Semester Report Cards', 'ag.4d': 'Report cards distributed by homeroom teachers.', 'ag.btn': 'View Full Calendar \u2192', 'ag.empty': 'Next academic year schedule awaits the official school calendar.', 'stp.ey': 'Admission Steps', 'stp.h': 'PPDB Registration Flow', 'stp.p': 'Four easy steps to join MTs Negeri 1 Kota Semarang.', 'stp.1t': 'Fill the Form', 'stp.1d': 'Register online or visit the madrasah.', 'stp.2t': 'Verify Documents', 'stp.2d': 'Birth certificate, family card, diploma/SKL, reports, photo.', 'stp.3t': 'Take the Selection', 'stp.3d': 'Academic/non-academic test or document screening.', 'stp.4t': 'Re-register', 'stp.4d': 'Check the announcement and re-register on schedule.', 'stp.btn': 'Start Registration \u2192', 'age.p': 'Academic calendar 2026/2027 (current year) — schedules for activities, exams, and school holidays. Click a date for details.',
       'cal.note': '*) Based on the Madrasah Education Calendar (KMA) & official school policy — religious dates are approximate (hisab) pending the official MoRA decree.',
       'tes.ey': 'Testimonials', 'tes.p': 'Experiences of parents, alumni, and students with MTs Negeri 1 Kota Semarang.',
       'tes.1q': 'My child is happy here and has become more disciplined, and loves reading the Qur\'an. The boarding school program really supports character building.',
@@ -892,7 +892,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'tea.4h': 'Agus Prapto Sukoco', 'tea.4p': 'Arts & Choir Teacher',
       'tea.5h': 'Agus Trisnoto', 'tea.5p': 'Arts & Choir Teacher',
       'tea.6h': 'Other Educators', 'tea.6p': 'Teachers & Staff',
-      'tea.badge': 'Official info coming soon', 'tea.note': 'The full directory of educators & staff is available on the school notice board and official profile.',
+      'tea.badge': 'Official info coming soon', 'tea.note': 'Official photos to follow — the full staff directory is on the school notice board.',
       'fas.ey': 'Facilities', 'fas.p': 'Facilities that support learning and student comfort.',
       'fas.1t': 'Buildings & Campus', 'fas.1p': 'The school buildings and campus — including the SBSN building inaugurated by the Minister of Religious Affairs.',
       'fas.2t': 'Classrooms & Activity Spaces', 'fas.2p': 'Classrooms, halls, and activity areas for active learning.',
@@ -1013,12 +1013,12 @@ document.addEventListener('DOMContentLoaded', function () {
       'prf.id.koordinat': 'Coordinates',
       'prf.id.koordinatv': '-7.0334, 110.4677',
       'prf.id.akreditasi': 'Accreditation',
-      'prf.id.akrednote': '(to be verified)',
+      'prf.id.akrednote': '',
       'prf.id.npsn': 'NPSN / NSM',
-      'prf.id.npsnnote': '(not yet available — please fill in)',
+      'prf.id.npsnv': 'Shown on the school data board',
       'prf.id.kepala': 'Head of Madrasah',
       'prf.id.kepalav': 'H. Kasturi, S.Ag., M.Pd.',
-      'prf.id.kepalanote': '(as of 2022–2023, please update)',
+      'prf.id.kepalanote': '',
       'prf.id.kurikulum': 'Curriculum',
       'prf.id.kurikulumv': 'Implementation of the Merdeka Curriculum (pilot madrasah)',
       'prf.str.ey': 'Organization',
@@ -1345,13 +1345,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var months = lang2 === 'en'
       ? ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
       : ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+    if (!upcoming.length) {
+      list.innerHTML = '<p class="result-empty">' + esc((I18N[lang2] || I18N.id)['ag.empty'] || 'Jadwal TP berikutnya menunggu kalender resmi madrasah.') + '</p>';
+      window.__homeAgenda = renderHomeAgenda;
+      return;
+    }
     list.innerHTML = upcoming.map(function (e) {
       var dt = new Date(e.d + 'T00:00:00');
-      var label = ('0' + dt.getDate()).slice(-2) + ' ' + months[dt.getMonth()] + ' ' + dt.getFullYear();
       return '<div class="agenda-item"><div class="agenda-date"><b>' + dt.getDate() + '</b><small>' +
         months[dt.getMonth()] + ' ' + dt.getFullYear() + '</small></div>' +
-        '<div class="agenda-body"><h4>' + e.t + '</h4><p>' + e.p + '</p></div>' +
-        '<span class="agenda-tag">' + e.c + '</span></div>';
+        '<div class="agenda-body"><h4>' + esc(e.t) + '</h4><p>' + esc(e.p) + '</p></div>' +
+        '<span class="agenda-tag">' + esc(e.c) + '</span></div>';
     }).join('');
     window.__homeAgenda = renderHomeAgenda;
   }
@@ -2086,12 +2090,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (guruGrid) {
       const data = loadJSON('assets/data/guru.json', []);
       const cur = I18N[lang] || I18N.id;
-      guruGrid.innerHTML = data.map((g, ix) =>
-        '<div class="teacher-card reveal revealed" style="transition-delay:' + (ix * 0.05).toFixed(2) + 's;">' +
-        '<span class="avatar-mono lg" aria-hidden="true">' + esc(g.inisial) + '</span>' +
-        '<h4>' + esc(g.nama) + '</h4><p>' + esc(g.jabatan) + '</p>' +
+      guruGrid.innerHTML = data.map((g, ix) => {
+        const av = g.foto
+          ? '<img class="teacher-avatar" src="' + esc(g.foto) + '" alt="Foto ' + esc(g.nama) + '" loading="lazy" width="92" height="92" onerror="this.outerHTML=\'<span class=&quot;avatar-mono lg&quot; aria-hidden=&quot;true&quot;>\' + esc(g.inisial) + \'</span>\'">'
+          : '<span class="avatar-mono lg" aria-hidden="true">' + esc(g.inisial) + '</span>';
+        const lead = /kepala/i.test(g.jabatan || '') ? ' teacher-lead' : '';
+        return '<div class="teacher-card reveal revealed' + lead + '" style="transition-delay:' + (ix * 0.05).toFixed(2) + 's;">' +
+        av + '<h4>' + esc(g.nama) + '</h4><p>' + esc(g.jabatan) + '</p>' +
         '<span class="teach-sub">' + esc(g.mapel) + '</span>' +
-        '<p class="consult"><strong>' + esc(cur['tea.consult'] || 'Konsultasi') + ':</strong> ' + esc(g.konsultasi) + '</p></div>').join('');
+        '<p class="consult"><strong>' + esc(cur['tea.consult'] || 'Konsultasi') + ':</strong> ' + esc(g.konsultasi) + '</p></div>';
+      }).join('');
     }
   })();
 
