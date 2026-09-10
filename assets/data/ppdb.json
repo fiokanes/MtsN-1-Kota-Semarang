@@ -1,0 +1,95 @@
+{
+  "tp": "2027/2028",
+  "status": "Segera dibuka — pantau pengumuman panitia",
+  "jalur": [
+    {
+      "nama": "Reguler",
+      "kuota": 220,
+      "syarat": "Lulusan SD/MI, seleksi berkas + tes",
+      "status": "segera dibuka"
+    },
+    {
+      "nama": "Prestasi (rapor & lomba)",
+      "kuota": 70,
+      "syarat": "Rapor semester 1–5 / sertifikat juara",
+      "status": "segera dibuka"
+    },
+    {
+      "nama": "Boarding School Idzatun Nasyi'in",
+      "kuota": 200,
+      "syarat": "100 putra + 100 putri, seleksi + wawancara",
+      "status": "segera dibuka"
+    },
+    {
+      "nama": "Afirmasi",
+      "kuota": 32,
+      "syarat": "KIP/PKH atau rekomendasi",
+      "status": "segera dibuka"
+    }
+  ],
+  "total_kuota": 522,
+  "biaya": [
+    {
+      "komponen": "Pendaftaran",
+      "reguler": "Gratis (madrasah negeri)",
+      "boarding": "Gratis pendaftaran"
+    },
+    {
+      "komponen": "SPP bulanan",
+      "reguler": "Rp0 — sekolah negeri",
+      "boarding": "Kontribusi asrama/makan sesuai ketentuan*"
+    },
+    {
+      "komponen": "Seragam & atribut",
+      "reguler": "Sesuai ketentuan panitia*",
+      "boarding": "Sesuai ketentuan panitia*"
+    },
+    {
+      "komponen": "Kegiatan & ekstrakurikuler",
+      "reguler": "Gratis / iuran kegiatan*",
+      "boarding": "Termasuk pembinaan pesantren*"
+    }
+  ],
+  "catatan_biaya": "*Nominal pasti mengikuti SK resmi madrasah tahun berjalan. Hubungi panitia untuk rincian — tidak ada pungutan di luar ketentuan resmi.",
+  "panitia_wa": "62246716521",
+  "jadwal": [
+    {
+      "kegiatan": "Sosialisasi & pembukaan pendaftaran",
+      "waktu": "Menunggu pengumuman resmi"
+    },
+    {
+      "kegiatan": "Verifikasi berkas",
+      "waktu": "Menunggu pengumuman resmi"
+    },
+    {
+      "kegiatan": "Seleksi",
+      "waktu": "Menunggu pengumuman resmi"
+    },
+    {
+      "kegiatan": "Pengumuman & daftar ulang",
+      "waktu": "Menunggu pengumuman resmi"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Kapan PPDB TP 2027/2028 dibuka?",
+      "a": "Jadwal resmi menunggu pengumuman panitia. Pantau laman ini dan kanal resmi madrasah; referensi PPDB 2022 dibuka 15 Maret – 14 April."
+    },
+    {
+      "q": "Apa saja jalur pendaftarannya?",
+      "a": "Reguler, Prestasi (rapor/lomba), Boarding School Idzatun Nasyi'in (100 putra + 100 putri), dan Afirmasi."
+    },
+    {
+      "q": "Berapa biayanya?",
+      "a": "Sebagai madrasah negeri, SPP reguler Rp0. Biaya asrama/seragam mengikuti SK resmi tahun berjalan — tanyakan ke panitia, waspada pungli."
+    },
+    {
+      "q": "Bagaimana cara menghubungi panitia?",
+      "a": "Isi formulir minat di bawah (pesan WA otomatis terisi), atau hubungi (024) 6716521 / humas@mtsn1semarang.sch.id."
+    },
+    {
+      "q": "Syarat masuk Boarding School?",
+      "a": "Lulusan SD/MI, lolos seleksi berkas + wawancara, siap tinggal di asrama dengan pembinaan tahfidz dan kitab kuning."
+    }
+  ]
+}

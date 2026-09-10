@@ -2321,3 +2321,25 @@ body.cookie-visible .site-footer { padding-bottom: 120px; }
 }
 .sambutan-play small { font-family: var(--font-head); font-weight: 700; font-size: .9rem; text-shadow: 0 1px 8px rgba(0,0,0,.5); }
 html[data-theme="dark"] .sambutan-play small { color: #fff; }
+
+/* ===== Portal PPDB, filter prestasi, guru dinamis (2027) ===== */
+.ppdb-status { display:flex; align-items:center; justify-content:center; gap:10px; font-weight:600; color:var(--green-900); margin:-8px 0 26px; }
+.status-dot { width:11px; height:11px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 5px rgba(245,179,1,.22); }
+.quota-grid { margin-bottom:28px; }
+.quota-card { text-align:center; }
+.quota-num { font-family:var(--font-head); font-weight:800; font-size:2.2rem; color:var(--green-700); line-height:1.1; margin:8px 0 4px; }
+.portal-actions { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-bottom:34px; }
+.form-minat { max-width:860px; margin:0 auto; }
+.form-minat h3 { font-family:var(--font-head); color:var(--green-900); margin-bottom:4px; }
+.form-minat > p { color:var(--ink-soft); font-size:.92rem; margin-bottom:18px; }
+.fine-note { max-width:900px; margin:12px auto 0; font-size:.82rem; color:#6b7280; text-align:center; }
+.biaya-table td, .biaya-table th { vertical-align:top; }
+.filter-row { display:flex; gap:10px; align-items:center; justify-content:center; flex-wrap:wrap; margin-bottom:30px; }
+.filter-label { font-weight:600; font-size:.88rem; color:var(--green-900); }
+.filter-select { padding:10px 14px; border:1.5px solid var(--line); border-radius:var(--radius-sm); font-family:var(--font-body); font-size:.9rem; background:var(--white); color:var(--ink); }
+.mini-tag { display:inline-block; font-size:.72rem; font-weight:700; color:var(--green-700); background:var(--green-50); border:1px solid var(--green-100); border-radius:50px; padding:3px 12px; margin:2px 4px 2px 0; }
+.tl-src { font-size:.8rem; color:#6b7280; margin-top:6px; }
+.result-count { text-align:center; color:var(--ink-soft); font-size:.88rem; margin-top:18px; }
+.result-empty { text-align:center; color:var(--ink-soft); padding:20px; }
+.teacher-grid .consult { font-size:.8rem; color:var(--ink-soft); margin-top:10px; }
+@media (max-width:640px){ .portal-actions .btn{ width:100%; justify-content:center; } }

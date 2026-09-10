@@ -1,0 +1,49 @@
+name: Web Quality
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Regenerate sitemap + check links
+        run: node tools/site-check.js
+      - name: Commit sitemap if changed
+        run: |
+          git config user.name "site-bot"
+          git config user.email "site-bot@local"
+          git add sitemap.xml
+          git diff --cached --quiet || git commit -m "Auto: regenerate sitemap"
+          git push || true
+
+  reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Agenda H-7 reminder (issue bila ada agenda seminggu ke depan)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const now = new Date(); now.setHours(0,0,0,0);
+            const soon = new Date(now.getTime() + 7*864e5);
+            let agenda = [];
+            try { agenda = JSON.parse(fs.readFileSync('assets/data/agenda.json','utf8')).id || []; } catch(e) {}
+            const hit = agenda.filter(e => { const d = new Date(e.d+'T00:00:00'); return d >= now && d <= soon; });
+            if (!hit.length) { console.log('Tidak ada agenda H-7.'); return; }
+            const body = hit.map(e => `- ${e.d} — ${e.t} (${e.c})`).join('\n');
+            const title = `Agenda seminggu ke depan (${hit.length})`;
+            const { data: issues } = await github.rest.issues.listForRepo({ owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'agenda-reminder' });
+            if (issues.length) { console.log('Reminder sudah ada.'); return; }
+            await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ['agenda-reminder'] });

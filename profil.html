@@ -22,6 +22,10 @@
   <link rel="alternate" hreflang="id" href="https://mtsn1semarang.sch.id/profil.html">
   <link rel="alternate" hreflang="en" href="https://mtsn1semarang.sch.id/profil.html">  <link rel="alternate" hreflang="x-default" href="https://mtsn1semarang.sch.id/profil.html">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#064e2e">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -198,7 +202,7 @@
       <div class="section-head">
         <span class="section-eyebrow" data-i18n="prf.str.ey">Organisasi</span>
         <h2 data-i18n="prf.str.h">Struktur Organisasi</h2>
-        <p data-i18n="prf.str.p">Kerangka pengelolaan madrasah (draf — mohon disesuaikan dengan kondisi aktual).</p>
+        <p data-i18n="prf.str.p">Struktur pengelolaan madrasah — daftar pendidik &amp; jadwal konsultasi ada di <a href="index.html#guru">bagian Guru beranda</a>.</p>
       </div>
       <div style="max-width:900px;margin:0 auto;">
         <div style="text-align:center;background:var(--green-800);color:#fff;border-radius:var(--radius);padding:20px;font-family:var(--font-head);font-weight:700;" data-i18n="prf.str.kepala">
@@ -392,5 +396,6 @@
   <button class="to-top" data-i18n-aria="toTop.aria" aria-label="Kembali ke atas">↑</button>
 
   <script src="js/main.js" defer></script>
+  <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});}</script>
 </body>
 </html>

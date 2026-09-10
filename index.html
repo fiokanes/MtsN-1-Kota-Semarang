@@ -66,7 +66,8 @@
   <link rel="alternate" hreflang="en" href="https://mtsn1semarang.sch.id/">
   <link rel="alternate" hreflang="x-default" href="https://mtsn1semarang.sch.id/">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
-  <link rel="apple-touch-icon" href="assets/logo.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -710,44 +711,18 @@
   </section>
 
   <!-- ===== Guru & Staf ===== -->
-  <section class="section section-alt">
+  <section class="section section-alt" id="guru">
     <div class="container">
       <div class="section-head reveal">
         <span class="section-eyebrow" data-i18n="tea.ey">Pendidik &amp; Tenaga Kependidikan</span>
         <h2 data-i18n="tea.h">Guru &amp; Tenaga Kependidikan</h2>
         <p data-i18n="tea.p">Tenaga pendidik profesional dan berdedikasi dalam mendampingi peserta didik.</p>
       </div>
-      <div class="teacher-grid">
-        <div class="teacher-card reveal">
-          <span class="avatar-mono lg" aria-hidden="true">HK</span>
-          <h4>H. Kasturi, S.Ag., M.Pd.</h4>
-          <p data-i18n="tea.1p">Kepala Madrasah</p>
-          <span class="teach-sub" data-i18n="tea.1s">Fikih &amp; Keagamaan</span>
-        </div>
-        <div class="teacher-card reveal" style="transition-delay:.06s;">
-          <span class="avatar-mono lg" aria-hidden="true">FA</span>
-          <h4 data-i18n="tea.2h">M. Fajar Anshari</h4>
-          <p data-i18n="tea.2p">Kepala Boarding School</p>
-          <span class="teach-sub" data-i18n="tea.2s">Pembina Asrama</span>
-        </div>
-        <div class="teacher-card reveal" style="transition-delay:.12s;">
-          <span class="avatar-mono lg" aria-hidden="true">SP</span>
-          <h4 data-i18n="tea.3h">Saptono</h4>
-          <p data-i18n="tea.3p">Pembina Pramuka</p>
-          <span class="teach-sub" data-i18n="tea.3s">Ka. Gudep Putra</span>
-        </div>
-        <div class="teacher-card reveal">
-          <span class="avatar-mono lg" aria-hidden="true">APS</span>
-          <h4 data-i18n="tea.4h">Agus Prapto Sukoco</h4>
-          <p data-i18n="tea.4p">Guru Seni &amp; Paduan Suara</p>
-          <span class="teach-sub" data-i18n="tea.4s">Pelatih Seni</span>
-        </div>
-        <div class="teacher-card reveal" style="transition-delay:.06s;">
-          <span class="avatar-mono lg" aria-hidden="true">AT</span>
-          <h4 data-i18n="tea.5h">Agus Trisnoto</h4>
-          <p data-i18n="tea.5p">Guru Seni &amp; Paduan Suara</p>
-          <span class="teach-sub" data-i18n="tea.5s">Pelatih Seni</span>
-        </div>
+      <div class="teacher-grid" id="teacherGrid">
+        <noscript>
+          <div class="teacher-card"><span class="avatar-mono lg" aria-hidden="true">HK</span><h4>H. Kasturi, S.Ag., M.Pd.</h4><p>Kepala Madrasah</p><span class="teach-sub">Fikih &amp; Keagamaan</span></div>
+          <div class="teacher-card"><span class="avatar-mono lg" aria-hidden="true">FA</span><h4>M. Fajar Anshari</h4><p>Kepala Boarding School</p><span class="teach-sub">Pembina Asrama</span></div>
+        </noscript>
       </div>
       <p class="teacher-note" data-i18n="tea.note">Daftar lengkap pendidik &amp; tenaga kependidikan tersedia di papan informasi madrasah dan profil resmi.</p>
     </div>
@@ -965,5 +940,6 @@
   </a>
 
   <script src="js/main.js" defer></script>
+  <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});}</script>
 </body>
 </html>

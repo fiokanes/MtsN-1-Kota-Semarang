@@ -701,7 +701,30 @@ document.addEventListener('DOMContentLoaded', function () {
       'ktk.fm.email': 'Email', 'ktk.fm.emailph': 'email@contoh.com',
       'ktk.fm.subjek': 'Subjek', 'ktk.fm.subjekph': 'Subjek pesan',
       'ktk.fm.pesan': 'Pesan', 'ktk.fm.pesanph': 'Tulis pesan Anda di sini...',
-      'ktk.fm.btn': 'Kirim Pesan'
+      'ktk.fm.btn': 'Kirim Pesan',
+      'ktk.fm.sending': 'Mengirim…', 'ktk.fm.sent': 'Terima kasih! Pesan Anda telah terkirim. Tim kami akan segera menghubungi Anda.',
+      'ktk.fm.waFallback': 'Email gagal terkirim — WhatsApp panitia akan dibuka dengan pesan Anda.',
+      'ktk.fm.invalid': 'Mohon lengkapi: nama (min. 3 huruf), email valid, subjek, dan pesan (min. 10 karakter).',
+      'ppd.portal.ey': 'Portal PPDB TP 2027/2028', 'ppd.portal.h': 'Kuota per Jalur',
+      'ppd.portal.p': 'Pilih jalur, unduh brosur, lalu isi formulir minat — pesan WhatsApp ke panitia terisi otomatis.',
+      'ppd.portal.status': 'Segera dibuka — pantau pengumuman panitia',
+      'ppd.portal.brosur': '\u2b07 Unduh Brosur (PDF)', 'ppd.portal.minat': 'Isi Formulir Minat \u2192',
+      'ppd.minat.h': 'Formulir Minat PPDB', 'ppd.minat.p': 'Isi data singkat — tombol kirim membuka WhatsApp panitia dengan pesan yang sudah terisi.',
+      'ppd.minat.nama': 'Nama calon siswa', 'ppd.minat.sekolah': 'Asal sekolah (SD/MI)',
+      'ppd.minat.jalur': 'Jalur pendaftaran', 'ppd.minat.hp': 'No. HP/WA orang tua',
+      'ppd.minat.btn': 'Kirim via WhatsApp \u2192', 'ppd.minat.invalid': 'Mohon lengkapi nama, asal sekolah, jalur, dan no. HP/WA yang valid (10–15 digit).',
+      'ppd.biaya.ey': 'Transparansi Biaya', 'ppd.biaya.h': 'Estimasi Biaya',
+      'ppd.biaya.p': 'Madrasah negeri — SPP reguler Rp0. Rincian lain mengikuti SK resmi tahun berjalan.',
+      'ppd.biaya.h1': 'Komponen', 'ppd.biaya.h2': 'Reguler', 'ppd.biaya.h3': 'Boarding School',
+      'ppd.biaya.note': '*Nominal pasti mengikuti SK resmi madrasah tahun berjalan. Waspada pungutan di luar ketentuan resmi.',
+      'ppd.faq.ey': 'Tanya Jawab PPDB', 'ppd.faq.h': 'Sering Ditanyakan soal PPDB',
+      'pst.filter.tahun': 'Tahun', 'pst.filter.bidang': 'Bidang', 'pst.filter.tingkat': 'Tingkat',
+      'pst.filter.all': 'Semua', 'pst.count': '{n} prestasi ditampilkan',
+      'pst.alu.ey': 'Jejak Alumni', 'pst.alu.h': 'Direktori Alumni',
+      'pst.alu.p': 'Lulusan yang melanjutkan ke madrasah unggulan dan menorehkan prestasi.',
+      'tea.consult': 'Konsultasi', 'nl.sending': 'Mengirim…',
+      'nl.thanks': 'Terima kasih! Email Anda telah kami catat.',
+      'nl.fail': 'Gagal mengirim. Coba lagi atau hubungi WhatsApp madrasah.'
     },
     en: {
       'nav.home': 'Home', 'nav.profil': 'About', 'nav.sejarah': 'History', 'nav.visi': 'Vision & Mission',
@@ -1147,7 +1170,30 @@ document.addEventListener('DOMContentLoaded', function () {
       'ktk.fm.email': 'Email', 'ktk.fm.emailph': 'email@example.com',
       'ktk.fm.subjek': 'Subject', 'ktk.fm.subjekph': 'Message subject',
       'ktk.fm.pesan': 'Message', 'ktk.fm.pesanph': 'Write your message here...',
-      'ktk.fm.btn': 'Send Message'
+      'ktk.fm.btn': 'Send Message',
+      'ktk.fm.sending': 'Sending…', 'ktk.fm.sent': 'Thank you! Your message has been sent. Our team will contact you soon.',
+      'ktk.fm.waFallback': 'Email failed — opening WhatsApp with your message instead.',
+      'ktk.fm.invalid': 'Please complete: name (min. 3 chars), valid email, subject, and message (min. 10 chars).',
+      'ppd.portal.ey': 'PPDB Portal AY 2027/2028', 'ppd.portal.h': 'Quota per Track',
+      'ppd.portal.p': 'Pick a track, download the brochure, then fill the interest form — WhatsApp to the committee is pre-filled.',
+      'ppd.portal.status': 'Opening soon — follow committee announcements',
+      'ppd.portal.brosur': '\u2b07 Download Brochure (PDF)', 'ppd.portal.minat': 'Fill Interest Form \u2192',
+      'ppd.minat.h': 'PPDB Interest Form', 'ppd.minat.p': 'Fill in briefly — submit opens WhatsApp to the committee with a pre-filled message.',
+      'ppd.minat.nama': 'Prospective student name', 'ppd.minat.sekolah': 'Previous school (SD/MI)',
+      'ppd.minat.jalur': 'Admission track', 'ppd.minat.hp': 'Parent phone/WA number',
+      'ppd.minat.btn': 'Send via WhatsApp \u2192', 'ppd.minat.invalid': 'Please complete name, school, track, and a valid phone/WA number (10–15 digits).',
+      'ppd.biaya.ey': 'Fee Transparency', 'ppd.biaya.h': 'Estimated Fees',
+      'ppd.biaya.p': 'Public madrasah — regular tuition Rp0. Other items follow the official yearly decree.',
+      'ppd.biaya.h1': 'Item', 'ppd.biaya.h2': 'Regular', 'ppd.biaya.h3': 'Boarding School',
+      'ppd.biaya.note': '*Final amounts follow the official yearly decree. Beware of unofficial charges.',
+      'ppd.faq.ey': 'PPDB Q&A', 'ppd.faq.h': 'PPDB FAQs',
+      'pst.filter.tahun': 'Year', 'pst.filter.bidang': 'Field', 'pst.filter.tingkat': 'Level',
+      'pst.filter.all': 'All', 'pst.count': '{n} achievements shown',
+      'pst.alu.ey': 'Alumni Trail', 'pst.alu.h': 'Alumni Directory',
+      'pst.alu.p': 'Graduates continuing to flagship schools and earning achievements.',
+      'tea.consult': 'Consultation', 'nl.sending': 'Sending…',
+      'nl.thanks': 'Thank you! Your email has been recorded.',
+      'nl.fail': 'Failed to send. Try again or contact the school WhatsApp.'
     }
   };
 
@@ -1187,6 +1233,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.__forceSearch) window.__forceSearch();
     if (window.__calRender) window.__calRender();
     if (window.__homeAgenda) window.__homeAgenda();
+    if (window.__prestasiRender) window.__prestasiRender();
     if (window.__cdTick) window.__cdTick();
     if (window.__mediaSync) window.__mediaSync();
   }
@@ -1454,22 +1501,77 @@ document.addEventListener('DOMContentLoaded', function () {
   if (nlForm) {
     nlForm.addEventListener('submit', function (e) {
       e.preventDefault();
+      const cur = I18N[lang] || I18N.id;
       const input = nlForm.querySelector('input[type="email"]');
       const msg = nlForm.parentElement.querySelector('.nl-msg');
-      if (!input || !input.value) return;
-      const cur = I18N[lang] || I18N.id;
-      msg.textContent = cur['nl.sending'] || 'Mengirim…';
+      const v = (input.value || '').trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) {
+        msg.textContent = cur['ktk.fm.invalid'];
+        msg.style.color = '#fca5a5';
+        input.focus();
+        return;
+      }
       msg.style.color = '';
+      msg.textContent = cur['nl.sending'] || 'Mengirim…';
+      let done = false;
+      const timer = setTimeout(function () {
+        if (!done) {
+          done = true;
+          msg.textContent = cur['nl.fail'];
+        }
+      }, 8000);
       fetch('https://formsubmit.co/ajax/humas@mtsn1semarang.sch.id', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ email: input.value, _subject: 'Newsletter MTsN 1 Kota Semarang' })
-      }).then(function (r) { return r.json(); }).then(function () {
+        body: JSON.stringify({ email: v, _subject: 'Newsletter MTsN 1 Kota Semarang' })
+      }).then(function (r) {
+        if (!r.ok) throw new Error('http ' + r.status);
+        return r.json();
+      }).then(function () {
+        done = true;
+        clearTimeout(timer);
         msg.textContent = cur['nl.thanks'];
         input.value = '';
+        const cb = nlForm.querySelector('input[type="checkbox"]');
+        if (cb) cb.checked = false;
       }).catch(function () {
-        msg.textContent = cur['nl.fail'] || 'Gagal mengirim. Silakan coba lagi.';
+        done = true;
+        clearTimeout(timer);
+        msg.textContent = cur['nl.fail'];
       });
+    });
+  }
+
+  // ================= ANALITIK PRIVASI (tanpa cookie) + HELPER =================
+  window.MTSN_ANALYTICS_ENDPOINT = window.MTSN_ANALYTICS_ENDPOINT || '';
+  (function () {
+    try {
+      const k = 'mtsn1-stats';
+      const s = JSON.parse(localStorage.getItem(k) || '{}');
+      const pg = location.pathname.split('/').pop() || 'index.html';
+      s[pg] = (s[pg] || 0) + 1;
+      s._last = new Date().toISOString().slice(0, 10);
+      localStorage.setItem(k, JSON.stringify(s));
+      if (window.MTSN_ANALYTICS_ENDPOINT && navigator.sendBeacon) {
+        navigator.sendBeacon(window.MTSN_ANALYTICS_ENDPOINT, JSON.stringify({ page: pg, lang: lang, ref: document.referrer || '' }));
+      }
+    } catch (e) {}
+  })();
+  function loadJSON(url, fallback) {
+    try {
+      const x = new XMLHttpRequest();
+      x.open('GET', url, false);
+      x.send(null);
+      if (x.status === 200 || (x.status === 0 && x.responseText)) {
+        const d = JSON.parse(x.responseText);
+        if (d) return d;
+      }
+    } catch (e) {}
+    return fallback;
+  }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
     });
   }
 
@@ -1575,25 +1677,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ================= FAQ AKORDEON =================
-  document.querySelectorAll('.faq-item').forEach(function (item) {
-    const q = item.querySelector('.faq-q');
-    const a = item.querySelector('.faq-a');
-    if (!q || !a) return;
-    q.addEventListener('click', function () {
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(function (o) {
-        o.classList.remove('open');
-        o.querySelector('.faq-a').style.maxHeight = null;
-        o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+  function bindFaq(root) {
+    (root || document).querySelectorAll('.faq-item').forEach(function (item) {
+      const q = item.querySelector('.faq-q');
+      const a = item.querySelector('.faq-a');
+      if (!q || !a || q.dataset.bound) return;
+      q.dataset.bound = '1';
+      q.addEventListener('click', function () {
+        const isOpen = item.classList.contains('open');
+        (root || document).querySelectorAll('.faq-item.open').forEach(function (o) {
+          o.classList.remove('open');
+          o.querySelector('.faq-a').style.maxHeight = null;
+          o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          a.style.maxHeight = a.scrollHeight + 'px';
+          q.setAttribute('aria-expanded', 'true');
+        }
       });
-      if (!isOpen) {
-        item.classList.add('open');
-        a.style.maxHeight = a.scrollHeight + 'px';
-        q.setAttribute('aria-expanded', 'true');
-      }
     });
-  });
+  }
+  // ================= FAQ AKORDEON =================
+  bindFaq(document);
 
   // ================= LIGHTBOX GALERI =================
   const galItems = document.querySelectorAll('.galeri-item[data-full]');
@@ -1814,31 +1920,181 @@ document.addEventListener('DOMContentLoaded', function () {
   if (ctForm) {
     ctForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      const nama = (ctForm.querySelector('#nama') || {}).value || '';
-      const email = (ctForm.querySelector('#email') || {}).value || '';
-      const subjek = (ctForm.querySelector('#subjek') || {}).value || '';
-      const pesan = (ctForm.querySelector('#pesan') || {}).value || '';
+      const cur = I18N[lang] || I18N.id;
+      const nama = (ctForm.querySelector('#nama').value || '').trim();
+      const email = (ctForm.querySelector('#email').value || '').trim();
+      const subjek = (ctForm.querySelector('#subjek').value || '').trim();
+      const pesan = (ctForm.querySelector('#pesan').value || '').trim();
       const m = document.getElementById('formMsg');
-      if (!m) return;
-      m.textContent = 'Mengirim…';
+      const okMail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+      if (nama.length < 3 || !okMail || !subjek || pesan.length < 10) {
+        m.textContent = cur['ktk.fm.invalid'];
+        m.style.color = '#b91c1c';
+        return;
+      }
+      m.style.color = '';
+      m.textContent = cur['ktk.fm.sending'] || 'Mengirim…';
+      const payload = { _subject: subjek, Nama: nama, Email: email, Pesan: pesan };
+      let done = false;
+      const timer = setTimeout(function () {
+        if (!done) waFallback();
+      }, 8000);
+      function waFallback() {
+        if (done) return;
+        done = true;
+        clearTimeout(timer);
+        const line = encodeURIComponent('Assalamu\'alaikum, saya ' + nama + ' (' + email + ').\nSubjek: ' + subjek + '\n\n' + pesan);
+        window.open('https://wa.me/62246716521?text=' + line, '_blank', 'noopener');
+        m.textContent = cur['ktk.fm.waFallback'];
+        ctForm.reset();
+      }
       fetch('https://formsubmit.co/ajax/humas@mtsn1semarang.sch.id', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ _subject: subjek, Nama: nama, Email: email, Pesan: pesan })
-      }).then(function (r) { return r.json(); }).then(function () {
-        m.textContent = 'Terima kasih! Pesan Anda telah terkirim. Tim kami akan segera menghubungi Anda.';
+        body: JSON.stringify(payload)
+      }).then(function (r) {
+        if (!r.ok) throw new Error('http ' + r.status);
+        return r.json();
+      }).then(function () {
+        done = true;
+        clearTimeout(timer);
+        m.textContent = cur['ktk.fm.sent'];
         ctForm.reset();
-      }).catch(function () {
-        // fallback: buka aplikasi email
-        const line = encodeURIComponent('Nama: ' + nama + '\nEmail: ' + email + '\n\n' + pesan);
-        window.location.href = 'mailto:humas@mtsn1semarang.sch.id?subject=' + encodeURIComponent(subjek) + '&body=' + line;
-        m.textContent = 'Terima kasih — aplikasi email Anda akan terbuka untuk mengirim pesan.';
-        ctForm.reset();
-      });
+      }).catch(waFallback);
     });
   }
 
   // ================= BANNER COOKIE / PREFERENSI =================
+  // ================= PORTAL PPDB (kuota, biaya, FAQ, minat) =================
+  (function () {
+    const grid = document.getElementById('quotaGrid');
+    const biaya = document.getElementById('biayaBody');
+    const faqBox = document.getElementById('ppdbFaq');
+    const minat = document.getElementById('minatForm');
+    if (!grid && !biaya && !faqBox && !minat) return;
+    const data = loadJSON('assets/data/ppdb.json', null);
+    if (!data) return;
+    if (grid) {
+      grid.innerHTML = (data.jalur || []).map(function (j, ix) {
+        return '<div class="card quota-card reveal revealed" style="transition-delay:' + (ix * 0.06).toFixed(2) + 's;">' +
+          '<span class="tag">' + esc(j.status || '') + '</span>' +
+          '<div class="quota-num">' + esc(j.kuota) + '</div>' +
+          '<h3>' + esc(j.nama) + '</h3><p>' + esc(j.syarat) + '</p></div>';
+      }).join('');
+    }
+    if (biaya) {
+      biaya.innerHTML = (data.biaya || []).map(function (b) {
+        return '<tr><td><strong>' + esc(b.komponen) + '</strong></td><td>' + esc(b.reguler) + '</td><td>' + esc(b.boarding) + '</td></tr>';
+      }).join('');
+    }
+    if (faqBox) {
+      faqBox.innerHTML = (data.faq || []).map(function (f) {
+        return '<div class="faq-item"><button type="button" class="faq-q" aria-expanded="false">' + esc(f.q) +
+          '</button><div class="faq-a"><p>' + esc(f.a) + '</p></div></div>';
+      }).join('');
+      bindFaq(faqBox);
+      const ld = {
+        '@context': 'https://schema.org', '@type': 'FAQPage',
+        mainEntity: (data.faq || []).map(function (f) {
+          return { '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } };
+        })
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.head.appendChild(s);
+    }
+    if (minat) {
+      const sel = minat.querySelector('#minatJalur');
+      sel.innerHTML = '<option value="">—</option>' + (data.jalur || []).map(function (j) {
+        return '<option value="' + esc(j.nama) + '">' + esc(j.nama) + ' (kuota ' + esc(j.kuota) + ')</option>';
+      }).join('');
+      minat.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const cur = I18N[lang] || I18N.id;
+        const msg = document.getElementById('minatMsg');
+        const nama = (minat.querySelector('#minatNama').value || '').trim();
+        const sekolah = (minat.querySelector('#minatSekolah').value || '').trim();
+        const jalur = sel.value;
+        const hp = (minat.querySelector('#minatHp').value || '').replace(/[^0-9+]/g, '');
+        const digits = hp.replace(/\D/g, '');
+        if (nama.length < 3 || sekolah.length < 3 || !jalur || digits.length < 10 || digits.length > 15) {
+          msg.textContent = cur['ppd.minat.invalid'];
+          msg.style.color = '#b91c1c';
+          return;
+        }
+        const text = 'Assalamu\'alaikum panitia PPDB MTsN 1 Kota Semarang.%0A%0A' +
+          'Nama: ' + encodeURIComponent(nama) + '%0A' +
+          'Asal sekolah: ' + encodeURIComponent(sekolah) + '%0A' +
+          'Jalur: ' + encodeURIComponent(jalur) + '%0A' +
+          'HP/WA: ' + encodeURIComponent(hp);
+        window.open('https://wa.me/' + (data.panitia_wa || '62246716521') + '?text=' + text, '_blank', 'noopener');
+        msg.style.color = '';
+        msg.textContent = cur['ktk.fm.sent'];
+        minat.reset();
+      });
+    }
+  })();
+
+  // ================= PRESTASI + ALUMNI + GURU (data JSON) =================
+  (function () {
+    const list = document.getElementById('prestasiList');
+    const alumniGrid = document.getElementById('alumniGrid');
+    const guruGrid = document.getElementById('teacherGrid');
+    if (list) {
+      const data = loadJSON('assets/data/prestasi.json', []);
+      const fT = document.getElementById('filterTahun');
+      const fB = document.getElementById('filterBidang');
+      const fK = document.getElementById('filterTingkat');
+      const count = document.getElementById('prestasiCount');
+      const years = [...new Set(data.map((d) => d.tahun))].sort((a, b) => b - a);
+      const bids = [...new Set(data.map((d) => d.bidang))].sort();
+      const lvls = [...new Set(data.map((d) => d.tingkat))].sort();
+      const cur0 = I18N[lang] || I18N.id;
+      const allTxt = cur0['pst.filter.all'] || 'Semua';
+      years.forEach((y) => fT.insertAdjacentHTML('beforeend', '<option>' + y + '</option>'));
+      bids.forEach((b) => fB.insertAdjacentHTML('beforeend', '<option>' + esc(b) + '</option>'));
+      lvls.forEach((l) => fK.insertAdjacentHTML('beforeend', '<option>' + esc(l) + '</option>'));
+      fT.previousElementSibling.textContent = cur0['pst.filter.tahun'] || 'Tahun';
+      fB.previousElementSibling.textContent = cur0['pst.filter.bidang'] || 'Bidang';
+      fK.previousElementSibling.textContent = cur0['pst.filter.tingkat'] || 'Tingkat';
+      function render() {
+        const cur = I18N[lang] || I18N.id;
+        const rows = data.filter((d) =>
+          (!fT.value || String(d.tahun) === fT.value) &&
+          (!fB.value || d.bidang === fB.value) &&
+          (!fK.value || d.tingkat === fK.value));
+        list.innerHTML = rows.map((d) =>
+          '<div class="tl-item"><div class="tl-dot"></div><div class="tl-card">' +
+          '<div class="tl-year">' + esc(d.tahun) + '</div><h3>' + esc(d.judul) + '</h3>' +
+          '<p><span class="mini-tag">' + esc(d.bidang) + '</span> <span class="mini-tag">' + esc(d.tingkat) + '</span></p>' +
+          '<p class="tl-src">Sumber: ' + esc(d.sumber) + '</p></div></div>').join('') ||
+          '<p class="result-empty">—</p>';
+        count.textContent = (cur['pst.count'] || '{n} prestasi').replace('{n}', rows.length);
+      }
+      [fT, fB, fK].forEach((s) => s.addEventListener('change', render));
+      window.__prestasiRender = render;
+      render();
+    }
+    if (alumniGrid) {
+      const data = loadJSON('assets/data/alumni.json', []);
+      alumniGrid.innerHTML = data.map((a, ix) =>
+        '<div class="card reveal revealed" style="transition-delay:' + (ix * 0.05).toFixed(2) + 's;">' +
+        '<span class="tag">' + esc(a.angkatan) + ' · ' + esc(a.bidang) + '</span>' +
+        '<h3>' + esc(a.nama) + '</h3><p>' + esc(a.tujuan) + '</p></div>').join('');
+    }
+    if (guruGrid) {
+      const data = loadJSON('assets/data/guru.json', []);
+      const cur = I18N[lang] || I18N.id;
+      guruGrid.innerHTML = data.map((g, ix) =>
+        '<div class="teacher-card reveal revealed" style="transition-delay:' + (ix * 0.05).toFixed(2) + 's;">' +
+        '<span class="avatar-mono lg" aria-hidden="true">' + esc(g.inisial) + '</span>' +
+        '<h4>' + esc(g.nama) + '</h4><p>' + esc(g.jabatan) + '</p>' +
+        '<span class="teach-sub">' + esc(g.mapel) + '</span>' +
+        '<p class="consult"><strong>' + esc(cur['tea.consult'] || 'Konsultasi') + ':</strong> ' + esc(g.konsultasi) + '</p></div>').join('');
+    }
+  })();
+
   (function () {
     let ok = false;
     try { ok = !!localStorage.getItem('mtsn1-cookie-ok'); } catch (e) { return; }

@@ -22,10 +22,17 @@
   <link rel="alternate" hreflang="id" href="https://mtsn1semarang.sch.id/ppdb.html">
   <link rel="alternate" hreflang="en" href="https://mtsn1semarang.sch.id/ppdb.html">  <link rel="alternate" hreflang="x-default" href="https://mtsn1semarang.sch.id/ppdb.html">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#064e2e">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kapan PPDB TP 2027/2028 dibuka?", "acceptedAnswer": {"@type": "Answer", "text": "Jadwal resmi menunggu pengumuman panitia. Pantau laman ini dan kanal resmi madrasah; referensi PPDB 2022 dibuka 15 Maret – 14 April."}}, {"@type": "Question", "name": "Apa saja jalur pendaftarannya?", "acceptedAnswer": {"@type": "Answer", "text": "Reguler, Prestasi (rapor/lomba), Boarding School Idzatun Nasyi'in (100 putra + 100 putri), dan Afirmasi."}}, {"@type": "Question", "name": "Berapa biayanya?", "acceptedAnswer": {"@type": "Answer", "text": "Sebagai madrasah negeri, SPP reguler Rp0. Biaya asrama/seragam mengikuti SK resmi tahun berjalan — tanyakan ke panitia, waspada pungli."}}, {"@type": "Question", "name": "Bagaimana cara menghubungi panitia?", "acceptedAnswer": {"@type": "Answer", "text": "Isi formulir minat di bawah (pesan WA otomatis terisi), atau hubungi (024) 6716521 / humas@mtsn1semarang.sch.id."}}, {"@type": "Question", "name": "Syarat masuk Boarding School?", "acceptedAnswer": {"@type": "Answer", "text": "Lulusan SD/MI, lolos seleksi berkas + wawancara, siap tinggal di asrama dengan pembinaan tahfidz dan kitab kuning."}}]}
+  </script>
 </head>
 <body>
   <!-- ===== Navigasi ===== -->
@@ -92,6 +99,78 @@
     <div class="container">
       <p class="breadcrumb"><a href="index.html">Beranda</a> / PPDB</p>
       <h1>Penerimaan Peserta Didik Baru</h1>
+    </div>
+  </section>
+
+  <!-- ===== Portal PPDB: kuota jalur, brosur, formulir minat ===== -->
+  <section class="section" id="portal">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow" data-i18n="ppd.portal.ey">Portal PPDB TP 2027/2028</span>
+        <h2 data-i18n="ppd.portal.h">Kuota per Jalur</h2>
+        <p data-i18n="ppd.portal.p">Pilih jalur, unduh brosur, lalu isi formulir minat — pesan WhatsApp ke panitia terisi otomatis.</p>
+      </div>
+      <p class="ppdb-status reveal" role="status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="ppd.portal.status">Segera dibuka — pantau pengumuman panitia</span></p>
+      <div class="grid-4 quota-grid reveal" id="quotaGrid"></div>
+      <div class="portal-actions reveal">
+        <a href="assets/dokumen/prospektus-2026.pdf" class="btn btn-gold" download data-i18n="ppd.portal.brosur">⬇ Unduh Brosur (PDF)</a>
+        <a href="#minat" class="btn btn-ghost" data-i18n="ppd.portal.minat">Isi Formulir Minat →</a>
+      </div>
+      <div class="card form-minat reveal" id="minat">
+        <h3 data-i18n="ppd.minat.h">Formulir Minat PPDB</h3>
+        <p data-i18n="ppd.minat.p">Isi data singkat — tombol kirim membuka WhatsApp panitia dengan pesan yang sudah terisi.</p>
+        <form class="form-grid" id="minatForm" novalidate>
+          <div class="form-field">
+            <label for="minatNama" data-i18n="ppd.minat.nama">Nama calon siswa</label>
+            <input type="text" id="minatNama" name="nama" autocomplete="name" required minlength="3" placeholder="Nama lengkap">
+          </div>
+          <div class="form-field">
+            <label for="minatSekolah" data-i18n="ppd.minat.sekolah">Asal sekolah (SD/MI)</label>
+            <input type="text" id="minatSekolah" name="sekolah" required minlength="3" placeholder="SD/MI …">
+          </div>
+          <div class="form-field">
+            <label for="minatJalur" data-i18n="ppd.minat.jalur">Jalur pendaftaran</label>
+            <select id="minatJalur" name="jalur" required></select>
+          </div>
+          <div class="form-field">
+            <label for="minatHp" data-i18n="ppd.minat.hp">No. HP/WA orang tua</label>
+            <input type="tel" id="minatHp" name="hp" inputmode="tel" autocomplete="tel" required placeholder="08…">
+          </div>
+          <div class="form-field full">
+            <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;" data-i18n="ppd.minat.btn">Kirim via WhatsApp →</button>
+          </div>
+          <p class="form-msg" id="minatMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Estimasi Biaya ===== -->
+  <section class="section section-alt" id="biaya">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow" data-i18n="ppd.biaya.ey">Transparansi Biaya</span>
+        <h2 data-i18n="ppd.biaya.h">Estimasi Biaya</h2>
+        <p data-i18n="ppd.biaya.p">Madrasah negeri — SPP reguler Rp0. Rincian lain mengikuti SK resmi tahun berjalan.</p>
+      </div>
+      <div class="table-wrap reveal" style="max-width:900px;margin:0 auto;">
+        <table class="biaya-table">
+          <thead><tr><th data-i18n="ppd.biaya.h1">Komponen</th><th data-i18n="ppd.biaya.h2">Reguler</th><th data-i18n="ppd.biaya.h3">Boarding School</th></tr></thead>
+          <tbody id="biayaBody"></tbody>
+        </table>
+      </div>
+      <p class="fine-note reveal" data-i18n="ppd.biaya.note">*Nominal pasti mengikuti SK resmi madrasah tahun berjalan. Waspada pungutan di luar ketentuan resmi.</p>
+    </div>
+  </section>
+
+  <!-- ===== FAQ PPDB ===== -->
+  <section class="section" id="faq-ppdb">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow" data-i18n="ppd.faq.ey">Tanya Jawab PPDB</span>
+        <h2 data-i18n="ppd.faq.h">Sering Ditanyakan soal PPDB</h2>
+      </div>
+      <div class="faq-list faq-wrap reveal" id="ppdbFaq"></div>
     </div>
   </section>
 
@@ -274,5 +353,6 @@
   <button class="to-top" aria-label="Kembali ke atas">↑</button>
 
   <script src="js/main.js" defer></script>
+  <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});}</script>
 </body>
 </html>

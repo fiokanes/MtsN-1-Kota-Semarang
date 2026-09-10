@@ -1,0 +1,37 @@
+[
+  {
+    "inisial": "HK",
+    "nama": "H. Kasturi, S.Ag., M.Pd.",
+    "jabatan": "Kepala Madrasah",
+    "mapel": "Fikih & Keagamaan",
+    "konsultasi": "Senin–Kamis via TU madrasah"
+  },
+  {
+    "inisial": "FA",
+    "nama": "M. Fajar Anshari",
+    "jabatan": "Kepala Boarding School",
+    "mapel": "Pembina Asrama",
+    "konsultasi": "Setiap hari efektif di asrama"
+  },
+  {
+    "inisial": "SP",
+    "nama": "Saptono",
+    "jabatan": "Pembina Pramuka",
+    "mapel": "Ka. Gudep Putra",
+    "konsultasi": "Jadwal latihan pramuka"
+  },
+  {
+    "inisial": "APS",
+    "nama": "Agus Prapto Sukoco",
+    "jabatan": "Guru Seni & Paduan Suara",
+    "mapel": "Pelatih Seni",
+    "konsultasi": "Jadwal ekstrakurikuler seni"
+  },
+  {
+    "inisial": "AT",
+    "nama": "Agus Trisnoto",
+    "jabatan": "Guru Seni & Paduan Suara",
+    "mapel": "Pelatih Seni",
+    "konsultasi": "Jadwal ekstrakurikuler seni"
+  }
+]

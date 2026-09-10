@@ -22,10 +22,17 @@
   <link rel="alternate" hreflang="id" href="https://mtsn1semarang.sch.id/program.html">
   <link rel="alternate" hreflang="en" href="https://mtsn1semarang.sch.id/program.html">  <link rel="alternate" hreflang="x-default" href="https://mtsn1semarang.sch.id/program.html">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#064e2e">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Apakah tahfidz wajib untuk semua siswa?", "acceptedAnswer": {"@type": "Answer", "text": "Ya. Tahfidzul Qur'an adalah program unggulan yang dibina terstruktur untuk seluruh peserta didik, dilengkapi kajian kitab kuning dan pendampingan pengasuh."}}, {"@type": "Question", "name": "Bagaimana sistem Boarding School Idzatun Nasyi'in?", "acceptedAnswer": {"@type": "Answer", "text": "Asrama dikelola mandiri ala pesantren — hafalan Al-Qur'an, kajian kitab, pembinaan karakter harian. Kapasitas 100 santri putra + 100 santriwati."}}, {"@type": "Question", "name": "Program apa saja selain tahfidz?", "acceptedAnswer": {"@type": "Answer", "text": "Riset dan Sains — pembinaan kompetisi dari tingkat kota hingga internasional, termasuk KSM dan riset internasional."}}, {"@type": "Question", "name": "Ekstrakurikuler apa saja yang tersedia?", "acceptedAnswer": {"@type": "Answer", "text": "Pramuka, hadroh, futsal, bulutangkis, KIR/robotik, jurnalistik-multimedia, English & Arabic club, PMR/UKS, dan seni-teater."}}]}
+  </script>
 </head>
 <body>
   <!-- ===== Navigasi ===== -->
@@ -215,6 +222,34 @@
     </div>
   </section>
 
+  <!-- ===== FAQ Program & Boarding ===== -->
+  <section class="section section-alt" id="faq-program">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">Tanya Jawab Program</span>
+        <h2>Sering Ditanyakan soal Program &amp; Boarding</h2>
+      </div>
+      <div class="faq-list faq-wrap reveal" id="programFaq">
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false">Apakah tahfidz wajib untuk semua siswa?<span aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Ya. Tahfidzul Qur'an adalah program unggulan yang dibina terstruktur untuk seluruh peserta didik, dilengkapi kajian kitab kuning dan pendampingan pengasuh.</p></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false">Bagaimana sistem Boarding School Idzatun Nasyi'in?<span aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Asrama dikelola mandiri ala pesantren — hafalan Al-Qur'an, kajian kitab, pembinaan karakter harian. Kapasitas 100 santri putra + 100 santriwati. Lihat rincian di <a href="ppdb.html#biaya">estimasi biaya boarding</a>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false">Program apa saja selain tahfidz?<span aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Riset dan Sains — pembinaan kompetisi dari tingkat kota hingga internasional, termasuk KSM dan riset internasional. Lihat <a href="prestasi.html">arsip prestasi</a>.</p></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false">Ekstrakurikuler apa saja yang tersedia?<span aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Pramuka, hadroh, futsal, bulutangkis, KIR/robotik, jurnalistik-multimedia, English &amp; Arabic club, PMR/UKS, dan seni-teater.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CTA ===== -->
   <section class="section" style="padding-top:0;">
     <div class="container">
@@ -287,5 +322,6 @@
   <button class="to-top" data-i18n-aria="toTop.aria" aria-label="Kembali ke atas">↑</button>
 
   <script src="js/main.js" defer></script>
+  <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});}</script>
 </body>
 </html>
