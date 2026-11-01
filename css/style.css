@@ -1045,6 +1045,8 @@ body.overlay-open { overflow: hidden; }
   font-size: .7rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,.8);
 }
 .countdown .cd-done { text-align: center; color: var(--green-800); font-weight: 600; }
+.countdown--start + .cd-note { margin-top: 10px; font-size: .8rem; color: rgba(255,255,255,.82); max-width: 560px; }
+html[data-theme="dark"] .countdown--start + .cd-note { color: #aab8bd; }
 
 /* ---------- Testimoni ---------- */
 .testi-slider { position: relative; max-width: 860px; margin: 0 auto; }
